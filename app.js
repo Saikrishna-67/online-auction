@@ -250,8 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
       pendingSliceIndex = sliceIndex;
 
       if (isMultiplayer && currentRoomCode && db) {
-        const myIndex = players.findIndex(p => p.id === localPlayerId);
-        if (myIndex === currentPlayerIndex || isRoomHost) {
+        if (isRoomHost) {
           db.ref(`rooms/${currentRoomCode}/currentDraft`).set({
             isOpen: true,
             char: selectedChar,
@@ -274,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
               hasConcluded: false
             }
           });
-          db.ref(`rooms/${currentRoomCode}/currentSpin`).set(null);
+          db.ref(`rooms/${currentRoomCode}/currentSpin`).remove();
         }
       } else {
         showDraftModal(selectedChar);
@@ -1328,12 +1327,14 @@ document.addEventListener('DOMContentLoaded', () => {
     spinBtn.disabled = false;
 
     if (isMultiplayer && currentRoomCode && db) {
-      const nextTurn = (currentPlayerIndex + 1) % players.length;
-      db.ref(`rooms/${currentRoomCode}`).update({
-        currentDraft: null,
-        currentSpin: null,
-        currentPlayerIndex: nextTurn
-      });
+      if (isRoomHost) {
+        const nextTurn = (currentPlayerIndex + 1) % players.length;
+        db.ref(`rooms/${currentRoomCode}`).update({
+          currentDraft: null,
+          currentSpin: null,
+          currentPlayerIndex: nextTurn
+        });
+      }
     } else {
       currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
       renderPlayerDock();
@@ -1370,12 +1371,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextTurn = (currentPlayerIndex + 1) % players.length;
 
     if (isMultiplayer && currentRoomCode && db) {
-      db.ref(`rooms/${currentRoomCode}`).update({
-        players: players,
-        currentPlayerIndex: nextTurn,
-        currentDraft: null,
-        currentSpin: null
-      });
+      if (isRoomHost) {
+        db.ref(`rooms/${currentRoomCode}`).update({
+          players: players,
+          currentPlayerIndex: nextTurn,
+          currentDraft: null,
+          currentSpin: null
+        });
+      }
     } else {
       currentPlayerIndex = nextTurn;
       renderPlayerDock();
