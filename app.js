@@ -216,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let localPlayerName = localStorage.getItem('anime_player_name') || 'Player 1';
   let isRoomHost = false;
   let isRemoteSpinning = false;
+  let lastProcessedSpinId = null;
 
   let pendingCharacter = null;
   let pendingSliceIndex = -1;
@@ -485,10 +486,13 @@ document.addEventListener('DOMContentLoaded', () => {
       updateCounters();
       updateMultiplayerSpinState();
 
-      // Remote Wheel Spin Sync
-      if (roomData.currentSpin && roomData.currentSpin.isSpinning) {
-        if (!wheel.isSpinning) {
-          wheel.spin(roomData.currentSpin.sliceIndex);
+      // Remote Wheel Spin Sync - only fires once per unique spinId
+      if (roomData.currentSpin && roomData.currentSpin.isSpinning && roomData.currentSpin.spinId) {
+        if (roomData.currentSpin.spinId !== lastProcessedSpinId) {
+          lastProcessedSpinId = roomData.currentSpin.spinId;
+          if (!wheel.isSpinning) {
+            wheel.spin(roomData.currentSpin.sliceIndex);
+          }
         }
       }
 
@@ -1731,9 +1735,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const randomIndex = Math.floor(Math.random() * pool.length);
       const selectedChar = pool[randomIndex];
+      const spinId = 'spin_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7);
+
+      lastProcessedSpinId = spinId;
+      spinBtn.disabled = true;
 
       db.ref(`rooms/${currentRoomCode}/currentSpin`).set({
         isSpinning: true,
+        spinId: spinId,
         sliceIndex: randomIndex,
         char: selectedChar,
         timestamp: Date.now()
