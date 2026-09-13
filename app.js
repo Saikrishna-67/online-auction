@@ -208,12 +208,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Multiplayer State
   let isMultiplayer = false;
   let currentRoomCode = null;
-  let localPlayerId = sessionStorage.getItem('anime_player_id');
-  if (!localPlayerId) {
-    localPlayerId = 'p_' + Math.random().toString(36).substring(2, 9);
-    sessionStorage.setItem('anime_player_id', localPlayerId);
-  }
-  let localPlayerName = sessionStorage.getItem('anime_player_name') || 'Player ' + Math.floor(1 + Math.random() * 99);
+  let localPlayerId = 'p_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 9);
+  let localPlayerName = 'Player ' + Math.floor(1 + Math.random() * 99);
   let isRoomHost = false;
   let isRemoteSpinning = false;
   let lastProcessedSpinId = null;
