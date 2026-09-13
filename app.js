@@ -246,6 +246,11 @@ document.addEventListener('DOMContentLoaded', () => {
     'wheel-canvas',
     'flapper-svg',
     (selectedChar, sliceIndex) => {
+      if (!selectedChar) {
+        const pool = activePools[currentUniverse] || [];
+        selectedChar = pool[sliceIndex] || pool[0];
+      }
+      if (!selectedChar) return;
       pendingCharacter = selectedChar;
       pendingSliceIndex = sliceIndex;
 
@@ -483,6 +488,20 @@ document.addEventListener('DOMContentLoaded', () => {
         multiplayerModal.close();
       }
       renderPlayerDock();
+
+      // Synchronize active pool across all clients based on drafted squads
+      const draftedIds = new Set();
+      players.forEach(p => {
+        (p.characters || []).forEach(c => {
+          if (c && c.id) draftedIds.add(c.id);
+        });
+      });
+      const uni = roomData.universe || currentUniverse;
+      activePools[uni] = masterRoster.filter(c => (uni === 'all' || c.universe === uni) && !draftedIds.has(c.id));
+      if (!wheel.isSpinning) {
+        wheel.setItems(activePools[uni]);
+      }
+
       updateCounters();
       updateMultiplayerSpinState();
 

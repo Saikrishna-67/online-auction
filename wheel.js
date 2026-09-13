@@ -370,7 +370,7 @@ class AnimeWheel {
 
         this.sound.playVictory();
         if (this.onComplete) {
-          const winner = this.items[targetSliceIndex];
+          const winner = (this.items && this.items[targetSliceIndex]) || (this.items && this.items[0]) || null;
           this.onComplete(winner, targetSliceIndex);
         }
       }
