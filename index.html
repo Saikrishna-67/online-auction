@@ -54,19 +54,19 @@
 
     <h1 id="game-title">MULTIVERSE <span class="highlight">DRAFT WHEEL</span></h1>
 
-    <!-- Universe Selector: One Piece (500+), Naruto (500+), Marvel (100), or Combined All (1,100+) -->
+    <!-- Universe Selector: One Piece (100 Prime), Naruto (100 Prime), Marvel (100 Prime), or Combined All (300) -->
     <div class="universe-selector">
       <button class="universe-tab active op-tab" data-universe="onepiece" id="tab-onepiece">
-        🏴‍☠️ One Piece <span class="badge-count" id="badge-op-count">500+</span>
+        🏴‍☠️ One Piece <span class="badge-count" id="badge-op-count">100</span>
       </button>
       <button class="universe-tab nr-tab" data-universe="naruto" id="tab-naruto">
-        🍃 Naruto <span class="badge-count" id="badge-nr-count">500+</span>
+        🍃 Naruto <span class="badge-count" id="badge-nr-count">100</span>
       </button>
       <button class="universe-tab mv-tab" data-universe="marvel" id="tab-marvel">
         🦸 Marvel <span class="badge-count" id="badge-mv-count">100</span>
       </button>
       <button class="universe-tab all-tab" data-universe="all" id="tab-all">
-        ⚡ All Multiverse <span class="badge-count" id="badge-all-count">1100+</span>
+        ⚡ All Multiverse <span class="badge-count" id="badge-all-count">300</span>
       </button>
     </div>
   </header>
@@ -385,10 +385,18 @@
       </div>
 
       <div class="setup-group">
-        <label class="setup-label">Starting Budget per Player (50,000 to 100,000):</label>
+        <label class="setup-label">Starting Budget per Player:</label>
         <div class="budget-slider-wrapper">
-          <input type="range" id="budget-slider" class="budget-slider" min="50000" max="100000" step="5000" value="75000">
-          <span class="budget-val" id="budget-display">75,000 ฿/Ryo</span>
+          <input type="range" id="budget-slider" class="budget-slider" min="10000" max="500000" step="5000" value="75000">
+          <span class="budget-val" id="budget-display">75,000 ฿</span>
+        </div>
+        <div class="player-count-btns" style="margin-top: 0.6rem;">
+          <button class="p-count-btn btn-budget-preset" data-budget="25000" type="button">25k</button>
+          <button class="p-count-btn btn-budget-preset" data-budget="50000" type="button">50k</button>
+          <button class="p-count-btn btn-budget-preset active" data-budget="75000" type="button">75k</button>
+          <button class="p-count-btn btn-budget-preset" data-budget="100000" type="button">100k</button>
+          <button class="p-count-btn btn-budget-preset" data-budget="200000" type="button">200k</button>
+          <button class="p-count-btn btn-budget-preset" data-budget="500000" type="button">500k</button>
         </div>
       </div>
 
@@ -422,18 +430,21 @@
         <div class="mp-form-group">
           <label class="setup-label">Starting Budget per Player:</label>
           <select id="mp-budget-select" class="mp-select">
-            <option value="50000">50,000 ฿ / Ryo</option>
-            <option value="75000" selected>75,000 ฿ / Ryo (Standard)</option>
-            <option value="100000">100,000 ฿ / Ryo (High Stakes)</option>
+            <option value="25000">25,000</option>
+            <option value="50000">50,000</option>
+            <option value="75000" selected>75,000 (Standard)</option>
+            <option value="100000">100,000 (High Stakes)</option>
+            <option value="200000">200,000 (Epic)</option>
+            <option value="500000">500,000 (Unlimited War)</option>
           </select>
         </div>
         <div class="mp-form-group">
           <label class="setup-label">Universe Roster:</label>
           <select id="mp-universe-select" class="mp-select">
-            <option value="onepiece">🏴‍☠️ One Piece (530+ Characters)</option>
-            <option value="naruto">🍃 Naruto (560+ Characters)</option>
-            <option value="marvel">🦸 Marvel (100 Top Heroes & Villains)</option>
-            <option value="all">⚡ All Multiverse (1,100+ Characters)</option>
+            <option value="onepiece">🏴‍☠️ One Piece (100 Prime Legends)</option>
+            <option value="naruto">🍃 Naruto (100 Prime Legends - No Boruto)</option>
+            <option value="marvel">🦸 Marvel (100 Prime Heroes & Villains)</option>
+            <option value="all">⚡ All Multiverse (300 Total Master Roster)</option>
           </select>
         </div>
         <button class="btn-primary" id="mp-create-room-btn" type="button" style="margin-top: 1rem;">🚀 Create Online Room & Get Code</button>
@@ -485,8 +496,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="characters.js?v=4"></script>
-  <script src="wheel.js?v=4"></script>
-  <script src="app.js?v=4"></script>
+  <script src="characters.js?v=5"></script>
+  <script src="wheel.js?v=5"></script>
+  <script src="app.js?v=5"></script>
 </body>
 </html>

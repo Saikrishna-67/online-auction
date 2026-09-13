@@ -662,7 +662,14 @@ document.addEventListener('DOMContentLoaded', () => {
       ];
     }
     budgetSlider.value = startingBudget;
-    budgetDisplay.textContent = `${startingBudget.toLocaleString()} ฿/Ryo`;
+    const currency = currentUniverse === 'naruto' ? 'Ryo' : (currentUniverse === 'marvel' ? '$' : '฿');
+    budgetDisplay.textContent = `${startingBudget.toLocaleString()} ${currency}`;
+    
+    document.querySelectorAll('.btn-budget-preset').forEach(btn => {
+      const b = parseInt(btn.getAttribute('data-budget') || '0');
+      btn.classList.toggle('active', b === startingBudget);
+    });
+
     renderSetupPlayerInputs();
     setupModal.showModal();
   }
@@ -724,6 +731,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function applySetup(isFreshReset = false) {
+    const oldBudget = startingBudget;
     const newBudget = parseInt(budgetSlider.value || '75000');
     startingBudget = newBudget;
     const count = setupPlayersList.length;
@@ -743,6 +751,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (players[i]) {
         players[i].name = pName;
         players[i].colorClass = colorClass;
+        if (!players[i].characters || players[i].characters.length === 0) {
+          players[i].money = newBudget;
+        } else {
+          const spent = Math.max(0, (oldBudget - (players[i].money || 0)));
+          players[i].money = Math.max(0, newBudget - spent);
+        }
         updatedPlayers.push(players[i]);
       } else {
         updatedPlayers.push({
@@ -763,12 +777,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderPlayerDock();
     updateCounters();
+
+    if (isMultiplayer && currentRoomCode && db && isRoomHost) {
+      db.ref(`rooms/${currentRoomCode}`).update({
+        startingBudget: newBudget,
+        players: players
+      });
+    }
+
     setupModal.close();
     wheel.sound.playVictory();
   }
 
   function refreshActivePools() {
-    activePools.onepiece = masterRoster.filter(c => c.universe === 'onepiece');
+    activePools.onepiece = masterRoster.filter(c => c.universe === 'onepiece' || c.universe === 'one-piece');
     activePools.naruto = masterRoster.filter(c => c.universe === 'naruto');
     activePools.marvel = masterRoster.filter(c => c.universe === 'marvel');
     activePools.all = [...masterRoster];
@@ -824,19 +846,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateCounters() {
-    const opCount = masterRoster.filter(c => c.universe === 'onepiece').length;
+    const opCount = masterRoster.filter(c => c.universe === 'onepiece' || c.universe === 'one-piece').length;
     const nrCount = masterRoster.filter(c => c.universe === 'naruto').length;
     const mvCount = masterRoster.filter(c => c.universe === 'marvel').length;
     const totalCount = masterRoster.length;
 
-    badgeOpCount.textContent = `${activePools.onepiece.length}/${opCount}`;
-    badgeNrCount.textContent = `${activePools.naruto.length}/${nrCount}`;
-    if (badgeMvCount) badgeMvCount.textContent = `${activePools.marvel.length}/${mvCount}`;
-    badgeAllCount.textContent = `${activePools.all.length}/${totalCount}`;
-    btnTotalCount.textContent = `${totalCount} Characters`;
+    if (badgeOpCount) badgeOpCount.textContent = `${activePools.onepiece.length}`;
+    if (badgeNrCount) badgeNrCount.textContent = `${activePools.naruto.length}`;
+    if (badgeMvCount) badgeMvCount.textContent = `${activePools.marvel.length}`;
+    if (badgeAllCount) badgeAllCount.textContent = `${activePools.all.length}`;
+    if (btnTotalCount) btnTotalCount.textContent = `${totalCount} Characters`;
 
     const activeLen = (activePools[currentUniverse] || []).length;
-    remainingCountEl.textContent = activeLen;
+    if (remainingCountEl) remainingCountEl.textContent = activeLen;
   }
 
   // --- SCOREBOARD RENDERING ---
@@ -1708,6 +1730,26 @@ document.addEventListener('DOMContentLoaded', () => {
     wheel.sound.playVictory();
   }
 
+  function getSavedRoster() {
+    if (typeof loadCharacters === 'function') {
+      return loadCharacters();
+    }
+    return typeof DEFAULT_CHARACTERS !== 'undefined' ? [...DEFAULT_CHARACTERS] : [];
+  }
+
+  function saveRosterToStorage(chars) {
+    if (typeof saveCharacters === 'function') {
+      saveCharacters(chars);
+    }
+  }
+
+  function resetRosterToDefault() {
+    if (typeof resetCharactersToDefault === 'function') {
+      return resetCharactersToDefault();
+    }
+    return typeof DEFAULT_CHARACTERS !== 'undefined' ? [...DEFAULT_CHARACTERS] : [];
+  }
+
   // --- EVENT HANDLERS ---
 
   // Multiplayer Button & Modal Handlers
@@ -1964,7 +2006,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   budgetSlider.addEventListener('input', (e) => {
     const val = parseInt(e.target.value);
-    budgetDisplay.textContent = `${val.toLocaleString()} ฿/Ryo`;
+    const currency = currentUniverse === 'naruto' ? 'Ryo' : (currentUniverse === 'marvel' ? '$' : '฿');
+    budgetDisplay.textContent = `${val.toLocaleString()} ${currency}`;
+    document.querySelectorAll('.btn-budget-preset').forEach(btn => {
+      const b = parseInt(btn.getAttribute('data-budget') || '0');
+      btn.classList.toggle('active', b === val);
+    });
+  });
+
+  document.querySelectorAll('.btn-budget-preset').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const bVal = parseInt(btn.getAttribute('data-budget') || '75000');
+      budgetSlider.value = bVal;
+      const currency = currentUniverse === 'naruto' ? 'Ryo' : (currentUniverse === 'marvel' ? '$' : '฿');
+      budgetDisplay.textContent = `${bVal.toLocaleString()} ${currency}`;
+      document.querySelectorAll('.btn-budget-preset').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
   });
 
   pCountBtns.forEach(btn => {
