@@ -208,12 +208,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Multiplayer State
   let isMultiplayer = false;
   let currentRoomCode = null;
-  let localPlayerId = localStorage.getItem('anime_player_id');
+  let localPlayerId = sessionStorage.getItem('anime_player_id');
   if (!localPlayerId) {
     localPlayerId = 'p_' + Math.random().toString(36).substring(2, 9);
-    localStorage.setItem('anime_player_id', localPlayerId);
+    sessionStorage.setItem('anime_player_id', localPlayerId);
   }
-  let localPlayerName = localStorage.getItem('anime_player_name') || 'Player 1';
+  let localPlayerName = sessionStorage.getItem('anime_player_name') || 'Player ' + Math.floor(1 + Math.random() * 99);
   let isRoomHost = false;
   let isRemoteSpinning = false;
   let lastProcessedSpinId = null;
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const hostName = (mpHostName.value || '').trim() || 'Captain Luffy';
     localPlayerName = hostName;
-    localStorage.setItem('anime_player_name', hostName);
+    sessionStorage.setItem('anime_player_name', hostName);
 
     const budget = parseInt(mpBudgetSelect.value || '75000');
     const universe = mpUniverseSelect.value || 'onepiece';
@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const pName = (name || '').trim() || 'Shinobi ' + Math.floor(10 + Math.random() * 90);
     localPlayerName = pName;
-    localStorage.setItem('anime_player_name', pName);
+    sessionStorage.setItem('anime_player_name', pName);
 
     db.ref('rooms/' + cleanedCode).once('value').then(snapshot => {
       const roomData = snapshot.val();
