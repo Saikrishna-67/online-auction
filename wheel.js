@@ -138,6 +138,7 @@ class AnimeWheel {
     const radius = this.radius;
     const numSlices = this.items.length;
     const isNaruto = this.theme === 'naruto';
+    const isMarvel = this.theme === 'marvel';
 
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
@@ -161,10 +162,10 @@ class AnimeWheel {
     ctx.save();
     ctx.beginPath();
     ctx.arc(center, center, radius + 10, 0, 2 * Math.PI);
-    ctx.fillStyle = isNaruto ? '#1a0e05' : '#1e1b18';
+    ctx.fillStyle = isMarvel ? '#1a0505' : (isNaruto ? '#1a0e05' : '#1e1b18');
     ctx.fill();
     ctx.lineWidth = 7;
-    ctx.strokeStyle = isNaruto ? '#e85d04' : '#d4af37';
+    ctx.strokeStyle = isMarvel ? '#e23636' : (isNaruto ? '#e85d04' : '#d4af37');
     ctx.stroke();
 
     // Rivet Studs
@@ -176,9 +177,9 @@ class AnimeWheel {
 
       ctx.beginPath();
       ctx.arc(sx, sy, 3, 0, 2 * Math.PI);
-      ctx.fillStyle = isNaruto ? '#faa307' : '#f9d774';
+      ctx.fillStyle = isMarvel ? '#fca311' : (isNaruto ? '#faa307' : '#f9d774');
       ctx.fill();
-      ctx.strokeStyle = isNaruto ? '#6a040f' : '#8c6b16';
+      ctx.strokeStyle = isMarvel ? '#7f1d1d' : (isNaruto ? '#6a040f' : '#8c6b16');
       ctx.lineWidth = 1;
       ctx.stroke();
     }
@@ -201,9 +202,11 @@ class AnimeWheel {
         ctx.arc(center, center, radius, startAngle, endAngle);
         ctx.closePath();
 
-        const defaultPalette = isNaruto
-          ? ['#d00000', '#f77f00', '#2b2d42', '#38b000', '#3a0ca3', '#0077b6', '#e85d04']
-          : ['#c1121f', '#0077b6', '#2a9d8f', '#f4a261', '#6a4c93', '#2b2d42', '#d4af37'];
+        const defaultPalette = isMarvel
+          ? ['#e23636', '#fca311', '#0077b6', '#38b000', '#7b2cbf', '#111827', '#ffd166', '#d90429']
+          : (isNaruto
+            ? ['#d00000', '#f77f00', '#2b2d42', '#38b000', '#3a0ca3', '#0077b6', '#e85d04']
+            : ['#c1121f', '#0077b6', '#2a9d8f', '#f4a261', '#6a4c93', '#2b2d42', '#d4af37']);
         
         ctx.fillStyle = char.color || defaultPalette[(i / step) % defaultPalette.length];
         ctx.fill();
@@ -220,7 +223,9 @@ class AnimeWheel {
       ctx.beginPath();
       ctx.arc(center, center, radius * 0.72, 0, 2 * Math.PI);
       ctx.lineWidth = 2;
-      ctx.strokeStyle = isNaruto ? 'rgba(247, 127, 0, 0.4)' : 'rgba(212, 175, 55, 0.4)';
+      ctx.strokeStyle = isMarvel
+        ? 'rgba(252, 163, 17, 0.45)'
+        : (isNaruto ? 'rgba(247, 127, 0, 0.4)' : 'rgba(212, 175, 55, 0.4)');
       ctx.stroke();
       ctx.restore();
 
@@ -237,15 +242,17 @@ class AnimeWheel {
         ctx.arc(center, center, radius, startAngle, endAngle);
         ctx.closePath();
 
-        const defaultColors = isNaruto 
-          ? ['#d00000', '#f77f00', '#2b2d42', '#38b000', '#3a0ca3', '#0077b6']
-          : ['#c1121f', '#0077b6', '#2a9d8f', '#f4a261', '#6a4c93', '#2b2d42'];
+        const defaultColors = isMarvel
+          ? ['#e23636', '#fca311', '#0077b6', '#38b000', '#7b2cbf', '#111827', '#ffd166', '#d90429']
+          : (isNaruto 
+            ? ['#d00000', '#f77f00', '#2b2d42', '#38b000', '#3a0ca3', '#0077b6']
+            : ['#c1121f', '#0077b6', '#2a9d8f', '#f4a261', '#6a4c93', '#2b2d42']);
         
         ctx.fillStyle = character.color || defaultColors[i % defaultColors.length];
         ctx.fill();
 
         ctx.lineWidth = 1.5;
-        ctx.strokeStyle = isNaruto ? '#211306' : '#2b2318';
+        ctx.strokeStyle = isMarvel ? '#1a0505' : (isNaruto ? '#211306' : '#2b2318');
         ctx.stroke();
 
         // Text label
@@ -280,16 +287,20 @@ class AnimeWheel {
 
     ctx.beginPath();
     ctx.arc(center, center, 44, 0, 2 * Math.PI);
-    ctx.fillStyle = isNaruto ? '#1a0e05' : '#261b11';
+    ctx.fillStyle = isMarvel ? '#1a0505' : (isNaruto ? '#1a0e05' : '#261b11');
     ctx.fill();
     ctx.lineWidth = 4;
-    ctx.strokeStyle = isNaruto ? '#f77f00' : '#e5a93c';
+    ctx.strokeStyle = isMarvel ? '#fca311' : (isNaruto ? '#f77f00' : '#e5a93c');
     ctx.stroke();
 
     ctx.beginPath();
     ctx.arc(center, center, 35, 0, 2 * Math.PI);
     const grad = ctx.createRadialGradient(center - 4, center - 4, 2, center, center, 35);
-    if (isNaruto) {
+    if (isMarvel) {
+      grad.addColorStop(0, '#ffd166');
+      grad.addColorStop(0.7, '#e23636');
+      grad.addColorStop(1, '#590d22');
+    } else if (isNaruto) {
       grad.addColorStop(0, '#fca311');
       grad.addColorStop(0.7, '#d00000');
       grad.addColorStop(1, '#370617');
@@ -305,7 +316,7 @@ class AnimeWheel {
     ctx.font = '22px sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(isNaruto ? '🍃' : '☠️', center, center);
+    ctx.fillText(isMarvel ? '🦸' : (isNaruto ? '🍃' : '☠️'), center, center);
 
     ctx.restore();
   }

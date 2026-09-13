@@ -49,6 +49,13 @@ body.theme-naruto {
     repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 2px, transparent 2px, transparent 8px);
 }
 
+body.theme-marvel {
+  background-image: 
+    radial-gradient(circle at 50% 10%, rgba(226, 54, 54, 0.28) 0%, transparent 60%),
+    radial-gradient(circle at 80% 90%, rgba(252, 163, 17, 0.16) 0%, transparent 60%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 2px, transparent 2px, transparent 8px);
+}
+
 #confetti-canvas {
   position: fixed;
   top: 0;
@@ -104,6 +111,12 @@ body.theme-naruto .logo-badge {
   color: var(--naruto-orange);
 }
 
+body.theme-marvel .logo-badge {
+  background: rgba(226, 54, 54, 0.14);
+  border-color: rgba(252, 163, 17, 0.6);
+  color: #fca311;
+}
+
 .btn-header {
   background: rgba(15, 23, 42, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -142,6 +155,11 @@ h1 span.highlight {
 body.theme-naruto h1 span.highlight {
   color: var(--naruto-orange);
   text-shadow: 0 0 20px rgba(247, 127, 0, 0.7);
+}
+
+body.theme-marvel h1 span.highlight {
+  color: #e23636;
+  text-shadow: 0 0 20px rgba(226, 54, 54, 0.8), 0 0 35px rgba(252, 163, 17, 0.4);
 }
 
 /* Universe Mode Selector Tabs */
@@ -187,6 +205,13 @@ body.theme-naruto h1 span.highlight {
   border-color: #f97316;
   color: #fff;
   box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+}
+
+.universe-tab.active.mv-tab {
+  background: linear-gradient(135deg, #e23636, #7f1d1d);
+  border-color: #fca311;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(226, 54, 54, 0.7);
 }
 
 .universe-tab.active.all-tab {
@@ -501,6 +526,13 @@ body.theme-naruto .spin-btn {
   border-color: #ffd166;
   color: #fff;
   box-shadow: 0 10px 25px rgba(247, 127, 0, 0.45), 0 4px 0 #780000;
+}
+
+body.theme-marvel .spin-btn {
+  background: linear-gradient(135deg, #fca311 0%, #e23636 40%, #780000 100%);
+  border-color: #ffd166;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(226, 54, 54, 0.55), 0 4px 0 #4a0000;
 }
 
 .spin-btn:hover:not(:disabled) {

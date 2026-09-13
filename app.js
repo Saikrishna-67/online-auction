@@ -15,9 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const tabOp = document.getElementById('tab-onepiece');
   const tabNr = document.getElementById('tab-naruto');
+  const tabMv = document.getElementById('tab-marvel');
   const tabAll = document.getElementById('tab-all');
   const badgeOpCount = document.getElementById('badge-op-count');
   const badgeNrCount = document.getElementById('badge-nr-count');
+  const badgeMvCount = document.getElementById('badge-mv-count');
   const badgeAllCount = document.getElementById('badge-all-count');
   const btnTotalCount = document.getElementById('btn-total-count');
   const remainingCountEl = document.getElementById('remaining-count');
@@ -191,11 +193,12 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // --- GAME STATE ---
-  let masterRoster = getSavedRoster(); // 1,000+ characters loaded
-  let currentUniverse = 'onepiece'; // 'onepiece', 'naruto', 'all'
+  let masterRoster = getSavedRoster(); // 1,100+ characters loaded
+  let currentUniverse = 'onepiece'; // 'onepiece', 'naruto', 'marvel', 'all'
   let activePools = {
     onepiece: [],
     naruto: [],
+    marvel: [],
     all: []
   };
 
@@ -767,6 +770,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function refreshActivePools() {
     activePools.onepiece = masterRoster.filter(c => c.universe === 'onepiece');
     activePools.naruto = masterRoster.filter(c => c.universe === 'naruto');
+    activePools.marvel = masterRoster.filter(c => c.universe === 'marvel');
     activePools.all = [...masterRoster];
   }
 
@@ -781,21 +785,38 @@ document.addEventListener('DOMContentLoaded', () => {
   function setUniverse(universe) {
     currentUniverse = universe;
     const isNaruto = universe === 'naruto';
+    const isMarvel = universe === 'marvel';
 
-    body.className = isNaruto ? 'theme-naruto' : 'theme-onepiece';
+    if (isMarvel) {
+      body.className = 'theme-marvel';
+    } else if (isNaruto) {
+      body.className = 'theme-naruto';
+    } else {
+      body.className = 'theme-onepiece';
+    }
 
     tabOp.classList.toggle('active', universe === 'onepiece');
     tabNr.classList.toggle('active', universe === 'naruto');
+    if (tabMv) tabMv.classList.toggle('active', universe === 'marvel');
     tabAll.classList.toggle('active', universe === 'all');
 
-    spinText.textContent = isNaruto ? 'SPIN CHAKRA' : (universe === 'all' ? 'SPIN ANIME WHEEL' : 'SPIN THE HELM');
+    if (isMarvel) {
+      spinText.textContent = 'ASSEMBLE & SPIN';
+    } else if (isNaruto) {
+      spinText.textContent = 'SPIN CHAKRA';
+    } else if (universe === 'all') {
+      spinText.textContent = 'SPIN MULTIVERSE';
+    } else {
+      spinText.textContent = 'SPIN THE HELM';
+    }
 
-    wheel.setTheme(universe === 'naruto' ? 'naruto' : 'onepiece');
+    wheel.setTheme(universe);
     const pool = activePools[universe] || activePools.onepiece;
     wheel.setItems(pool);
 
     if (pool.length > 0) {
-      tickerName.textContent = `${pool[0].universe === 'naruto' ? '🍃' : '☠️'} ${pool[0].name}`;
+      const icon = pool[0].universe === 'naruto' ? '🍃' : (pool[0].universe === 'marvel' ? '🦸' : '☠️');
+      tickerName.textContent = `${icon} ${pool[0].name}`;
     }
 
     updateCounters();
@@ -805,10 +826,12 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateCounters() {
     const opCount = masterRoster.filter(c => c.universe === 'onepiece').length;
     const nrCount = masterRoster.filter(c => c.universe === 'naruto').length;
+    const mvCount = masterRoster.filter(c => c.universe === 'marvel').length;
     const totalCount = masterRoster.length;
 
     badgeOpCount.textContent = `${activePools.onepiece.length}/${opCount}`;
     badgeNrCount.textContent = `${activePools.naruto.length}/${nrCount}`;
+    if (badgeMvCount) badgeMvCount.textContent = `${activePools.marvel.length}/${mvCount}`;
     badgeAllCount.textContent = `${activePools.all.length}/${totalCount}`;
     btnTotalCount.textContent = `${totalCount} Characters`;
 
@@ -820,7 +843,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderPlayerDock() {
     playersDock.innerHTML = '';
-    const currency = currentUniverse === 'naruto' ? 'Ryo' : '฿';
+    const currency = currentUniverse === 'naruto' ? 'Ryo' : (currentUniverse === 'marvel' ? '$' : '฿');
 
     players.forEach((p, idx) => {
       const card = document.createElement('div');
@@ -831,7 +854,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (p.characters && p.characters.length > 0) {
         chipsHtml = p.characters.map((c, cIdx) => `
           <button class="squad-chip" data-player="${idx}" data-char-idx="${cIdx}" title="Click to view ${c.name} stats">
-            ${c.universe === 'naruto' ? '🍃' : '☠️'} ${c.name}
+            ${c.universe === 'naruto' ? '🍃' : (c.universe === 'marvel' ? '🦸' : '☠️')} ${c.name}
           </button>
         `).join('');
       } else {
@@ -1432,35 +1455,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function populateModalData(char) {
     const isNaruto = char.universe === 'naruto';
+    const isMarvel = char.universe === 'marvel';
 
-    posterCard.className = `wanted-poster-card ${isNaruto ? 'naruto-card' : ''}`;
-    cardHeaderTitle.textContent = isNaruto ? 'SHINOBI CLASSIFIED' : 'WANTED';
-    cardHeaderSubtext.textContent = isNaruto ? 'BINGO BOOK S-RANK' : 'DEAD OR ALIVE';
-    currencySymbol.textContent = isNaruto ? 'Ryo' : '฿';
+    posterCard.className = `wanted-poster-card ${isMarvel ? 'marvel-card' : (isNaruto ? 'naruto-card' : '')}`;
+    cardHeaderTitle.textContent = isMarvel ? 'AVENGERS DOSSIER' : (isNaruto ? 'SHINOBI CLASSIFIED' : 'WANTED');
+    cardHeaderSubtext.textContent = isMarvel ? 'S.H.I.E.L.D. EYES ONLY' : (isNaruto ? 'BINGO BOOK S-RANK' : 'DEAD OR ALIVE');
+    currencySymbol.textContent = isMarvel ? '$' : (isNaruto ? 'Ryo' : '฿');
 
-    charEpithet.textContent = char.epithet || 'Elite Fighter';
+    charEpithet.textContent = char.epithet || (isMarvel ? 'Super Hero / Villain' : 'Elite Fighter');
     charName.textContent = char.name;
     charBounty.textContent = char.bounty > 0 ? char.bounty.toLocaleString() : '100,000';
 
-    labelAffiliation.textContent = isNaruto ? 'Hidden Village' : 'Affiliation / Crew';
-    charAffiliation.textContent = char.affiliation || 'Grand Line / Shinobi World';
+    labelAffiliation.textContent = isMarvel ? 'Affiliation / Team' : (isNaruto ? 'Hidden Village' : 'Affiliation / Crew');
+    charAffiliation.textContent = char.affiliation || (isMarvel ? 'Avengers / Marvel Universe' : 'Grand Line / Shinobi World');
 
-    labelRole.textContent = isNaruto ? 'Ninja Rank / Title' : 'Role / Rank';
+    labelRole.textContent = isMarvel ? 'Role / Classification' : (isNaruto ? 'Ninja Rank / Title' : 'Role / Rank');
     charRole.textContent = char.role || 'Combatant';
 
-    labelPower.textContent = isNaruto ? 'Kekkei Genkai / Chakra' : 'Devil Fruit / Power';
+    labelPower.textContent = isMarvel ? 'Superpower / Mutation' : (isNaruto ? 'Kekkei Genkai / Chakra' : 'Devil Fruit / Power');
     charPower.textContent = char.power || 'None';
 
-    charOrigin.textContent = char.origin || (isNaruto ? 'Shinobi World' : 'Grand Line');
+    charOrigin.textContent = char.origin || (isMarvel ? 'Earth-616' : (isNaruto ? 'Shinobi World' : 'Grand Line'));
     charQuote.textContent = char.quote || '...';
 
     charTechniques.innerHTML = '';
-    labelTechniques.textContent = isNaruto ? 'Signature Jutsu' : 'Signature Techniques';
+    labelTechniques.textContent = isMarvel ? 'Signature Abilities' : (isNaruto ? 'Signature Jutsu' : 'Signature Techniques');
     (char.techniques || [char.power]).filter(Boolean).forEach(tech => {
       const span = document.createElement('span');
       span.className = 'haki-badge';
       span.textContent = tech;
-      if (isNaruto) {
+      if (isMarvel) {
+        span.style.background = '#e23636';
+        span.style.color = '#fff';
+      } else if (isNaruto) {
         span.style.background = '#e85d04';
         span.style.color = '#fff';
       }
@@ -1478,8 +1505,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function createFallbackAvatar(char) {
     const initials = char.name.split(' ').map(n => n[0]).slice(0, 2).join('');
-    const bg = char.color || (char.universe === 'naruto' ? '#f77f00' : '#851c14');
-    const emblem = char.universe === 'naruto' ? '🍃 NARUTO 🍃' : '☠️ ONE PIECE ☠️';
+    const bg = char.color || (char.universe === 'marvel' ? '#e23636' : (char.universe === 'naruto' ? '#f77f00' : '#851c14'));
+    const emblem = char.universe === 'marvel' ? '🦸 MARVEL 🦸' : (char.universe === 'naruto' ? '🍃 NARUTO 🍃' : '☠️ ONE PIECE ☠️');
     const svg = `
       <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
         <rect width="300" height="300" fill="${bg}"/>
@@ -1526,12 +1553,15 @@ document.addEventListener('DOMContentLoaded', () => {
     displayList.forEach((c, idx) => {
       const tr = document.createElement('tr');
       const isNaruto = c.universe === 'naruto';
-      const currency = isNaruto ? 'Ryo' : '฿';
+      const isMarvel = c.universe === 'marvel';
+      const currency = isMarvel ? '$' : (isNaruto ? 'Ryo' : '฿');
+      const badgeBg = isMarvel ? '#e23636' : (isNaruto ? '#ea580c' : '#b91c1c');
+      const badgeLabel = isMarvel ? '🦸 Marvel' : (isNaruto ? '🍃 Naruto' : '🏴‍☠️ One Piece');
 
       tr.innerHTML = `
         <td>${idx + 1}</td>
         <td><strong>${c.name}</strong><br><small style="color:#94a3b8;">${c.epithet || ''}</small></td>
-        <td><span class="haki-badge" style="background:${isNaruto ? '#ea580c' : '#b91c1c'}">${isNaruto ? '🍃 Naruto' : '🏴‍☠️ One Piece'}</span></td>
+        <td><span class="haki-badge" style="background:${badgeBg}">${badgeLabel}</span></td>
         <td>${c.affiliation || '-'}</td>
         <td>${(c.bounty || 0).toLocaleString()} ${currency}</td>
         <td><small>${c.power || '-'}</small></td>
@@ -1659,6 +1689,8 @@ document.addEventListener('DOMContentLoaded', () => {
       confirmMsg = '⚠️ Are you sure you want to DELETE ALL One Piece characters from the wheel?';
     } else if (filterUni === 'naruto') {
       confirmMsg = '⚠️ Are you sure you want to DELETE ALL Naruto characters from the wheel?';
+    } else if (filterUni === 'marvel') {
+      confirmMsg = '⚠️ Are you sure you want to DELETE ALL Marvel characters from the wheel?';
     }
 
     if (!confirm(confirmMsg)) return;
@@ -1806,6 +1838,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (wheel.isSpinning) return;
     setUniverse('naruto');
   });
+
+  if (tabMv) {
+    tabMv.addEventListener('click', () => {
+      if (wheel.isSpinning) return;
+      setUniverse('marvel');
+    });
+  }
 
   tabAll.addEventListener('click', () => {
     if (wheel.isSpinning) return;

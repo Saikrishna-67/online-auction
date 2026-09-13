@@ -22,13 +22,13 @@
   <!-- Header -->
   <header>
     <div class="top-bar">
-      <div class="logo-badge" id="universe-badge">☠️ Grand Line & Shinobi Roulette 🍃</div>
+      <div class="logo-badge" id="universe-badge">☠️ Grand Line, Shinobi & Marvel Multiverse 🦸</div>
       <div class="header-actions">
         <button id="open-multiplayer-btn" class="btn-header btn-mp-glow" title="Play Online with Friends from different phones">
           🌐 Online Room <span id="mp-header-status-dot" class="status-dot"></span>
         </button>
         <button id="open-roster-btn" class="btn-header" title="Edit, Add, or Delete Characters">
-          ✏️ Edit Roster (<span id="btn-total-count">1000+</span>)
+          ✏️ Edit Roster (<span id="btn-total-count">1100+</span>)
         </button>
         <button id="open-setup-btn" class="btn-header" title="Player & Budget Settings">
           ⚙️ Game Setup (<span id="btn-player-count">2P</span>)
@@ -52,9 +52,9 @@
       </div>
     </div>
 
-    <h1 id="game-title">ANIME <span class="highlight">DRAFT WHEEL</span></h1>
+    <h1 id="game-title">MULTIVERSE <span class="highlight">DRAFT WHEEL</span></h1>
 
-    <!-- Universe Selector: One Piece (500+), Naruto (500+), or Combined All (1,000+) -->
+    <!-- Universe Selector: One Piece (500+), Naruto (500+), Marvel (100), or Combined All (1,100+) -->
     <div class="universe-selector">
       <button class="universe-tab active op-tab" data-universe="onepiece" id="tab-onepiece">
         🏴‍☠️ One Piece <span class="badge-count" id="badge-op-count">500+</span>
@@ -62,8 +62,11 @@
       <button class="universe-tab nr-tab" data-universe="naruto" id="tab-naruto">
         🍃 Naruto <span class="badge-count" id="badge-nr-count">500+</span>
       </button>
+      <button class="universe-tab mv-tab" data-universe="marvel" id="tab-marvel">
+        🦸 Marvel <span class="badge-count" id="badge-mv-count">100</span>
+      </button>
       <button class="universe-tab all-tab" data-universe="all" id="tab-all">
-        ⚡ All Universes <span class="badge-count" id="badge-all-count">1000+</span>
+        ⚡ All Multiverse <span class="badge-count" id="badge-all-count">1100+</span>
       </button>
     </div>
   </header>
@@ -280,9 +283,10 @@
     <div class="roster-toolbar">
       <input type="text" id="roster-search-input" class="roster-search" placeholder="🔍 Search character by name, village, crew, or power...">
       <select id="roster-universe-filter" class="roster-filter-select">
-        <option value="all">⚡ All Universes (1,000+)</option>
+        <option value="all">⚡ All Multiverse (1,100+)</option>
         <option value="onepiece">🏴‍☠️ One Piece (530+)</option>
         <option value="naruto">🍃 Naruto (560+)</option>
+        <option value="marvel">🦸 Marvel (100 Top Characters)</option>
       </select>
       <button class="btn-sm btn-add" id="toggle-add-form-btn" type="button">➕ Add Character</button>
       <button class="btn-sm btn-del" id="delete-all-roster-btn" type="button">🗑️ Delete All Characters</button>
@@ -301,6 +305,7 @@
         <select id="form-char-universe">
           <option value="onepiece">🏴‍☠️ One Piece</option>
           <option value="naruto">🍃 Naruto</option>
+          <option value="marvel">🦸 Marvel</option>
         </select>
       </div>
       <div class="edit-input-group">
@@ -427,7 +432,8 @@
           <select id="mp-universe-select" class="mp-select">
             <option value="onepiece">🏴‍☠️ One Piece (530+ Characters)</option>
             <option value="naruto">🍃 Naruto (560+ Characters)</option>
-            <option value="all">⚡ All Universes (1,000+ Characters)</option>
+            <option value="marvel">🦸 Marvel (100 Top Heroes & Villains)</option>
+            <option value="all">⚡ All Multiverse (1,100+ Characters)</option>
           </select>
         </div>
         <button class="btn-primary" id="mp-create-room-btn" type="button" style="margin-top: 1rem;">🚀 Create Online Room & Get Code</button>
@@ -475,12 +481,12 @@
   </dialog>
 
   <footer>
-    <p>One Piece & Naruto character names, images, and concepts &copy; Eiichiro Oda, Masashi Kishimoto / Shueisha, Toei Animation, Studio Pierrot.</p>
+    <p>One Piece, Naruto & Marvel character names, images, and concepts &copy; Eiichiro Oda, Masashi Kishimoto, Marvel Entertainment / Disney, Shueisha, Toei Animation, Studio Pierrot.</p>
   </footer>
 
   <!-- Scripts -->
-  <script src="characters.js"></script>
-  <script src="wheel.js"></script>
-  <script src="app.js"></script>
+  <script src="characters.js?v=4"></script>
+  <script src="wheel.js?v=4"></script>
+  <script src="app.js?v=4"></script>
 </body>
 </html>
