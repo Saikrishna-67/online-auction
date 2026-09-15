@@ -186,6 +186,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const victoryLeaderboard = document.getElementById('victory-leaderboard');
   const closeVictoryBtn = document.getElementById('close-victory-btn');
   const restartVictoryBtn = document.getElementById('restart-victory-btn');
+  const victoryBattleBtn = document.getElementById('victory-battle-btn');
+
+  // Battle Arena Modal Elements
+  const openBattleBtn = document.getElementById('open-battle-btn');
+  const battleModal = document.getElementById('battle-modal');
+  const closeBattleBtn = document.getElementById('close-battle-btn');
+  const battleP1Select = document.getElementById('battle-p1-select');
+  const battleP2Select = document.getElementById('battle-p2-select');
+  const battleCardP1 = document.getElementById('battle-card-p1');
+  const battleCardP2 = document.getElementById('battle-card-p2');
+  const battleNameP1 = document.getElementById('battle-name-p1');
+  const battleNameP2 = document.getElementById('battle-name-p2');
+  const battlePowerP1 = document.getElementById('battle-power-p1');
+  const battlePowerP2 = document.getElementById('battle-power-p2');
+  const battleHpP1 = document.getElementById('battle-hp-p1');
+  const battleHpP2 = document.getElementById('battle-hp-p2');
+  const battleRosterP1 = document.getElementById('battle-roster-p1');
+  const battleRosterP2 = document.getElementById('battle-roster-p2');
+  const battleClashIcon = document.getElementById('battle-clash-icon');
+  const battleRoundBadge = document.getElementById('battle-round-badge');
+  const battleCombatFeed = document.getElementById('battle-combat-feed');
+  const startBattleSimBtn = document.getElementById('start-battle-sim-btn');
 
   // Player Color Palette (Supports 12+ unique colors)
   const PLAYER_COLOR_CLASSES = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10', 'p11', 'p12'];
@@ -761,6 +783,209 @@ document.addEventListener('DOMContentLoaded', () => {
     victoryModal.showModal();
     confetti.fire(currentUniverse);
     wheel.sound.playVictory();
+  }
+
+  // --- BATTLE ARENA SIMULATOR ---
+  let isBattleRunning = false;
+
+  function openBattleArena(defaultP1 = 0, defaultP2 = 1) {
+    if (!battleModal) return;
+
+    if (players.length < 2) {
+      alert("⚠️ You need at least 2 players in the game to battle!");
+      return;
+    }
+
+    // Populate player dropdown selectors
+    battleP1Select.innerHTML = '';
+    battleP2Select.innerHTML = '';
+
+    players.forEach((p, idx) => {
+      const charCount = (p.characters || []).length;
+      const opt1 = document.createElement('option');
+      opt1.value = idx;
+      opt1.textContent = `${p.name} (${charCount} fighters)`;
+      if (idx === defaultP1) opt1.selected = true;
+      battleP1Select.appendChild(opt1);
+
+      const opt2 = document.createElement('option');
+      opt2.value = idx;
+      opt2.textContent = `${p.name} (${charCount} fighters)`;
+      if (idx === defaultP2) opt2.selected = true;
+      battleP2Select.appendChild(opt2);
+    });
+
+    renderBattleStage();
+    battleCombatFeed.innerHTML = '<div class="battle-log-entry battle-log-intro">⚔️ Matchup ready! Click "SIMULATE SQUAD BATTLE" to start the clash of titans!</div>';
+    startBattleSimBtn.disabled = false;
+    startBattleSimBtn.textContent = '🔥 SIMULATE SQUAD BATTLE! 💥';
+
+    battleModal.showModal();
+  }
+
+  function renderBattleStage() {
+    const p1Idx = parseInt(battleP1Select.value || '0');
+    const p2Idx = parseInt(battleP2Select.value || '1');
+
+    const p1 = players[p1Idx] || players[0];
+    const p2 = players[p2Idx] || players[1] || players[0];
+
+    const p1Squad = p1.characters || [];
+    const p2Squad = p2.characters || [];
+
+    const p1Power = p1Squad.reduce((sum, c) => sum + (parseFloat(c.powerLevel) || 0), 0);
+    const p2Power = p2Squad.reduce((sum, c) => sum + (parseFloat(c.powerLevel) || 0), 0);
+
+    battleNameP1.textContent = p1.name;
+    battleNameP1.style.color = PLAYER_COLOR_HEX[p1.colorClass] || '#ffd166';
+    battlePowerP1.textContent = `⚡ ${p1Power.toFixed(1)} PWR`;
+
+    battleNameP2.textContent = p2.name;
+    battleNameP2.style.color = PLAYER_COLOR_HEX[p2.colorClass] || '#ffd166';
+    battlePowerP2.textContent = `⚡ ${p2Power.toFixed(1)} PWR`;
+
+    battleHpP1.style.width = '100%';
+    battleHpP1.classList.remove('danger');
+    battleHpP2.style.width = '100%';
+    battleHpP2.classList.remove('danger');
+
+    // Render roster thumbnails
+    battleRosterP1.innerHTML = p1Squad.length > 0
+      ? p1Squad.map(c => `<img src="${c.thumb || c.image || ''}" class="battle-fighter-chip" title="${c.name} (⚡${c.powerLevel || 0})" alt="${c.name}">`).join('')
+      : '<span style="font-size:0.75rem; color:#94a3b8; font-style:italic;">No fighters</span>';
+
+    battleRosterP2.innerHTML = p2Squad.length > 0
+      ? p2Squad.map(c => `<img src="${c.thumb || c.image || ''}" class="battle-fighter-chip" title="${c.name} (⚡${c.powerLevel || 0})" alt="${c.name}">`).join('')
+      : '<span style="font-size:0.75rem; color:#94a3b8; font-style:italic;">No fighters</span>';
+
+    battleRoundBadge.textContent = 'READY';
+    battleClashIcon.textContent = '⚔️';
+  }
+
+  async function runBattleSimulation() {
+    if (isBattleRunning) return;
+
+    const p1Idx = parseInt(battleP1Select.value || '0');
+    const p2Idx = parseInt(battleP2Select.value || '1');
+
+    if (p1Idx === p2Idx) {
+      alert("⚠️ Please choose two DIFFERENT players to battle!");
+      return;
+    }
+
+    const p1 = players[p1Idx];
+    const p2 = players[p2Idx];
+
+    const p1Squad = (p1.characters || []);
+    const p2Squad = (p2.characters || []);
+
+    if (p1Squad.length === 0 || p2Squad.length === 0) {
+      alert("⚠️ Both players must have at least 1 character in their squad to battle! Spin the wheel to draft characters first.");
+      return;
+    }
+
+    isBattleRunning = true;
+    startBattleSimBtn.disabled = true;
+    startBattleSimBtn.textContent = '⚔️ BATTLE IN PROGRESS... 🔥';
+    battleCombatFeed.innerHTML = '';
+
+    const p1BasePower = p1Squad.reduce((sum, c) => sum + (parseFloat(c.powerLevel) || 0), 0);
+    const p2BasePower = p2Squad.reduce((sum, c) => sum + (parseFloat(c.powerLevel) || 0), 0);
+
+    const maxHpP1 = Math.max(10000, Math.round(p1BasePower * 200));
+    const maxHpP2 = Math.max(10000, Math.round(p2BasePower * 200));
+
+    let hpP1 = maxHpP1;
+    let hpP2 = maxHpP2;
+
+    const appendLog = (html) => {
+      const entry = document.createElement('div');
+      entry.innerHTML = html;
+      battleCombatFeed.appendChild(entry);
+      battleCombatFeed.scrollTop = battleCombatFeed.scrollHeight;
+    };
+
+    appendLog(`<div class="battle-log-entry" style="text-align:center; color:#ffd166; font-weight:800;">🔔 BATTLE START: ${p1.name} (HP: ${maxHpP1.toLocaleString()}) VS ${p2.name} (HP: ${maxHpP2.toLocaleString()})!</div>`);
+
+    let turn = 0;
+    const maxRounds = 12;
+
+    while (hpP1 > 0 && hpP2 > 0 && turn < maxRounds) {
+      turn++;
+      await new Promise(r => setTimeout(r, 850));
+
+      battleRoundBadge.textContent = `ROUND ${turn}`;
+
+      const isP1Attacking = (turn % 2 !== 0);
+      const attackerPlayer = isP1Attacking ? p1 : p2;
+      const defenderPlayer = isP1Attacking ? p2 : p1;
+      const attackerSquad = isP1Attacking ? p1Squad : p2Squad;
+
+      // Pick a random fighter from attacker squad
+      const fighter = attackerSquad[Math.floor(Math.random() * attackerSquad.length)];
+      const fighterPower = parseFloat(fighter.powerLevel) || 50;
+
+      // Tech and damage calculation
+      const techList = fighter.techniques && fighter.techniques.length > 0 ? fighter.techniques : [fighter.power || 'Peak Power Surge'];
+      const chosenTech = techList[Math.floor(Math.random() * techList.length)];
+      const isCrit = Math.random() < 0.28;
+      const variance = 0.85 + Math.random() * 0.35;
+      const damage = Math.round(fighterPower * 25 * variance * (isCrit ? 1.8 : 1.0));
+
+      // Shake animation
+      const targetCard = isP1Attacking ? battleCardP2 : battleCardP1;
+      targetCard.classList.remove('shake');
+      void targetCard.offsetWidth;
+      targetCard.classList.add('shake');
+
+      battleClashIcon.textContent = isCrit ? '💥' : '⚡';
+      wheel.sound.playTick();
+
+      if (isP1Attacking) {
+        hpP2 = Math.max(0, hpP2 - damage);
+        const pct = Math.max(0, (hpP2 / maxHpP2) * 100);
+        battleHpP2.style.width = `${pct}%`;
+        if (pct < 30) battleHpP2.classList.add('danger');
+      } else {
+        hpP1 = Math.max(0, hpP1 - damage);
+        const pct = Math.max(0, (hpP1 / maxHpP1) * 100);
+        battleHpP1.style.width = `${pct}%`;
+        if (pct < 30) battleHpP1.classList.add('danger');
+      }
+
+      const quoteHtml = fighter.quote ? `<div class="battle-log-quote">"${fighter.quote}"</div>` : '';
+      const critTag = isCrit ? '<span style="color:#f59e0b; font-weight:900;">[CRITICAL HIT! 💥]</span> ' : '';
+
+      appendLog(`
+        <div class="battle-log-entry ${isCrit ? 'battle-log-crit' : 'battle-log-hit'}">
+          <strong>${attackerPlayer.name}'s ${fighter.name}</strong> unleashed <em>"${chosenTech}"</em>! ${critTag}Dealt <strong>-${damage.toLocaleString()} DMG</strong> to ${defenderPlayer.name}!
+          ${quoteHtml}
+        </div>
+      `);
+    }
+
+    await new Promise(r => setTimeout(r, 600));
+
+    // Determine Winner
+    const p1Won = hpP1 > hpP2;
+    const winner = p1Won ? p1 : p2;
+    const loser = p1Won ? p2 : p1;
+
+    battleRoundBadge.textContent = 'KO! 🏆';
+    battleClashIcon.textContent = '👑';
+
+    appendLog(`
+      <div class="battle-log-entry battle-log-winner">
+        👑 VICTORY! <strong>${winner.name}</strong>'s squad defeated ${loser.name}! Total supremacy on the battlefield! 🎉
+      </div>
+    `);
+
+    confetti.fire(currentUniverse);
+    wheel.sound.playVictory();
+
+    isBattleRunning = false;
+    startBattleSimBtn.disabled = false;
+    startBattleSimBtn.textContent = '⚔️ REMATCH / BATTLE AGAIN! 🔥';
   }
 
   // --- INITIALIZATION & REPLAY ---
@@ -2198,7 +2423,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Backdrop click dismiss for dialogs
-  [rosterModal, setupModal, multiplayerModal, modal, victoryModal].forEach(dlg => {
+  [rosterModal, setupModal, multiplayerModal, modal, victoryModal, battleModal].forEach(dlg => {
     if (!dlg) return;
     dlg.addEventListener('click', (e) => {
       const rect = dlg.getBoundingClientRect();
@@ -2217,6 +2442,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Battle Arena Actions
+  if (openBattleBtn) {
+    openBattleBtn.addEventListener('click', () => openBattleArena());
+  }
+
+  if (victoryBattleBtn) {
+    victoryBattleBtn.addEventListener('click', () => {
+      if (victoryModal) victoryModal.close();
+      openBattleArena();
+    });
+  }
+
+  if (closeBattleBtn) {
+    closeBattleBtn.addEventListener('click', () => {
+      if (battleModal) battleModal.close();
+    });
+  }
+
+  if (battleP1Select) {
+    battleP1Select.addEventListener('change', () => renderBattleStage());
+  }
+
+  if (battleP2Select) {
+    battleP2Select.addEventListener('change', () => renderBattleStage());
+  }
+
+  if (startBattleSimBtn) {
+    startBattleSimBtn.addEventListener('click', () => runBattleSimulation());
+  }
 
   // Setup Modal Handling
   openSetupBtn.addEventListener('click', () => {

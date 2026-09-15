@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=13">
   <!-- Firebase Realtime Sync SDK -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
@@ -24,6 +24,9 @@
     <div class="top-bar">
       <div class="logo-badge" id="universe-badge">☠️ Grand Line, Shinobi & Marvel Multiverse 🦸</div>
       <div class="header-actions">
+        <button id="open-battle-btn" class="btn-header btn-battle-glow" title="Simulate Squad vs Squad Battles">
+          ⚔️ Battle Arena
+        </button>
         <button id="open-multiplayer-btn" class="btn-header btn-mp-glow" title="Play Online with Friends from different phones">
           🌐 Online Room <span id="mp-header-status-dot" class="status-dot"></span>
         </button>
@@ -545,7 +548,78 @@
 
       <div class="setup-action-btns" style="margin-top: 1.4rem;">
         <button class="btn-secondary" id="close-victory-btn" type="button">Inspect Squads 👁️</button>
-        <button class="btn-primary" id="restart-victory-btn" type="button">New Draft Battle 🔄</button>
+        <button class="btn-primary btn-battle-glow" id="victory-battle-btn" type="button" style="margin-top:0;">⚔️ Battle Now! 🔥</button>
+        <button class="btn-secondary" id="restart-victory-btn" type="button">New Draft 🔄</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- BATTLE ARENA MODAL -->
+  <dialog id="battle-modal">
+    <div class="setup-content battle-modal-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <div class="setup-title" style="margin-bottom: 0; color: #ef4444; display: flex; align-items: center; gap: 0.5rem; font-size: 1.35rem;">
+          ⚔️ SQUAD BATTLE ARENA 🔥
+        </div>
+        <button class="btn-sm btn-del" id="close-battle-btn" style="margin-right: 0;">Close ✕</button>
+      </div>
+
+      <!-- Select Matchup (Player A vs Player B) -->
+      <div class="battle-setup-row">
+        <div class="battle-fighter-select">
+          <label class="setup-label" style="font-size: 0.78rem; margin-bottom: 0.2rem;">🔴 Challenger 1:</label>
+          <select id="battle-p1-select" class="setup-input battle-select"></select>
+        </div>
+        <div class="battle-vs-badge">VS</div>
+        <div class="battle-fighter-select">
+          <label class="setup-label" style="font-size: 0.78rem; margin-bottom: 0.2rem;">🔵 Challenger 2:</label>
+          <select id="battle-p2-select" class="setup-input battle-select"></select>
+        </div>
+      </div>
+
+      <!-- Battle Matchup Display (Fighter Card A vs Fighter Card B) -->
+      <div class="battle-stage" id="battle-stage">
+        <!-- Team 1 Card -->
+        <div class="battle-side-card" id="battle-card-p1">
+          <div class="battle-side-header">
+            <span class="battle-side-name" id="battle-name-p1">Player 1</span>
+            <span class="battle-side-power" id="battle-power-p1">⚡ 0 PWR</span>
+          </div>
+          <div class="battle-hp-bar-wrapper">
+            <div class="battle-hp-fill" id="battle-hp-p1" style="width: 100%;"></div>
+          </div>
+          <div class="battle-roster-preview" id="battle-roster-p1"></div>
+        </div>
+
+        <!-- Center VS Animation & Clash FX -->
+        <div class="battle-center-fx" id="battle-center-fx">
+          <div class="battle-clash-icon" id="battle-clash-icon">⚔️</div>
+          <div class="battle-round-badge" id="battle-round-badge">READY</div>
+        </div>
+
+        <!-- Team 2 Card -->
+        <div class="battle-side-card" id="battle-card-p2">
+          <div class="battle-side-header">
+            <span class="battle-side-name" id="battle-name-p2">Player 2</span>
+            <span class="battle-side-power" id="battle-power-p2">⚡ 0 PWR</span>
+          </div>
+          <div class="battle-hp-bar-wrapper">
+            <div class="battle-hp-fill" id="battle-hp-p2" style="width: 100%;"></div>
+          </div>
+          <div class="battle-roster-preview" id="battle-roster-p2"></div>
+        </div>
+      </div>
+
+      <!-- Live Combat Feed / Battle Log -->
+      <div class="battle-combat-feed" id="battle-combat-feed">
+        <div class="battle-log-entry battle-log-intro">⚔️ Choose your squad fighters and click 'SIMULATE BATTLE' to start!</div>
+      </div>
+
+      <!-- Controls -->
+      <div class="battle-controls">
+        <button class="btn-primary btn-battle-start" id="start-battle-sim-btn" type="button">
+          🔥 SIMULATE SQUAD BATTLE! 💥
+        </button>
       </div>
     </div>
   </dialog>
@@ -555,8 +629,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="characters.js?v=12"></script>
-  <script src="wheel.js?v=12"></script>
-  <script src="app.js?v=12"></script>
+  <script src="characters.js?v=13"></script>
+  <script src="wheel.js?v=13"></script>
+  <script src="app.js?v=13"></script>
 </body>
 </html>
