@@ -737,6 +737,44 @@ dialog#character-modal::backdrop {
   color: #851c14;
 }
 
+.power-level-card-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(239, 68, 68, 0.15));
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 0.8rem;
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.1);
+}
+
+.pl-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #d97706;
+  text-transform: uppercase;
+}
+
+.pl-number {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #b45309;
+  text-shadow: 0 0 4px rgba(245, 158, 11, 0.3);
+}
+
+.pl-tier {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0369a1;
+  background: rgba(3, 105, 161, 0.12);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
 .char-details-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

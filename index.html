@@ -151,6 +151,12 @@
           <span class="bounty-amount" id="char-bounty">3,000,000,000</span>
         </div>
 
+        <div class="power-level-card-banner">
+          <span class="pl-tag">⚡ POWER LEVEL</span>
+          <span class="pl-number" id="char-power-level">100.0 / 100</span>
+          <span class="pl-tier" id="char-power-tier">(Ancient Deity)</span>
+        </div>
+
         <div class="char-details-grid">
           <div class="detail-item">
             <span class="detail-label" id="label-affiliation">Affiliation</span>
@@ -407,66 +413,73 @@
     </div>
   </dialog>
 
-  <!-- ONLINE MULTIPLAYER LOBBY MODAL -->
+  <!-- ONLINE MULTIPLAYER MODAL -->
   <dialog id="multiplayer-modal">
-    <div class="multiplayer-modal-content">
+    <div class="setup-content mp-modal-content">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
-        <div class="multiplayer-title" style="margin-bottom: 0;">🌐 Online Multiplayer (Cross-Phone)</div>
+        <div class="setup-title" style="margin-bottom: 0;">🌐 Online Multiplayer Live Auction</div>
         <button class="btn-sm btn-del" id="close-multiplayer-btn" style="margin-right: 0;">Close ✕</button>
       </div>
 
-      <!-- Mode Selector Tabs (Create vs Join) -->
-      <div class="multiplayer-nav-tabs" id="mp-nav-tabs">
-        <button class="mp-tab-btn active" data-tab="create" type="button">👑 Create Room (Host)</button>
-        <button class="mp-tab-btn" data-tab="join" type="button">📱 Join Room (Friend)</button>
+      <!-- Tabs: Host Room / Join Room -->
+      <div class="bidding-nav-tabs" style="margin-bottom: 1.2rem;">
+        <button class="bid-tab-btn mp-tab-btn active" data-tab="create" type="button">👑 Host New Room</button>
+        <button class="bid-tab-btn mp-tab-btn" data-tab="join" type="button">📱 Join via Code / Link</button>
       </div>
 
-      <!-- TAB 1: CREATE ROOM -->
-      <div id="mp-create-tab" class="mp-tab-content">
-        <div class="mp-form-group">
-          <label class="setup-label">Your Host Name:</label>
-          <input type="text" id="mp-host-name" class="mp-input" placeholder="e.g. Captain Luffy" maxlength="20" value="Host Player">
+      <!-- CREATE ROOM TAB -->
+      <div id="mp-create-tab" class="mp-tab-panel active">
+        <div class="setup-row">
+          <label class="setup-label">Your Host Player Name:</label>
+          <input type="text" id="mp-host-name" class="setup-input" placeholder="e.g. Captain Luffy" value="Host Player">
         </div>
-        <div class="mp-form-group">
-          <label class="setup-label">Starting Budget per Player:</label>
-          <select id="mp-budget-select" class="mp-select">
-            <option value="25000">25,000</option>
-            <option value="50000">50,000</option>
-            <option value="75000" selected>75,000 (Standard)</option>
-            <option value="100000">100,000 (High Stakes)</option>
-            <option value="200000">200,000 (Epic)</option>
-            <option value="500000">500,000 (Unlimited War)</option>
+
+        <div class="setup-row">
+          <label class="setup-label">Starting Purse Budget:</label>
+          <select id="mp-budget-select" class="setup-input">
+            <option value="100000000">100,000,000 (100M - Quick)</option>
+            <option value="500000000">500,000,000 (500M - High Stakes)</option>
+            <option value="1000000000" selected>1,000,000,000 (1 Billion - Emperor Tier)</option>
+            <option value="5000000000">5,000,000,000 (5 Billion - God Tier)</option>
           </select>
         </div>
-        <div class="mp-form-group">
-          <label class="setup-label">Universe Roster:</label>
-          <select id="mp-universe-select" class="mp-select">
-            <option value="onepiece">🏴‍☠️ One Piece (100 Prime Legends)</option>
-            <option value="naruto">🍃 Naruto (100 Prime Legends - No Boruto)</option>
-            <option value="marvel">🦸 Marvel (100 Prime Heroes & Villains)</option>
-            <option value="all">⚡ All Multiverse (300 Total Master Roster)</option>
+
+        <div class="setup-row">
+          <label class="setup-label">Universe Pool:</label>
+          <select id="mp-universe-select" class="setup-input">
+            <option value="onepiece" selected>🏴‍☠️ One Piece (Top 50 Prime)</option>
+            <option value="naruto">🍃 Naruto (Top 50 Prime)</option>
+            <option value="marvel">🦸 Marvel (Top 50 Comics)</option>
+            <option value="all">🌟 All Universes (150 Legends)</option>
           </select>
         </div>
-        <button class="btn-primary" id="mp-create-room-btn" type="button" style="margin-top: 1rem;">🚀 Create Online Room & Get Code</button>
+
+        <button class="btn-primary" id="mp-create-room-btn" type="button" style="width:100%; margin-top: 1rem;">
+          ✨ Generate Room & Invite Players 📱
+        </button>
       </div>
 
-      <!-- TAB 2: JOIN ROOM -->
-      <div id="mp-join-tab" class="mp-tab-content" style="display: none;">
-        <div class="mp-form-group">
+      <!-- JOIN ROOM TAB -->
+      <div id="mp-join-tab" class="mp-tab-panel" style="display: none;">
+        <div class="setup-row">
           <label class="setup-label">Enter 4-Digit Room Code:</label>
-          <input type="text" id="mp-join-code-input" class="mp-input mp-code-input" placeholder="e.g. OP88" maxlength="8">
+          <input type="text" id="mp-join-code-input" class="setup-input" placeholder="e.g. OP-77" maxlength="8" style="text-transform: uppercase; font-weight: bold; letter-spacing: 2px;">
         </div>
-        <div class="mp-form-group">
+
+        <div class="setup-row">
           <label class="setup-label">Your Player Name:</label>
-          <input type="text" id="mp-join-name-input" class="mp-input" placeholder="e.g. Zoro" maxlength="20">
+          <input type="text" id="mp-join-name-input" class="setup-input" placeholder="e.g. Zoro" value="Player 2">
         </div>
-        <button class="btn-primary" id="mp-join-room-btn" type="button" style="margin-top: 1rem;">🎮 Join Online Room</button>
+
+        <button class="btn-primary" id="mp-join-room-btn" type="button" style="width:100%; margin-top: 1rem;">
+          🚀 Connect to Auction Room
+        </button>
       </div>
 
-      <!-- STAGE 3: LOBBY WAITING ROOM -->
-      <div id="mp-lobby-stage" class="mp-tab-content" style="display: none;">
-        <div class="lobby-room-code-card">
-          <div class="lobby-code-sub">SHARE THIS ROOM CODE WITH FRIENDS:</div>
+      <!-- LOBBY STAGE (When Room is Active) -->
+      <div id="mp-lobby-stage" class="mp-tab-panel" style="display: none;">
+        <div class="lobby-code-box">
+          <div class="lobby-code-title">ROOM CODE:</div>
           <div class="lobby-code-val" id="mp-lobby-code-display">OP-77</div>
           <button class="btn-sm btn-edit" id="mp-lobby-copy-btn" type="button">📋 Copy Room Invite Link</button>
         </div>
@@ -496,8 +509,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="characters.js?v=7"></script>
-  <script src="wheel.js?v=7"></script>
-  <script src="app.js?v=7"></script>
+  <script src="characters.js?v=9"></script>
+  <script src="wheel.js?v=9"></script>
+  <script src="app.js?v=9"></script>
 </body>
 </html>

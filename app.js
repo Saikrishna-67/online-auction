@@ -91,6 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const charName = document.getElementById('char-name');
   const currencySymbol = document.getElementById('currency-symbol');
   const charBounty = document.getElementById('char-bounty');
+  const charPowerLevel = document.getElementById('char-power-level');
+  const charPowerTier = document.getElementById('char-power-tier');
   const charAffiliation = document.getElementById('char-affiliation');
   const charRole = document.getElementById('char-role');
   const charPower = document.getElementById('char-power');
@@ -292,8 +294,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   );
 
-  // Initialize Game
-  initGame(2, 75000);
+  // Initialize Game (Restore previous session on reload or start fresh)
+  if (!restoreGameState()) {
+    initGame(2, 75000);
+  }
 
   // Check URL for Auto Room Invite (?room=CODE)
   const urlParams = new URLSearchParams(window.location.search);
@@ -608,6 +612,62 @@ document.addEventListener('DOMContentLoaded', () => {
     db.ref('rooms/' + currentRoomCode + '/status').set('playing');
   }
 
+  // --- SESSION PERSISTENCE & AUTO-RESUME ---
+  const GAME_SESSION_KEY = 'anime_draft_live_session_v2';
+
+  function saveGameState() {
+    if (isMultiplayer) return; // In multiplayer, Firebase database stores state
+    try {
+      const state = {
+        players: players,
+        numPlayers: numPlayers,
+        startingBudget: startingBudget,
+        currentPlayerIndex: currentPlayerIndex,
+        currentUniverse: currentUniverse,
+        activePools: activePools
+      };
+      localStorage.setItem(GAME_SESSION_KEY, JSON.stringify(state));
+    } catch (e) {
+      console.warn('Failed to save live game session:', e);
+    }
+  }
+
+  function restoreGameState() {
+    try {
+      const saved = localStorage.getItem(GAME_SESSION_KEY);
+      if (saved) {
+        const state = JSON.parse(saved);
+        if (state && Array.isArray(state.players) && state.players.length > 0) {
+          players = state.players;
+          numPlayers = state.numPlayers || state.players.length;
+          startingBudget = state.startingBudget || 75000;
+          currentPlayerIndex = state.currentPlayerIndex || 0;
+          currentUniverse = state.currentUniverse || 'onepiece';
+
+          if (state.activePools && (state.activePools.onepiece || state.activePools.naruto || state.activePools.marvel)) {
+            activePools = state.activePools;
+          } else {
+            refreshActivePools();
+          }
+
+          renderPlayerDock();
+          setUniverse(currentUniverse);
+          spinBtn.disabled = false;
+          return true;
+        }
+      }
+    } catch (e) {
+      console.warn('Failed to restore live game session:', e);
+    }
+    return false;
+  }
+
+  function clearSavedGameState() {
+    try {
+      localStorage.removeItem(GAME_SESSION_KEY);
+    } catch (e) {}
+  }
+
   // --- INITIALIZATION & REPLAY ---
 
   function initGame(count, budget, customNames = []) {
@@ -636,6 +696,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderPlayerDock();
     setUniverse(currentUniverse);
     spinBtn.disabled = false;
+    saveGameState();
   }
 
   function addNewPlayerQuick(customName = null) {
@@ -653,6 +714,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderPlayerDock();
     updateCounters();
     wheel.sound.playTick();
+    saveGameState();
   }
 
   function openSetupModal() {
@@ -675,38 +737,42 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.toggle('active', b === startingBudget);
     });
 
+    if (setupPlayerCountDisplay) {
+      setupPlayerCountDisplay.textContent = setupPlayersList.length;
+    }
+    if (setupPlayerTotalTag) {
+      setupPlayerTotalTag.textContent = setupPlayersList.length;
+    }
+
     renderSetupPlayerInputs();
     setupModal.showModal();
   }
 
   function renderSetupPlayerInputs() {
-    if (!playerNamesInputsContainer) return;
-    const count = setupPlayersList.length;
-    if (setupPlayerCountDisplay) setupPlayerCountDisplay.textContent = count;
-    if (setupPlayerTotalTag) setupPlayerTotalTag.textContent = count;
-
-    pCountBtns.forEach(btn => {
-      const c = parseInt(btn.getAttribute('data-count') || '0');
-      btn.classList.toggle('active', c === count);
-    });
-
     playerNamesInputsContainer.innerHTML = '';
-    setupPlayersList.forEach((p, i) => {
-      const colorClass = p.colorClass || `p${(i % 12) + 1}`;
-      const colorHex = PLAYER_COLOR_HEX[colorClass] || '#ffd166';
+    const currency = currentUniverse === 'naruto' ? 'Ryo' : (currentUniverse === 'marvel' ? '$' : '฿');
+
+    setupPlayersList.forEach((p, idx) => {
       const row = document.createElement('div');
       row.className = 'player-name-row';
       row.innerHTML = `
-        <span class="player-color-dot" style="background: ${colorHex};"></span>
-        <label class="player-name-label">P${i + 1}:</label>
-        <input type="text" class="player-name-input" data-idx="${i}" value="${p.name}" placeholder="Enter name...">
-        ${setupPlayersList.length > 1 ? `<button class="btn-remove-player" data-idx="${i}" type="button" title="Remove Player ${i + 1}">🗑️</button>` : ''}
+        <span class="player-color-dot" style="background: ${PLAYER_COLOR_HEX[p.colorClass] || '#ffd166'};"></span>
+        <input type="text" class="setup-name-input" data-idx="${idx}" value="${p.name}" placeholder="Player ${idx + 1}" maxlength="24">
+        ${setupPlayersList.length > 2 ? `<button class="btn-sm btn-del btn-remove-player" data-idx="${idx}" type="button" title="Remove player">✕</button>` : ''}
       `;
       playerNamesInputsContainer.appendChild(row);
     });
 
-    playerNamesInputsContainer.querySelectorAll('.player-name-input').forEach(inp => {
-      inp.addEventListener('input', (e) => {
+    if (setupPlayerCountDisplay) setupPlayerCountDisplay.textContent = setupPlayersList.length;
+    if (setupPlayerTotalTag) setupPlayerTotalTag.textContent = setupPlayersList.length;
+
+    pCountBtns.forEach(btn => {
+      const c = parseInt(btn.getAttribute('data-count') || '0');
+      btn.classList.toggle('active', c === setupPlayersList.length);
+    });
+
+    playerNamesInputsContainer.querySelectorAll('.setup-name-input').forEach(input => {
+      input.addEventListener('input', (e) => {
         const idx = parseInt(e.target.getAttribute('data-idx'));
         if (setupPlayersList[idx]) {
           setupPlayersList[idx].name = e.target.value;
@@ -717,7 +783,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playerNamesInputsContainer.querySelectorAll('.btn-remove-player').forEach(btn => {
       btn.addEventListener('click', () => {
         const idx = parseInt(btn.getAttribute('data-idx'));
-        if (setupPlayersList.length > 1) {
+        if (setupPlayersList.length > 2) {
           setupPlayersList.splice(idx, 1);
           renderSetupPlayerInputs();
         }
@@ -726,13 +792,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function addPlayerToSetup() {
-    const nextIdx = setupPlayersList.length;
-    const colorClass = `p${(nextIdx % 12) + 1}`;
+    if (setupPlayersList.length >= 12) {
+      alert('Maximum of 12 players supported in local draft.');
+      return;
+    }
+    const idx = setupPlayersList.length;
     setupPlayersList.push({
-      name: `Player ${nextIdx + 1}`,
-      colorClass: colorClass
+      name: `Player ${idx + 1}`,
+      colorClass: `p${(idx % 12) + 1}`
     });
     renderSetupPlayerInputs();
+    wheel.sound.playTick();
   }
 
   function applySetup(isFreshReset = false) {
@@ -742,6 +812,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const count = setupPlayersList.length;
 
     if (isFreshReset) {
+      clearSavedGameState();
       const names = setupPlayersList.map((p, i) => (p.name && p.name.trim()) || `Player ${i + 1}`);
       initGame(count, newBudget, names);
       setupModal.close();
@@ -782,6 +853,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderPlayerDock();
     updateCounters();
+    saveGameState();
 
     if (isMultiplayer && currentRoomCode && db && isRoomHost) {
       db.ref(`rooms/${currentRoomCode}`).update({
@@ -802,6 +874,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function resetGame() {
+    clearSavedGameState();
     const currentNames = players.map(p => p.name);
     initGame(numPlayers, startingBudget, currentNames);
     wheel.sound.playVictory();
@@ -848,6 +921,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCounters();
     renderPlayerDock();
+    saveGameState();
   }
 
   function updateCounters() {
@@ -1483,9 +1557,16 @@ document.addEventListener('DOMContentLoaded', () => {
     cardHeaderSubtext.textContent = isMarvel ? 'S.H.I.E.L.D. EYES ONLY' : (isNaruto ? 'BINGO BOOK S-RANK' : 'DEAD OR ALIVE');
     currencySymbol.textContent = isMarvel ? '$' : (isNaruto ? 'Ryo' : '฿');
 
-    charEpithet.textContent = char.epithet || (isMarvel ? 'Super Hero / Villain' : 'Elite Fighter');
+    charEpithet.textContent = char.title || char.epithet || (isMarvel ? 'Super Hero / Cosmic Legend' : (isNaruto ? 'Legendary Shinobi' : 'Grand Line Legend'));
     charName.textContent = char.name;
-    charBounty.textContent = char.bounty > 0 ? char.bounty.toLocaleString() : '100,000';
+    charBounty.textContent = char.bounty > 0 ? (typeof char.bounty === 'number' ? char.bounty.toLocaleString() : char.bounty) : (char.bounty || '100,000');
+
+    if (charPowerLevel) {
+      charPowerLevel.textContent = (char.powerLevel ? Number(char.powerLevel).toFixed(1) : '85.0') + ' / 100';
+    }
+    if (charPowerTier) {
+      charPowerTier.textContent = `(${char.powerTier || 'Master Combatant'})`;
+    }
 
     labelAffiliation.textContent = isMarvel ? 'Affiliation / Team' : (isNaruto ? 'Hidden Village' : 'Affiliation / Crew');
     charAffiliation.textContent = char.affiliation || (isMarvel ? 'Avengers / Marvel Universe' : 'Grand Line / Shinobi World');
@@ -1560,6 +1641,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (q) {
       filtered = filtered.filter(c => 
         c.name.toLowerCase().includes(q) ||
+        (c.title && c.title.toLowerCase().includes(q)) ||
         (c.affiliation && c.affiliation.toLowerCase().includes(q)) ||
         (c.power && c.power.toLowerCase().includes(q)) ||
         (c.epithet && c.epithet.toLowerCase().includes(q))
@@ -1578,13 +1660,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const currency = isMarvel ? '$' : (isNaruto ? 'Ryo' : '฿');
       const badgeBg = isMarvel ? '#e23636' : (isNaruto ? '#ea580c' : '#b91c1c');
       const badgeLabel = isMarvel ? '🦸 Marvel' : (isNaruto ? '🍃 Naruto' : '🏴‍☠️ One Piece');
+      const pl = c.powerLevel ? Number(c.powerLevel).toFixed(1) : '85.0';
 
       tr.innerHTML = `
         <td>${idx + 1}</td>
-        <td><strong>${c.name}</strong><br><small style="color:#94a3b8;">${c.epithet || ''}</small></td>
+        <td><strong>${c.name}</strong><br><small style="color:#94a3b8;">${c.title || c.epithet || ''}</small></td>
         <td><span class="haki-badge" style="background:${badgeBg}">${badgeLabel}</span></td>
+        <td><strong style="color:#ffd166; font-size:1.02rem;">⚡ ${pl}</strong><br><small style="color:#38bdf8;">${c.powerTier || 'Fighter'}</small></td>
         <td>${c.affiliation || '-'}</td>
-        <td>${(c.bounty || 0).toLocaleString()} ${currency}</td>
+        <td>${typeof c.bounty === 'number' ? (c.bounty || 0).toLocaleString() + ' ' + currency : (c.bounty || '-')}</td>
         <td><small>${c.power || '-'}</small></td>
         <td>
           <button class="btn-sm btn-edit" data-id="${c.id}" type="button">✏️ Edit</button>
