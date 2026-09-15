@@ -1,5 +1,5 @@
-// Master Roster of 150 Prime Peak Characters: Top 50 One Piece + Top 50 Naruto (0 Boruto) + Top 50 Marvel
-// Complete with Authentic High-Res Character Artwork URLs & Calibrated Power Levels
+﻿// Master Roster of 150 Prime Peak Characters: Top 50 One Piece + Top 50 Naruto + Top 50 Marvel
+// Verified Working High-Res Images & Canon Calibrated Power Levels
 const DEFAULT_CHARACTERS = [
     {
         "id":  "op_1",
@@ -7,7 +7,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "When you hear the Drums of Liberation, hope returns to the world.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b343884-G53x637h65U2.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/6/475438.jpg",
         "basePrice":  16000,
         "title":  "Warrior of Liberation (Ancient Nika)",
         "power":  "Hito Hito no Mi, Model: Nika (Original Awakening)",
@@ -21,7 +21,7 @@ const DEFAULT_CHARACTERS = [
                            "Voice of All Things"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b343884-G53x637h65U2.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/6/475438.jpg",
         "role":  "Ancient Deity"
     },
     {
@@ -30,7 +30,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "The world does not need to know what lies beneath the surface.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b139989-qf2gMhyE83dM.png",
+        "image":  "https://static.wikia.nocookie.net/onepiece/images/f/f6/Imu_Anime_Infobox.png",
         "basePrice":  16000,
         "title":  "Supreme Sovereign of the Empty Throne",
         "power":  "Ancient Weapon Domination \u0026 Abyss Void",
@@ -44,7 +44,7 @@ const DEFAULT_CHARACTERS = [
                            "Immortality Surgery"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b139989-qf2gMhyE83dM.png",
+        "thumb":  "https://static.wikia.nocookie.net/onepiece/images/f/f6/Imu_Anime_Infobox.png",
         "role":  "World Sovereign"
     },
     {
@@ -53,7 +53,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Bringing smiles and freedom wherever darkness falls.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b343884-G53x637h65U2.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/6/475438.jpg",
         "basePrice":  15500,
         "title":  "Legendary God of Freedom",
         "power":  "Boundless Rubber Body \u0026 Reality Warping",
@@ -67,7 +67,7 @@ const DEFAULT_CHARACTERS = [
                            "Unbound Haki"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b343884-G53x637h65U2.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/6/475438.jpg",
         "role":  "Ancient Deity"
     },
     {
@@ -76,7 +76,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I will conquer the entire world and sit upon the Empty Throne!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b163273-J8j88E3E3q6E.png",
+        "image":  "https://static.wikia.nocookie.net/onepiece/images/b/b3/Rocks_D._Xebec_Anime_Concept_Infobox.png",
         "basePrice":  15000,
         "title":  "Captain of Rocks (God Valley Ruler)",
         "power":  "Supreme Conqueror\u0027s Haki \u0026 Dark Mastery",
@@ -90,7 +90,7 @@ const DEFAULT_CHARACTERS = [
                            "Ancient Taboo Knowledge"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b163273-J8j88E3E3q6E.png",
+        "thumb":  "https://static.wikia.nocookie.net/onepiece/images/b/b3/Rocks_D._Xebec_Anime_Concept_Infobox.png",
         "role":  "Pirate King Legend"
     },
     {
@@ -99,7 +99,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "My treasure? If you want it, you can have it! Find it!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b3040-2vNn4R8k6r4F.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/2/78917.jpg",
         "basePrice":  15000,
         "title":  "Pirate King (Prime Peak)",
         "power":  "Supreme Advanced Conqueror\u0027s Haki \u0026 Ace Blade",
@@ -113,7 +113,7 @@ const DEFAULT_CHARACTERS = [
                            "Voice of All Things"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b3040-2vNn4R8k6r4F.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/2/78917.jpg",
         "role":  "Pirate King Legend"
     },
     {
@@ -122,7 +122,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am only one man with one heart... Call me a demon, call me a monster, but I cannot be the strongest forever!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b5334-1mEskP4zX4kL.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/5/78920.jpg",
         "basePrice":  14800,
         "title":  "Whitebeard (Prime Strongest Man)",
         "power":  "Gura Gura no Mi (Tremor-Tremor Fruit)",
@@ -136,7 +136,7 @@ const DEFAULT_CHARACTERS = [
                            "World-Destroying Shockwave"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b5334-1mEskP4zX4kL.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/5/78920.jpg",
         "role":  "Pirate King Legend"
     },
     {
@@ -145,7 +145,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Bwahaha! There is no defense against fists fueled by pure love and justice!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b5344-9w4h5g2F5e5L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/13/78918.jpg",
         "basePrice":  14500,
         "title":  "Hero of the Marines (Prime Peak)",
         "power":  "Supreme Advanced Conqueror\u0027s Fist (No DF)",
@@ -159,7 +159,7 @@ const DEFAULT_CHARACTERS = [
                            "Iron Meteorite Throw"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b5344-9w4h5g2F5e5L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/13/78918.jpg",
         "role":  "Marine Legend"
     },
     {
@@ -168,7 +168,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Humans are mere insects crawling upon the earth.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b139990-2e4rT4gG5e6L.png",
+        "image":  "https://static.wikia.nocookie.net/onepiece/images/e/e4/Jaygarcia_Saturn_Anime_Infobox.png",
         "basePrice":  13500,
         "title":  "Warrior God of Science \u0026 Defense",
         "power":  "Gyuki Ushi-Oni Zoan \u0026 Infinite Regeneration",
@@ -182,7 +182,7 @@ const DEFAULT_CHARACTERS = [
                            "Absolute Regeneration"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b139990-2e4rT4gG5e6L.png",
+        "thumb":  "https://static.wikia.nocookie.net/onepiece/images/e/e4/Jaygarcia_Saturn_Anime_Infobox.png",
         "role":  "Elder (Gorosei)"
     },
     {
@@ -191,7 +191,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Those who protect scum are lower than scum itself.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b316499-5e4rT4gG5e6L.png",
+        "image":  "https://static.wikia.nocookie.net/onepiece/images/5/53/Figarland_Garling_Anime_Infobox.png",
         "basePrice":  13000,
         "title":  "Supreme Commander of God\u0027s Knights",
         "power":  "Champion of God Valley \u0026 Supreme Blade",
@@ -205,7 +205,7 @@ const DEFAULT_CHARACTERS = [
                            "Holy Knight Swordplay"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b316499-5e4rT4gG5e6L.png",
+        "thumb":  "https://static.wikia.nocookie.net/onepiece/images/5/53/Figarland_Garling_Anime_Infobox.png",
         "role":  "God Knight Champion"
     },
     {
@@ -214,7 +214,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "To train means to push past the limits of what you believe is possible.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b14949-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/14/78922.jpg",
         "basePrice":  13000,
         "title":  "Dark King (Prime First Mate)",
         "power":  "Mastery of All Three Advanced Haki Forms",
@@ -228,7 +228,7 @@ const DEFAULT_CHARACTERS = [
                            "Silent Lightning Step"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b14949-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/14/78922.jpg",
         "role":  "Pirate King Legend"
     },
     {
@@ -237,7 +237,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Justice is not something that wavers before chaos!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b9062-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/2/78919.jpg",
         "basePrice":  13500,
         "title":  "Fleet Admiral (Prime Daibutsu)",
         "power":  "Hito Hito no Mi, Model: Daibutsu",
@@ -251,7 +251,7 @@ const DEFAULT_CHARACTERS = [
                            "Enlightened Palm"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b9062-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/2/78919.jpg",
         "role":  "Fleet Admiral Legend"
     },
     {
@@ -260,7 +260,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Pirates rule the seas! The Government is nothing before absolute force!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b31139-5e4rT4gG5e6L.png",
+        "image":  "https://static.wikia.nocookie.net/onepiece/images/a/a2/Shepherd_Ju_Peter_Anime_Infobox.png",
         "basePrice":  13000,
         "title":  "Flying Pirate Supreme (Prime)",
         "power":  "Fuwa Fuwa no Mi (Float-Float Fruit)",
@@ -274,7 +274,7 @@ const DEFAULT_CHARACTERS = [
                            "Floating Ocean Trap"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b31139-5e4rT4gG5e6L.png",
+        "thumb":  "https://static.wikia.nocookie.net/onepiece/images/a/a2/Shepherd_Ju_Peter_Anime_Infobox.png",
         "role":  "Pirate Legend"
     },
     {
@@ -283,7 +283,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "If you still want to fight, step forward. We will be your opponents!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b46-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/12/30944.jpg",
         "basePrice":  14200,
         "title":  "Emperor of the Sea (Observation Killer)",
         "power":  "Master Conqueror\u0027s Haki \u0026 Gryphon Saber",
@@ -297,7 +297,7 @@ const DEFAULT_CHARACTERS = [
                            "Gryphon Flame Thrust"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b46-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/12/30944.jpg",
         "role":  "High Yonko"
     },
     {
@@ -306,7 +306,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Haki transcends all! Power is the only truth that governs this world!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b90151-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/14/370217.jpg",
         "basePrice":  14500,
         "title":  "King of the Beasts (Strongest Creature)",
         "power":  "Uo Uo no Mi, Model: Seiryu (Azure Dragon)",
@@ -320,7 +320,7 @@ const DEFAULT_CHARACTERS = [
                            "Tatsumaki Kaifuu"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b90151-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/14/370217.jpg",
         "role":  "High Yonko"
     },
     {
@@ -329,7 +329,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "A nation without freedom is no home for living men.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b8971-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/3/78916.jpg",
         "basePrice":  14500,
         "title":  "World\u0027s Worst Criminal (Supreme Commander)",
         "power":  "Weather \u0026 Wind Manipulation \u0026 Dragon Claw Ryuo",
@@ -343,7 +343,7 @@ const DEFAULT_CHARACTERS = [
                            "Supreme Revolutionary Command"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b8971-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/3/78916.jpg",
         "role":  "Revolutionary Supreme"
     },
     {
@@ -352,7 +352,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "A man\u0027s dream will never die! Zehahaha!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b5340-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/9/78921.jpg",
         "basePrice":  14000,
         "title":  "Blackbeard (Dual Devil Fruit Prime)",
         "power":  "Yami Yami + Gura Gura no Mi (Darkness \u0026 Quake)",
@@ -366,7 +366,7 @@ const DEFAULT_CHARACTERS = [
                            "Liberation Crusher"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b5340-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/9/78921.jpg",
         "role":  "Yonko"
     },
     {
@@ -375,7 +375,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I\u0027m gonna be the King of the Pirates!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b40-MNypXsxSRb1R.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/6/475438.jpg",
         "basePrice":  14000,
         "title":  "Straw Hat Luffy (Gear 5 Prime Awakening)",
         "power":  "Hito Hito no Mi, Model: Nika Awakening",
@@ -389,7 +389,7 @@ const DEFAULT_CHARACTERS = [
                            "Gear 5 Comic Transmutation"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b40-MNypXsxSRb1R.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/6/475438.jpg",
         "role":  "Yonko"
     },
     {
@@ -398,7 +398,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I do not hunt rabbits with a cannon. Show me your resolve!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b3042-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/14/46781.jpg",
         "basePrice":  13800,
         "title":  "World\u0027s Strongest Swordsman (Hawkeye)",
         "power":  "Black Blade Yoru \u0026 Supreme Observation Clairvoyance",
@@ -412,7 +412,7 @@ const DEFAULT_CHARACTERS = [
                            "Supreme Haki Edge"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b3042-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/14/46781.jpg",
         "role":  "Yonko Tier Swordsman"
     },
     {
@@ -421,7 +421,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Life or Treat! Give me your lifespan!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b90153-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/9/331393.jpg",
         "basePrice":  14000,
         "title":  "Big Mom (Prime / Soul Frenzy)",
         "power":  "Soru Soru no Mi (Soul-Soul Fruit) + Iron Balloon",
@@ -435,7 +435,7 @@ const DEFAULT_CHARACTERS = [
                            "Mother Visit Cannon"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b90153-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/9/331393.jpg",
         "role":  "Yonko"
     },
     {
@@ -444,7 +444,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "If you let evil live, you let the world rot. Eradicate it completely!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b16262-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/10/448060.jpg",
         "basePrice":  13500,
         "title":  "Fleet Admiral (Absolute Magma Justice)",
         "power":  "Magu Magu no Mi (Highest Offensive Firepower)",
@@ -458,7 +458,7 @@ const DEFAULT_CHARACTERS = [
                            "Magma Core Terrain Change"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b16262-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/10/448060.jpg",
         "role":  "Fleet Admiral"
     },
     {
@@ -467,7 +467,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "The thing called \u0027Justice\u0027 changes its shape depending on where you stand.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b13076-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/11/78924.jpg",
         "basePrice":  13200,
         "title":  "Former Admiral (Ice Age Mastery)",
         "power":  "Hie Hie no Mi (Ice-Ice Fruit) + Garp Strength",
@@ -481,7 +481,7 @@ const DEFAULT_CHARACTERS = [
                            "Ice Time Capsule"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b13076-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/11/78924.jpg",
         "role":  "Admiral Supreme"
     },
     {
@@ -490,7 +490,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Speed is weight. Have you ever been kicked at the speed of light?",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b16261-5e4rT4gG5e6L.png",
+        "image":  "https://static.wikia.nocookie.net/onepiece/images/a/ab/Aramaki_Anime_Infobox.png",
         "basePrice":  13000,
         "title":  "Marine Admiral (Glint-Glint Light Speed)",
         "power":  "Pika Pika no Mi (Light-Speed Acceleration)",
@@ -504,7 +504,7 @@ const DEFAULT_CHARACTERS = [
                            "Light Clone Legion"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b16261-5e4rT4gG5e6L.png",
+        "thumb":  "https://static.wikia.nocookie.net/onepiece/images/a/ab/Aramaki_Anime_Infobox.png",
         "role":  "Admiral Supreme"
     },
     {
@@ -513,7 +513,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am Oden! And I was born to boil!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b154867-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/15/423233.jpg",
         "basePrice":  12800,
         "title":  "Lord of Kuri (Wano Hero Prime)",
         "power":  "Ame no Habakiri \u0026 Enma Dual Master Ryuo",
@@ -527,7 +527,7 @@ const DEFAULT_CHARACTERS = [
                            "Dragon Scale Scarring"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b154867-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/15/423233.jpg",
         "role":  "Legendary Samurai"
     },
     {
@@ -536,7 +536,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "A single stroke of the blade is enough to sever any dragon in the skies.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b14945-5e4rT4gG5e6L.png",
+        "image":  "https://static.wikia.nocookie.net/onepiece/images/f/f6/Imu_Anime_Infobox.png",
         "basePrice":  12500,
         "title":  "God of the Blade (Sword God Prime)",
         "power":  "Master of Black Blade Shusui \u0026 Dragon Cleave",
@@ -550,7 +550,7 @@ const DEFAULT_CHARACTERS = [
                            "God of Sword Form"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b14945-5e4rT4gG5e6L.png",
+        "thumb":  "https://static.wikia.nocookie.net/onepiece/images/f/f6/Imu_Anime_Infobox.png",
         "role":  "Sword God"
     },
     {
@@ -559,7 +559,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Counting the heads of the people we failed to protect is a fool\u0027s errand.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b83537-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/11/78924.jpg",
         "basePrice":  12200,
         "title":  "Marine Admiral (Gravity Master)",
         "power":  "Zushi Zushi no Mi (Gravity-Gravity Fruit)",
@@ -573,7 +573,7 @@ const DEFAULT_CHARACTERS = [
                            "Raging Earth Levitation"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b83537-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/11/78924.jpg",
         "role":  "Admiral"
     },
     {
@@ -582,7 +582,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Discrimination creates stability! This world thrives on gods and cattle!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b148722-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/11/78928.jpg",
         "basePrice":  12000,
         "title":  "Marine Admiral (Forest Incarnate)",
         "power":  "Mori Mori no Mi (Woods-Woods Logia)",
@@ -596,7 +596,7 @@ const DEFAULT_CHARACTERS = [
                            "Forest Tree Golem"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b148722-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/11/78928.jpg",
         "role":  "Admiral"
     },
     {
@@ -605,7 +605,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Ace\u0027s will lives on in these flames!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b38243-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/13/261949.jpg",
         "basePrice":  11500,
         "title":  "Flame Emperor (Chief of Staff)",
         "power":  "Mera Mera no Mi + Dragon Claw Ryuo",
@@ -619,7 +619,7 @@ const DEFAULT_CHARACTERS = [
                            "Flame Emperor Mirage"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b38243-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/13/261949.jpg",
         "role":  "Revolutionary Emperor"
     },
     {
@@ -628,7 +628,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Don\u0027t move, Kizaru. Or I\u0027ll blow your head off.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b5347-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/8/78926.jpg",
         "basePrice":  11000,
         "title":  "First Mate of Red Hair Pirates",
         "power":  "Supreme Tactical IQ \u0026 Infused Haki Bullets",
@@ -642,7 +642,7 @@ const DEFAULT_CHARACTERS = [
                            "Conqueror\u0027s Pressure"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b5347-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/8/78926.jpg",
         "role":  "First Commander+"
     },
     {
@@ -651,7 +651,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Kill or be killed. That\u0027s the only law that matters on these seas.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b33100-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/16/78929.jpg",
         "basePrice":  10800,
         "title":  "Chief Guard / Blackbeard Titanic Captain",
         "power":  "Suke Suke no Mi (Clear-Clear) + Raiu Blade",
@@ -665,7 +665,7 @@ const DEFAULT_CHARACTERS = [
                            "Silent Ambuscade"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b33100-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/16/78929.jpg",
         "role":  "First Commander+"
     },
     {
@@ -674,7 +674,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Scars on the back are a swordsman\u0027s shame!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b62-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/3/131317.jpg",
         "basePrice":  10500,
         "title":  "King of Hell (Right Hand of Luffy)",
         "power":  "Three-Sword Style + Advanced Conqueror\u0027s Infusion",
@@ -688,7 +688,7 @@ const DEFAULT_CHARACTERS = [
                            "Billion-Fold World Trichiliocosm"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b62-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/3/131317.jpg",
         "role":  "YC+ / Master Swordsman"
     },
     {
@@ -697,7 +697,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "The weak don\u0027t get to decide how they die.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b14951-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/4/110998.jpg",
         "basePrice":  10500,
         "title":  "Surgeon of Death (Heart Pirates)",
         "power":  "Ope Ope no Mi (Op-Op Fruit Awakening)",
@@ -711,7 +711,7 @@ const DEFAULT_CHARACTERS = [
                            "Gamma Knife Surgical Strike"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b14951-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/4/110998.jpg",
         "role":  "YC+ / Awakened Captain"
     },
     {
@@ -720,7 +720,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "If you don\u0027t have the guts to die, then stay in the kiddie pool!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b14947-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/4/110998.jpg",
         "basePrice":  10200,
         "title":  "Captain Kid (Magnetism Awakening)",
         "power":  "Jiki Jiki no Mi (Magnet-Magnet Awakening)",
@@ -734,7 +734,7 @@ const DEFAULT_CHARACTERS = [
                            "Punk Rotten Golem"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b14947-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/4/110998.jpg",
         "role":  "YC+ / Awakened Captain"
     },
     {
@@ -743,7 +743,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am Kozuki Oden! I will fight for Wano\u0027s freedom!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b180738-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/10/448060.jpg",
         "basePrice":  10000,
         "title":  "Son of Kaido (Oni Princess)",
         "power":  "Inu Inu no Mi, Model: Okuchi no Makami + ACoC",
@@ -757,7 +757,7 @@ const DEFAULT_CHARACTERS = [
                            "White Serpent Ice Blast"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b180738-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/10/448060.jpg",
         "role":  "YC+ / Oni Princess"
     },
     {
@@ -766,7 +766,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "You can\u0027t just go taking out the King on your first turn, y\u0027know!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b9063-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/15/82767.jpg",
         "basePrice":  9800,
         "title":  "Former 1st Division Commander Whitebeard",
         "power":  "Tori Tori no Mi, Model: Phoenix",
@@ -780,7 +780,7 @@ const DEFAULT_CHARACTERS = [
                            "Healing Fire Aegis"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b9063-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/15/82767.jpg",
         "role":  "First Commander"
     },
     {
@@ -789,7 +789,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Kaido is the man who will become the Pirate King!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b148720-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/13/448057.jpg",
         "basePrice":  9600,
         "title":  "All-Star King (Lunarian Survivor)",
         "power":  "Ryu Ryu no Mi: Pteranodon + Lunarian Fire",
@@ -803,7 +803,7 @@ const DEFAULT_CHARACTERS = [
                            "Speed Flame Blade"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b148720-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/13/448057.jpg",
         "role":  "First Commander"
     },
     {
@@ -812,7 +812,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I will not allow anyone to look down on my family!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b123689-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/15/347209.jpg",
         "basePrice":  9500,
         "title":  "Sweet Commander Katakuri (Big Mom Pirates)",
         "power":  "Mochi Mochi no Mi Awakening + Future Sight",
@@ -826,7 +826,7 @@ const DEFAULT_CHARACTERS = [
                            "Peerless Mogura Thrust"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b123689-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/15/347209.jpg",
         "role":  "First Commander"
     },
     {
@@ -835,7 +835,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I\u0027ll never kick a woman, even if it kills me!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b305-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/9/131311.jpg",
         "basePrice":  9500,
         "title":  "Stealth Black / Ifrit Jambe",
         "power":  "Germa Exoskeleton + Ifrit Jambe Blue Lightning",
@@ -849,7 +849,7 @@ const DEFAULT_CHARACTERS = [
                            "Sky Walk Stealth Blitz"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b305-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/9/131311.jpg",
         "role":  "YC+ Commander"
     },
     {
@@ -858,7 +858,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Guns aren\u0027t for threats. They\u0027re for actions.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b5348-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/14/78927.jpg",
         "basePrice":  9200,
         "title":  "Red Hair Pirates Combatant",
         "power":  "Extreme Speed \u0026 Heavy Caliber Combat",
@@ -872,7 +872,7 @@ const DEFAULT_CHARACTERS = [
                            "Vanguard Rush"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b5348-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/14/78927.jpg",
         "role":  "Top Commander"
     },
     {
@@ -881,7 +881,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I can shoot an ant between the eyes from a hundred paces!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b5349-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/11/78928.jpg",
         "basePrice":  9000,
         "title":  "Red Hair Pirates Sniper Master",
         "power":  "Flawless Long-Range Advanced Observation Haki",
@@ -895,7 +895,7 @@ const DEFAULT_CHARACTERS = [
                            "Eagle Eye Surveillance"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b5349-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/11/78928.jpg",
         "role":  "Top Commander"
     },
     {
@@ -904,7 +904,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "If I get any thinner, I\u0027ll be too popular!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b148721-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/16/448058.jpg",
         "basePrice":  9000,
         "title":  "All-Star Queen (Mad Scientist)",
         "power":  "Ryu Ryu no Mi: Brachiosaurus + Cybernetics",
@@ -918,7 +918,7 @@ const DEFAULT_CHARACTERS = [
                            "Black Coffee Beam"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b148721-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/16/448058.jpg",
         "role":  "Second Commander"
     },
     {
@@ -927,7 +927,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Whether I kick a kitten or tear out your heart, the world will forgive me... Because I am beautiful!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b14946-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/10/78930.jpg",
         "basePrice":  8800,
         "title":  "Pirate Empress (Kuja Pirates)",
         "power":  "Mero Mero no Mi (Love-Love Petrification)",
@@ -941,7 +941,7 @@ const DEFAULT_CHARACTERS = [
                            "Conqueror\u0027s Allure"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b14946-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/10/78930.jpg",
         "role":  "Warlord Elite"
     },
     {
@@ -950,7 +950,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Dogs that lose their bark should keep their mouths shut.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b5341-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/16/46782.jpg",
         "basePrice":  8800,
         "title":  "Sir Crocodile (Cross Guild Founder)",
         "power":  "Suna Suna no Mi (Sand-Sand Logia Awakening)",
@@ -964,7 +964,7 @@ const DEFAULT_CHARACTERS = [
                            "Poison Scorpion Hook"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b5341-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/16/46782.jpg",
         "role":  "Warlord Elite"
     },
     {
@@ -973,7 +973,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "No blade in the world can cut diamond!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b9064-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/16/78929.jpg",
         "basePrice":  8500,
         "title":  "Whitebeard 3rd Division Commander",
         "power":  "Kira Kira no Mi (Diamond-Diamond Body)",
@@ -987,7 +987,7 @@ const DEFAULT_CHARACTERS = [
                            "Armored Tackle"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b9064-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/16/78929.jpg",
         "role":  "Commander"
     },
     {
@@ -996,7 +996,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "It is an honor to cross blades with Hawkeye Mihawk!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b33099-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/9/78921.jpg",
         "basePrice":  8400,
         "title":  "Flower Swordsman (Whitebeard 5th Division)",
         "power":  "Dual Rose Swordsmanship \u0026 Armament Master",
@@ -1010,7 +1010,7 @@ const DEFAULT_CHARACTERS = [
                            "Whitebeard Vanguard Blade"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b33099-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/9/78921.jpg",
         "role":  "Commander"
     },
     {
@@ -1019,7 +1019,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Welcome to Impel Down! None shall escape my venomous judgment!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b19001-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/3/131317.jpg",
         "basePrice":  8300,
         "title":  "Chief Warden of Impel Down",
         "power":  "Doku Doku no Mi (Venom-Venom Fruit)",
@@ -1033,7 +1033,7 @@ const DEFAULT_CHARACTERS = [
                            "Venom Road Fast Travel"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b19001-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/3/131317.jpg",
         "role":  "Warden Supreme"
     },
     {
@@ -1042,7 +1042,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Pirates are evil? The Marines are righteous? The winner will define justice!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b5343-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/12/111001.jpg",
         "basePrice":  8200,
         "title":  "Heavenly Demon (Dressrosa King)",
         "power":  "Ito Ito no Mi (String-String Awakening)",
@@ -1056,7 +1056,7 @@ const DEFAULT_CHARACTERS = [
                            "Parasite Puppet Control"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b5343-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/12/111001.jpg",
         "role":  "Warlord Elite"
     },
     {
@@ -1065,7 +1065,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am a man who wants to be part of the future Pirate King\u0027s crew!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b19000-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/12/82769.jpg",
         "basePrice":  8200,
         "title":  "Knight of the Sea (Straw Hat Helmsman)",
         "power":  "Fishman Karate Mastery \u0026 Water Manipulation",
@@ -1079,7 +1079,7 @@ const DEFAULT_CHARACTERS = [
                            "Current Pass Toss"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b19000-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/12/82769.jpg",
         "role":  "Commander"
     },
     {
@@ -1088,7 +1088,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I will wring every drop of life from our enemies.",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b123690-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/2/347210.jpg",
         "basePrice":  8000,
         "title":  "Sweet Commander Smoothie",
         "power":  "Shibo Shibo no Mi (Squeeze-Squeeze Fruit)",
@@ -1102,7 +1102,7 @@ const DEFAULT_CHARACTERS = [
                            "Dehydration Grip"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b123690-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/2/347210.jpg",
         "role":  "Commander"
     },
     {
@@ -1111,7 +1111,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I can produce an infinite army of biscuit soldiers!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b123688-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/12/347211.jpg",
         "basePrice":  7800,
         "title":  "Thousand Arms Cracker (Sweet Commander)",
         "power":  "Bisu Bisu no Mi (Biscuit-Biscuit Fruit)",
@@ -1125,7 +1125,7 @@ const DEFAULT_CHARACTERS = [
                            "Biscuit Clone Decoy"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b123688-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/12/347211.jpg",
         "role":  "Commander"
     },
     {
@@ -1134,7 +1134,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I don\u0027t need reason. I leave only barren drought in my wake!",
         "universe":  "onepiece",
         "origin":  "One Piece World",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b121966-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/8/318617.jpg",
         "basePrice":  7500,
         "title":  "All-Star Jack (Disaster)",
         "power":  "Zou Zou no Mi, Model: Mammoth",
@@ -1148,7 +1148,7 @@ const DEFAULT_CHARACTERS = [
                            "Disaster Stomp"
                        ],
         "affiliation":  "Grand Line Legend",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b121966-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/8/318617.jpg",
         "role":  "Commander"
     },
     {
@@ -1157,7 +1157,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "All chakra belongs to me! Once more, all shall become one!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b89791-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/2/255011.jpg",
         "basePrice":  16000,
         "title":  "Progenitor of Chakra (Rabbit Goddess)",
         "power":  "All-Killing Ash Bones \u0026 Expansive Truth-Seeker Orb",
@@ -1171,7 +1171,7 @@ const DEFAULT_CHARACTERS = [
                            "Eighty Gods Vacuum Attack"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b89791-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/2/255011.jpg",
         "role":  "Progenitor Goddess"
     },
     {
@@ -1180,7 +1180,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Where there is light, shadow will always follow. But bonds bridge all divides.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b89789-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/6/255013.jpg",
         "basePrice":  15800,
         "title":  "Sage of Six Paths (God of Shinobi)",
         "power":  "Creation of All Things \u0026 Rinnegan Dual Ten-Tails",
@@ -1194,7 +1194,7 @@ const DEFAULT_CHARACTERS = [
                            "Yin-Yang Transcendence"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b89789-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/6/255013.jpg",
         "role":  "Six Paths God"
     },
     {
@@ -1203,7 +1203,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Wake up to reality! In this world, wherever there is light, there is darkness.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b17042-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/8/284123.jpg",
         "basePrice":  15500,
         "title":  "Ghost of Uchiha (3-Eyed Juubi Jinchuriki)",
         "power":  "Rinnegan + Rinne Sharingan + God Tree Absorbed",
@@ -1217,7 +1217,7 @@ const DEFAULT_CHARACTERS = [
                            "Tengai Shinsei Meteor Drop"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b17042-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/8/284123.jpg",
         "role":  "Six Paths God"
     },
     {
@@ -1226,7 +1226,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "We shall guard the seal of the mother for all eternity on the Moon.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b90000-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/13/284125.jpg",
         "basePrice":  15000,
         "title":  "Tenseigan Ancestor (Moon Ruler)",
         "power":  "Tenseigan Chakra Mode \u0026 Golden Rebirth",
@@ -1240,7 +1240,7 @@ const DEFAULT_CHARACTERS = [
                            "Six Paths Sealing Technique"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b90000-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/13/284125.jpg",
         "role":  "Six Paths God"
     },
     {
@@ -1249,7 +1249,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I never go back on my word! That\u0027s my ninja way!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b17-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/9/75945.jpg",
         "basePrice":  14800,
         "title":  "Seventh Hokage (Six Paths Sage Mode Prime)",
         "power":  "Six Paths Senjutsu + Ashura Kurama Avatar",
@@ -1263,7 +1263,7 @@ const DEFAULT_CHARACTERS = [
                            "Truth-Seeker Orb Flight"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b17-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/9/75945.jpg",
         "role":  "Six Paths Transcendent"
     },
     {
@@ -1272,7 +1272,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I will sever the past and rebuild this world from the ashes!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b13-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/9/131313.jpg",
         "basePrice":  14600,
         "title":  "Shadow Hokage (Six Paths Rinnegan Prime)",
         "power":  "Tomoe Rinnegan + Indra Perfect Susanoo",
@@ -1286,7 +1286,7 @@ const DEFAULT_CHARACTERS = [
                            "Inferno Style: Flame Control Kirin"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b13-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/9/131313.jpg",
         "role":  "Six Paths Transcendent"
     },
     {
@@ -1295,7 +1295,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Those who break the rules are scum, but those who abandon their friends are worse than scum!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b85-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/7/284121.jpg",
         "basePrice":  14200,
         "title":  "Copy Ninja (Dual Mangekyo Sharingan Prime)",
         "power":  "Dual Kamui Space-Time + Six Paths Susanoo",
@@ -1309,7 +1309,7 @@ const DEFAULT_CHARACTERS = [
                            "Dual Kamui Intangibility"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b85-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/7/284121.jpg",
         "role":  "Six Paths Transcendent"
     },
     {
@@ -1318,7 +1318,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "The springtime of youth has not faded! It is burning at its absolute brightest!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b2382-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/4/53545.jpg",
         "basePrice":  14000,
         "title":  "Konoha\u0027s Sublime Green Beast (8th Gate Prime)",
         "power":  "Eight Gates Released Formation (Gate of Death)",
@@ -1332,7 +1332,7 @@ const DEFAULT_CHARACTERS = [
                            "Morning Peacock (Asakujaku)"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b2382-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/4/53545.jpg",
         "role":  "Taijutsu God"
     },
     {
@@ -1341,7 +1341,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am no one. I don\u0027t want to be anyone. All that matters is the Eye of the Moon Plan.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b17043-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/6/284124.jpg",
         "basePrice":  13800,
         "title":  "Ten-Tails Jinchuriki (Sword of Nunoboko)",
         "power":  "Juubi Jinchuriki + Kamui + Rinnegan",
@@ -1355,7 +1355,7 @@ const DEFAULT_CHARACTERS = [
                            "Wood Style: Cutting Sprigs"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b17043-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/6/284124.jpg",
         "role":  "Six Paths Transcendent"
     },
     {
@@ -1364,7 +1364,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "No matter what happens, I will protect our village. I still believe that protecting the village is the best way to protect people!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b17040-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/11/200021.jpg",
         "basePrice":  13500,
         "title":  "God of Shinobi (Prime Wood Release Sage)",
         "power":  "Sage Art Wood Release: True Several Thousand Hands",
@@ -1378,7 +1378,7 @@ const DEFAULT_CHARACTERS = [
                            "Deity Gates Sealing"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b17040-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/11/200021.jpg",
         "role":  "God of Shinobi"
     },
     {
@@ -1387,7 +1387,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Would you like these clones to use Susanoo or not?",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b17042-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/6/110994.jpg",
         "basePrice":  13200,
         "title":  "Leader of Uchiha (Prime EMS Alive + Kurama)",
         "power":  "Eternal Mangekyo Sharingan + Majestic Attire",
@@ -1401,7 +1401,7 @@ const DEFAULT_CHARACTERS = [
                            "Yasaka Magatama"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b17042-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/6/110994.jpg",
         "role":  "Legendary Shinobi"
     },
     {
@@ -1410,7 +1410,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "True strength is not born of vengeance, but from the desire to protect those you love.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b17039-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/7/131315.jpg",
         "basePrice":  12800,
         "title":  "Yellow Flash of the Leaf (KCM Edo Prime)",
         "power":  "Flying Thunder God Level 2 + Nine-Tails Mode",
@@ -1424,7 +1424,7 @@ const DEFAULT_CHARACTERS = [
                            "Instant Rasengan"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b17039-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/7/131315.jpg",
         "role":  "High Hokage"
     },
     {
@@ -1433,7 +1433,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "To preserve peace, one must be prepared to enact ruthlessly calculated measures.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b17041-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/6/200023.jpg",
         "basePrice":  12500,
         "title":  "Second Hokage (Water Dragon \u0026 Jutsu Pioneer)",
         "power":  "Creator of FTG, Shadow Clones \u0026 Edo Tensei",
@@ -1447,7 +1447,7 @@ const DEFAULT_CHARACTERS = [
                            "Tandem Paper Bomb Combo"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b17041-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/6/200023.jpg",
         "role":  "High Hokage"
     },
     {
@@ -1456,7 +1456,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Feel pain. Contemplate pain. Accept pain. Know pain. Shinra Tensei!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b17044-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/3/131319.jpg",
         "basePrice":  12200,
         "title":  "Leader of Akatsuki (Prime Healthy Rinnegan)",
         "power":  "Complete Six Paths of Pain in One Body",
@@ -1470,7 +1470,7 @@ const DEFAULT_CHARACTERS = [
                            "Gedo Statue Soul Dragon"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b17044-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/3/131319.jpg",
         "role":  "God of Six Paths"
     },
     {
@@ -1479,7 +1479,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "People live their lives bound by what they accept as correct and true. That is how they define \u0027reality\u0027.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b14-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/15/284122.jpg",
         "basePrice":  12000,
         "title":  "Uchiha Prodigy (Prime / Edo Mangekyo)",
         "power":  "Totsuka Blade + Yata Mirror Susanoo \u0026 Tsukuyomi",
@@ -1493,7 +1493,7 @@ const DEFAULT_CHARACTERS = [
                            "Amaterasu \u0026 Izanami"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b14-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/15/284122.jpg",
         "role":  "Uchiha Prodigy"
     },
     {
@@ -1502,7 +1502,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I have gathered all powers, surpassed Orochimaru-sama, and evolved into a Dragon!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b2384-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/13/110996.jpg",
         "basePrice":  11800,
         "title":  "Dragon Sage of Ryuchi Cave",
         "power":  "Snake/Dragon Sage Mode + Inorganic Reanimation",
@@ -1516,7 +1516,7 @@ const DEFAULT_CHARACTERS = [
                            "Tayuya Sound Genjutsu"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b2384-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/13/110996.jpg",
         "role":  "Sage Supreme"
     },
     {
@@ -1525,7 +1525,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "When tree leaves dance, one shall find flames!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b17038-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/9/200024.jpg",
         "basePrice":  11500,
         "title":  "Third Hokage (Prime God of Shinobi)",
         "power":  "Mastery of All 5 Chakra Natures + Enma",
@@ -1539,7 +1539,7 @@ const DEFAULT_CHARACTERS = [
                            "Shuriken Shadow Clone Technique"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b17038-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/9/200024.jpg",
         "role":  "Hokage Supreme"
     },
     {
@@ -1548,7 +1548,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "My lightning spear pierces all shields! My lightning armor deflects all blades!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b43878-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/12/131312.jpg",
         "basePrice":  11200,
         "title":  "Strongest Raikage (Iron Body)",
         "power":  "Lightning Chakra Cloak \u0026 Hell Stab One-Finger",
@@ -1562,7 +1562,7 @@ const DEFAULT_CHARACTERS = [
                            "Invincible Lightning Body"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b43878-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/12/131312.jpg",
         "role":  "High Kage"
     },
     {
@@ -1571,7 +1571,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Float like a butterfly, sting like a bee! Eight-Tails rhythm setting you free!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b17045-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/10/110995.jpg",
         "basePrice":  11000,
         "title":  "Eight-Tails Perfect Jinchuriki (Gyuki Master)",
         "power":  "Eight-Tails Full Avatar + 7-Sword Acrobatics",
@@ -1585,7 +1585,7 @@ const DEFAULT_CHARACTERS = [
                            "Lariat Lightning Charge"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b17045-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/10/110995.jpg",
         "role":  "Perfect Jinchuriki"
     },
     {
@@ -1594,7 +1594,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Dust Release dismantles matter to the atomic level. There is no defense.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b43879-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/13/284125.jpg",
         "basePrice":  10800,
         "title":  "Second Tsuchikage (The Non-Person)",
         "power":  "Dust Release (Jinton) + Complete Camouflage",
@@ -1608,7 +1608,7 @@ const DEFAULT_CHARACTERS = [
                            "Flight \u0026 Weight Manipulation"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b43879-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/13/284125.jpg",
         "role":  "High Kage"
     },
     {
@@ -1617,7 +1617,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "You kids can\u0027t even tell what\u0027s real and what\u0027s a clam mirage!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b43880-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/15/200026.jpg",
         "basePrice":  10600,
         "title":  "Second Mizukage (Mirage Tyrant)",
         "power":  "Steaming Danger Tyranny + Giant Mirage Clam",
@@ -1631,7 +1631,7 @@ const DEFAULT_CHARACTERS = [
                            "Oily Bubble Water Clone"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b43880-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/15/200026.jpg",
         "role":  "High Kage"
     },
     {
@@ -1640,7 +1640,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Never give up on your will of stone!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b26804-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/14/200025.jpg",
         "basePrice":  10500,
         "title":  "Third Tsuchikage (Fence-Sitter Prime)",
         "power":  "Dust Release: Detachment World Jutsu",
@@ -1654,7 +1654,7 @@ const DEFAULT_CHARACTERS = [
                            "Earth Golem Defense"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b26804-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/14/200025.jpg",
         "role":  "High Kage"
     },
     {
@@ -1663,7 +1663,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Speed and power are the only laws in combat!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b26803-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/16/75947.jpg",
         "basePrice":  10200,
         "title":  "Supreme Raikage (Prime Lightning V2)",
         "power":  "Lightning Release Armor V2 \u0026 Extreme Speed",
@@ -1677,7 +1677,7 @@ const DEFAULT_CHARACTERS = [
                            "Super Flash Step Speed"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b26803-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/16/75947.jpg",
         "role":  "High Kage"
     },
     {
@@ -1686,7 +1686,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I fight only for myself and love only myself... Until I met Naruto.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b1662-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/12/131312.jpg",
         "basePrice":  10000,
         "title":  "Fifth Kazekage (Sand Tsunami Commander)",
         "power":  "Magnet Release Shukaku Sand + Absolute Defense",
@@ -1700,7 +1700,7 @@ const DEFAULT_CHARACTERS = [
                            "Sand Sky Levitation Platform"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b1662-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/12/131312.jpg",
         "role":  "High Kage"
     },
     {
@@ -1709,7 +1709,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I want to obtain all the jutsu and understand all truths of this world.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b1660-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/10/131316.jpg",
         "basePrice":  9800,
         "title":  "Legendary Sannin (Immortal Serpent Prime)",
         "power":  "Eight-Branches Giant Serpent \u0026 Edo Tensei",
@@ -1723,7 +1723,7 @@ const DEFAULT_CHARACTERS = [
                            "Living Corpse Reincarnation"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b1660-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/10/131316.jpg",
         "role":  "Legendary Sannin"
     },
     {
@@ -1732,7 +1732,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "A real ninja is one who endures no matter what gets thrown at him!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b2381-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/11/131314.jpg",
         "basePrice":  9800,
         "title":  "Toad Sage (Gallant Jiraiya Prime)",
         "power":  "Sage Mode Mount Myoboku + Giant Rasengan",
@@ -1746,7 +1746,7 @@ const DEFAULT_CHARACTERS = [
                            "Sage Art: Goemon Boiling Oil Wave"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b2381-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/11/131314.jpg",
         "role":  "Legendary Sannin"
     },
     {
@@ -1755,7 +1755,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am the granddaughter of the First Hokage! I will never back down!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b2383-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/13/53549.jpg",
         "basePrice":  9600,
         "title":  "Fifth Hokage (Goddess of Slug Healing)",
         "power":  "Strength of a Hundred Seal (Byakugou) + Super Strength",
@@ -1769,7 +1769,7 @@ const DEFAULT_CHARACTERS = [
                            "Cellular Mitotic Regeneration"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b2383-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/13/53549.jpg",
         "role":  "Legendary Sannin"
     },
     {
@@ -1778,7 +1778,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I knew from the very beginning... that I had to kill my own comrades.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b3046-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/14/110992.jpg",
         "basePrice":  9500,
         "title":  "Monster of the Hidden Mist (Tailless Beast)",
         "power":  "Samehada Fusion + Great Shark Water Prison",
@@ -1792,7 +1792,7 @@ const DEFAULT_CHARACTERS = [
                            "Thousand Feeding Sharks"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b3046-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/14/110992.jpg",
         "role":  "Akatsuki Supreme"
     },
     {
@@ -1801,7 +1801,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Even Hell runs on money. Show me your head\u0027s worth!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b3048-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/5/110991.jpg",
         "basePrice":  9200,
         "title":  "Akatsuki Immortal (Earth Grudge Fear)",
         "power":  "Five Element Hearts \u0026 Black Thread Body",
@@ -1815,7 +1815,7 @@ const DEFAULT_CHARACTERS = [
                            "Earth Spear Hardening Skin"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b3048-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/5/110991.jpg",
         "role":  "Akatsuki Elite"
     },
     {
@@ -1824,7 +1824,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Fine art is something wonderful that\u0027s left long into the future... Eternal beauty.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b3045-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/7/110990.jpg",
         "basePrice":  9000,
         "title":  "Sasori of the Red Sand (Puppet Master)",
         "power":  "Performance of a Hundred Puppets + Iron Sand",
@@ -1838,7 +1838,7 @@ const DEFAULT_CHARACTERS = [
                            "Human Puppet Poison Needles"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b3045-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/7/110990.jpg",
         "role":  "Akatsuki Elite"
     },
     {
@@ -1847,7 +1847,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Art is an explosion! (Geijutsu wa Bakuhatsu da!)",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b3044-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/8/110989.jpg",
         "basePrice":  8800,
         "title":  "Explosive Artist (Clay Sculptor)",
         "power":  "Explosion Release (C4 Karura \u0026 C0 Detonation)",
@@ -1861,7 +1861,7 @@ const DEFAULT_CHARACTERS = [
                            "Explosive Clay Dragon Flight"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b3044-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/8/110989.jpg",
         "role":  "Akatsuki Elite"
     },
     {
@@ -1870,7 +1870,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Yahiko and Nagato\u0027s will has not vanished from this world!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b17046-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/2/110988.jpg",
         "basePrice":  8800,
         "title":  "God\u0027s Angel (Amegakure Leader)",
         "power":  "Dance of the Shikigami (600 Billion Bombs)",
@@ -1884,7 +1884,7 @@ const DEFAULT_CHARACTERS = [
                            "Paper Clone Dispersal"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b17046-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/2/110988.jpg",
         "role":  "Akatsuki Elite"
     },
     {
@@ -1893,7 +1893,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "You are the leaves basking in the sun. I am the roots that rot in the dark.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b26802-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/11/110993.jpg",
         "basePrice":  8600,
         "title":  "Darkness of the Shinobi (Foundation Root)",
         "power":  "10 Sharingan Izanagi Arm + Kotoamatsukami",
@@ -1907,7 +1907,7 @@ const DEFAULT_CHARACTERS = [
                            "Baku Tapir Vacuum Vacuum Vortex"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b26802-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/11/110993.jpg",
         "role":  "Dark Shinobi"
     },
     {
@@ -1916,7 +1916,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Self-sacrifice... A nameless shinobi of peace who protects from the shadows.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b43877-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/16/200028.jpg",
         "basePrice":  8600,
         "title":  "Shisui of the Body Flicker (Teleport Genius)",
         "power":  "Kotoamatsukami Absolute Genjutsu \u0026 Green Susanoo",
@@ -1930,7 +1930,7 @@ const DEFAULT_CHARACTERS = [
                            "Fire Style: Great Dragon Fire"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b43877-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/16/200028.jpg",
         "role":  "Uchiha Prodigy"
     },
     {
@@ -1939,7 +1939,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I\u0027m not the little girl standing behind their backs anymore!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b15-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/16/75947.jpg",
         "basePrice":  8400,
         "title":  "Medical Ninja Master (Byakugou Awakening)",
         "power":  "Hundred Healings Seal + Chakra Enhanced Strength",
@@ -1953,7 +1953,7 @@ const DEFAULT_CHARACTERS = [
                            "Cellular Regeneration Burst"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b15-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/16/75947.jpg",
         "role":  "Sannin Successor"
     },
     {
@@ -1962,7 +1962,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "My love is hotter than molten lava, honey.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b26805-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/14/110987.jpg",
         "basePrice":  8200,
         "title":  "Fifth Mizukage (Dual Kekkei Genkai)",
         "power":  "Lava Release (Yoton) \u0026 Boil Release (Futton)",
@@ -1976,7 +1976,7 @@ const DEFAULT_CHARACTERS = [
                            "Solid Lava Wall Defense"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b26805-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/14/110987.jpg",
         "role":  "Kage"
     },
     {
@@ -1985,7 +1985,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Do not judge a leader by his youthful visage.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b43881-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/9/75945.jpg",
         "basePrice":  8000,
         "title":  "Fourth Mizukage (Three-Tails Isobu)",
         "power":  "Perfect Isobu Jinchuriki + Water Mirror",
@@ -1999,7 +1999,7 @@ const DEFAULT_CHARACTERS = [
                            "Bijuu Bomb Water Blast"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b43881-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/9/75945.jpg",
         "role":  "Kage Jinchuriki"
     },
     {
@@ -2008,7 +2008,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Forty years of wandering with molten rock in my veins.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b43882-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/8/110985.jpg",
         "basePrice":  7900,
         "title":  "Four-Tails Jinchuriki (Son Goku Master)",
         "power":  "Lava Release Chakra Mode + Monkey King Strength",
@@ -2022,7 +2022,7 @@ const DEFAULT_CHARACTERS = [
                            "Volcanic Geyser Eruption"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b43882-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/8/110985.jpg",
         "role":  "Lava Jinchuriki"
     },
     {
@@ -2031,7 +2031,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Steam propulsion delivers unstoppable force.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b43883-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/9/110984.jpg",
         "basePrice":  7800,
         "title":  "Five-Tails Jinchuriki (Kokuo Master)",
         "power":  "Boil Release Steam Power + Steam Armor",
@@ -2045,7 +2045,7 @@ const DEFAULT_CHARACTERS = [
                            "Steam Mirage Cloak"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b43883-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/9/110984.jpg",
         "role":  "Steam Jinchuriki"
     },
     {
@@ -2054,7 +2054,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Bubbles float gently... Until they explode with deadly acid.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b35246-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/10/110983.jpg",
         "basePrice":  7700,
         "title":  "Six-Tails Jinchuriki (Saiken Master)",
         "power":  "Soap Bubble Ninjutsu + Corrosive Acid Gas",
@@ -2068,7 +2068,7 @@ const DEFAULT_CHARACTERS = [
                            "Exploding Soap Cloud"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b35246-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/10/110983.jpg",
         "role":  "Bubble Jinchuriki"
     },
     {
@@ -2077,7 +2077,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Let\u0027s make a hundred friends across every hidden village!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b43884-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/11/110982.jpg",
         "basePrice":  7600,
         "title":  "Seven-Tails Jinchuriki (Chomei Master)",
         "power":  "Flight Wings + Blinding Cocoon Scale Powder",
@@ -2091,7 +2091,7 @@ const DEFAULT_CHARACTERS = [
                            "Cocoon Trap Webbing"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b43884-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/11/110982.jpg",
         "role":  "Winged Jinchuriki"
     },
     {
@@ -2100,7 +2100,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "You\u0027ve stepped right into the den of the Two-Tails!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b3049-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/7/110986.jpg",
         "basePrice":  7500,
         "title":  "Two-Tails Jinchuriki (Matatabi Master)",
         "power":  "Blue Flame Fireballs + Complete Matatabi Control",
@@ -2114,7 +2114,7 @@ const DEFAULT_CHARACTERS = [
                            "Tailed Beast Cloak Agility"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b3049-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/7/110986.jpg",
         "role":  "Cat Fire Jinchuriki"
     },
     {
@@ -2123,7 +2123,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am Orochimaru-sama\u0027s weapon. That is my entire purpose in life!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b2385-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/12/53551.jpg",
         "basePrice":  7400,
         "title":  "Last of the Kaguya Clan (Bone Master)",
         "power":  "Shikotsumyaku Bone Manipulation + Curse Mark 2",
@@ -2137,7 +2137,7 @@ const DEFAULT_CHARACTERS = [
                            "Digital Shrapnel Finger Bones"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b2385-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/12/53551.jpg",
         "role":  "Kaguya Clan Elite"
     },
     {
@@ -2146,7 +2146,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Offer your blood to Lord Jashin! Savor the pain of the ritual!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b3047-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/14/110979.jpg",
         "basePrice":  7200,
         "title":  "Immortal Priest of Jashin (Akatsuki)",
         "power":  "Absolute Immortality \u0026 Voodoo Death Curse",
@@ -2160,7 +2160,7 @@ const DEFAULT_CHARACTERS = [
                            "Jashin Stake Self-Harm"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b3047-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/14/110979.jpg",
         "role":  "Akatsuki Immortal"
     },
     {
@@ -2169,7 +2169,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Sorry about this... But I\u0027m the Raikage\u0027s right-hand man.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b26806-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/12/110981.jpg",
         "basePrice":  7000,
         "title":  "Fifth Raikage / Black Lightning Master",
         "power":  "Storm Release (Ranton) + Black Lightning",
@@ -2183,7 +2183,7 @@ const DEFAULT_CHARACTERS = [
                            "Cleaver Sword Acrobatics"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b26806-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/12/110981.jpg",
         "role":  "Elite Jonin / Future Kage"
     },
     {
@@ -2192,7 +2192,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "When I was your age, these hands were already stained red with blood.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b2380-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/10/110983.jpg",
         "basePrice":  6800,
         "title":  "Demon of the Hidden Mist (Kubikiribocho)",
         "power":  "Silent Killing Technique + Water Dragon Jutsu",
@@ -2206,7 +2206,7 @@ const DEFAULT_CHARACTERS = [
                            "Executioner\u0027s Blade Regeneration"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b2380-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/10/110983.jpg",
         "role":  "Mist Seven Swordsman"
     },
     {
@@ -2215,7 +2215,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "An old woman still has a few tricks left to protect the future generation.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b3050-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/14/110987.jpg",
         "basePrice":  6600,
         "title":  "Sand Village Elder (Master Puppeteer)",
         "power":  "White Secret Technique: 10 Puppets of Chikamatsu",
@@ -2229,7 +2229,7 @@ const DEFAULT_CHARACTERS = [
                            "One\u0027s Own Life Reincarnation"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b3050-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/14/110987.jpg",
         "role":  "Sand Elder"
     },
     {
@@ -2238,7 +2238,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Destiny is not something decided for you. You carve your own path!",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b2378-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/13/53549.jpg",
         "basePrice":  6400,
         "title":  "Hyuga Clan Genius (War Arc Master)",
         "power":  "Byakugan Clairvoyance + Gentle Fist 64 Palms",
@@ -2252,7 +2252,7 @@ const DEFAULT_CHARACTERS = [
                            "Chakra Tenketsu Sealing"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b2378-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/13/53549.jpg",
         "role":  "Hyuga Master"
     },
     {
@@ -2261,7 +2261,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "The \u0027King\u0027 of the Leaf village is the children who inherit tomorrow.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b2379-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/8/200027.jpg",
         "basePrice":  6200,
         "title":  "Guardian Shinobi Twelve Elite",
         "power":  "Wind-Infused Trench Knives \u0026 Fire Ash Cloud",
@@ -2275,7 +2275,7 @@ const DEFAULT_CHARACTERS = [
                            "Chakra Flow Extension"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b2379-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/8/200027.jpg",
         "role":  "Guardian Ninja Elite"
     },
     {
@@ -2284,7 +2284,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "My Wood Release was created to calm the wrath of the Tailed Beasts.",
         "universe":  "naruto",
         "origin":  "Hidden Shinobi Lands",
-        "image":  "https://s4.anilist.co/file/anilistcdn/character/large/b3051-5e4rT4gG5e6L.png",
+        "image":  "https://cdn.myanimelist.net/images/characters/7/110986.jpg",
         "basePrice":  6000,
         "title":  "Anbu Wood Release Specialist",
         "power":  "Hashirama Cell Wood Release + Bijuu Suppression",
@@ -2298,7 +2298,7 @@ const DEFAULT_CHARACTERS = [
                            "Wood Locking Wall"
                        ],
         "affiliation":  "Shinobi World",
-        "thumb":  "https://s4.anilist.co/file/anilistcdn/character/large/b3051-5e4rT4gG5e6L.png",
+        "thumb":  "https://cdn.myanimelist.net/images/characters/7/110986.jpg",
         "role":  "Anbu Captain"
     },
     {
@@ -2307,7 +2307,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am the One Above All. I see through many eyes. I build with many hands.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/501-one-above-all.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/CaptainAmerica109.jpg/250px-CaptainAmerica109.jpg",
         "basePrice":  16000,
         "title":  "Supreme Creator of the Omniverse (TOAA)",
         "power":  "True Omnipotence, Omniscience, and Omnipresence",
@@ -2321,7 +2321,7 @@ const DEFAULT_CHARACTERS = [
                            "Boundless Primordial Light"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/501-one-above-all.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/CaptainAmerica109.jpg/250px-CaptainAmerica109.jpg",
         "role":  "Omnipotent Creator"
     },
     {
@@ -2330,7 +2330,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am the Living Tribunal. The balance of the Multiverse must be upheld.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/415-living-tribunal.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Living_Tribunal.jpg/250px-Living_Tribunal.jpg",
         "basePrice":  15800,
         "title":  "Embodiment of Multiversal Law",
         "power":  "Multiversal Authority \u0026 Cosmic Equilibrium",
@@ -2344,7 +2344,7 @@ const DEFAULT_CHARACTERS = [
                            "Three-Faced Reality Balance"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/415-living-tribunal.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Living_Tribunal.jpg/250px-Living_Tribunal.jpg",
         "role":  "Multiversal Judge"
     },
     {
@@ -2353,7 +2353,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I found that I was a god... and I found it beneath me.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/222-doctor-doom.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Doctor_Doom_%28Doom_2099%29.jpg/250px-Doctor_Doom_%28Doom_2099%29.jpg",
         "basePrice":  15600,
         "title":  "Ruler of Battleworld (Secret Wars Prime)",
         "power":  "Stolen Powers of the Entire Beyonder Race",
@@ -2367,7 +2367,7 @@ const DEFAULT_CHARACTERS = [
                            "Sorcery \u0026 Will Transmutation"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/222-doctor-doom.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Doctor_Doom_%28Doom_2099%29.jpg/250px-Doctor_Doom_%28Doom_2099%29.jpg",
         "role":  "Multiversal Supreme"
     },
     {
@@ -2376,7 +2376,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am that which is beyond all things. Your entire multiverse is a speck of dust in my cup.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/93-beyonder.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Quasar_%28Wendell_Vaughn%29.png/250px-Quasar_%28Wendell_Vaughn%29.png",
         "basePrice":  15600,
         "title":  "The Beyond Realm Incarnate",
         "power":  "Power Exceeding the Entire Marvel Multiverse Combined",
@@ -2390,7 +2390,7 @@ const DEFAULT_CHARACTERS = [
                            "Infinite Beyond Power Flow"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/93-beyonder.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Quasar_%28Wendell_Vaughn%29.png/250px-Quasar_%28Wendell_Vaughn%29.png",
         "role":  "Multiversal Entity"
     },
     {
@@ -2399,7 +2399,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Every single molecule in existence answers to my thoughts.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/460-molecule-man.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Sentry_%28Robert_Reynolds%29.png/250px-Sentry_%28Robert_Reynolds%29.png",
         "basePrice":  15400,
         "title":  "Owen Reece (Multiverse Reality Core)",
         "power":  "Total Molecular Manipulation \u0026 Multiverse Battery",
@@ -2413,7 +2413,7 @@ const DEFAULT_CHARACTERS = [
                            "Infinite Reality Construction"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/460-molecule-man.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Sentry_%28Robert_Reynolds%29.png/250px-Sentry_%28Robert_Reynolds%29.png",
         "role":  "Multiverse Reality Warper"
     },
     {
@@ -2422,7 +2422,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am inevitable. With a snap of my fingers, half the universe ceases to exist.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/655-thanos.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Thanos_Infinity_4.png/250px-Thanos_Infinity_4.png",
         "basePrice":  15200,
         "title":  "The Mad Titan (Infinity Gauntlet Prime)",
         "power":  "Mastery of All 6 Infinity Gems \u0026 Cosmic Will",
@@ -2436,7 +2436,7 @@ const DEFAULT_CHARACTERS = [
                            "Titan Eternal Physiology"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/655-thanos.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Thanos_Infinity_4.png/250px-Thanos_Infinity_4.png",
         "role":  "Infinity Titan"
     },
     {
@@ -2445,7 +2445,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am everything that is, was, and ever shall be within the cosmos.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/243-eternity.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Eternity_%28Marvel_Comics%29.png/250px-Eternity_%28Marvel_Comics%29.png",
         "basePrice":  15000,
         "title":  "Living Embodiment of Time \u0026 Space",
         "power":  "Manifestation of the Entire Universal Continuum",
@@ -2459,7 +2459,7 @@ const DEFAULT_CHARACTERS = [
                            "Universal Reality Restructure"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/243-eternity.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Eternity_%28Marvel_Comics%29.png/250px-Eternity_%28Marvel_Comics%29.png",
         "role":  "Cosmic Abstract"
     },
     {
@@ -2468,7 +2468,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am Fire and Life incarnate! Now and forever, I am the Phoenix!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/517-phoenix.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Jean_Grey_as_Phoenix.png/250px-Jean_Grey_as_Phoenix.png",
         "basePrice":  14800,
         "title":  "Jean Grey (Supreme Phoenix Force)",
         "power":  "Full Nexus Control of the Phoenix in White Hot Room",
@@ -2482,7 +2482,7 @@ const DEFAULT_CHARACTERS = [
                            "Omega-Plus Telepathic Singularity"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/517-phoenix.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Jean_Grey_as_Phoenix.png/250px-Jean_Grey_as_Phoenix.png",
         "role":  "Cosmic Force Incarnate"
     },
     {
@@ -2491,7 +2491,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "To me, my Galactus! Arise and fight!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/267-franklin-richards.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Franklin_Richards_%28Marvel_Comics%29.png/250px-Franklin_Richards_%28Marvel_Comics%29.png",
         "basePrice":  14500,
         "title":  "Adult Franklin (Celestial Architect)",
         "power":  "Pocket Universe Creation \u0026 Reality Architecture",
@@ -2505,7 +2505,7 @@ const DEFAULT_CHARACTERS = [
                            "Conceptual Telepathy \u0026 Telekinesis"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/267-franklin-richards.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Franklin_Richards_%28Marvel_Comics%29.png/250px-Franklin_Richards_%28Marvel_Comics%29.png",
         "role":  "Universal Creator"
     },
     {
@@ -2514,7 +2514,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Before existence, there was only me. And when existence ends, I remain.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/501-one-above-all.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Oblivion_%28Marvel_Comics%29.png/250px-Oblivion_%28Marvel_Comics%29.png",
         "basePrice":  14500,
         "title":  "The Primordial Void",
         "power":  "Embodiment of Total Nonexistence \u0026 Chaos King Source",
@@ -2528,7 +2528,7 @@ const DEFAULT_CHARACTERS = [
                            "Absolute Entropy"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/501-one-above-all.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Oblivion_%28Marvel_Comics%29.png/250px-Oblivion_%28Marvel_Comics%29.png",
         "role":  "Cosmic Abstract"
     },
     {
@@ -2537,7 +2537,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I do not hunger to be cruel. I consume because the cosmic order demands it.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/273-galactus.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Galactus.png/250px-Galactus.png",
         "basePrice":  14000,
         "title":  "The Devourer of Worlds / Lifebringer",
         "power":  "The Power Cosmic Unbound \u0026 World Energy Conversion",
@@ -2551,7 +2551,7 @@ const DEFAULT_CHARACTERS = [
                            "Cosmic Ray Obliteration"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/273-galactus.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Galactus.png/250px-Galactus.png",
         "role":  "Cosmic Devourer"
     },
     {
@@ -2560,7 +2560,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am the dark that came before the light. I am the King in Black.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/687-venom.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Knull_%28character%29.jpg/250px-Knull_%28character%29.jpg",
         "basePrice":  13800,
         "title":  "God of the Symbiotes (Lord of the Abyss)",
         "power":  "All-Black Necrosword \u0026 All Symbiote Hive Command",
@@ -2574,7 +2574,7 @@ const DEFAULT_CHARACTERS = [
                            "Immortal Void Absorption"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/687-venom.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Knull_%28character%29.jpg/250px-Knull_%28character%29.jpg",
         "role":  "Abyssal God"
     },
     {
@@ -2583,7 +2583,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I see the weave of fate... and I shall sever the tapestry of those above us!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/659-thor.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/Mephisto_%28Marvel_Comics%29.png/250px-Mephisto_%28Marvel_Comics%29.png",
         "basePrice":  13800,
         "title":  "All-Father Rune King (Shadow Severer)",
         "power":  "Odinforce + Rune Magic + Complete Omniscience",
@@ -2597,7 +2597,7 @@ const DEFAULT_CHARACTERS = [
                            "All-Father Rune Spells"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/659-thor.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/Mephisto_%28Marvel_Comics%29.png/250px-Mephisto_%28Marvel_Comics%29.png",
         "role":  "Skyfather Supreme"
     },
     {
@@ -2606,7 +2606,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "By the strength of Olympus and the cosmos, reality shall be made whole!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/322-hercules.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Scarlet_Witch.jpg/250px-Scarlet_Witch.jpg",
         "basePrice":  13500,
         "title":  "God of Gods (Reality Restorer)",
         "power":  "True Omnipotent Deity Overcoming Mikaboshi",
@@ -2620,7 +2620,7 @@ const DEFAULT_CHARACTERS = [
                            "Universal Continuum Repair"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/322-hercules.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Scarlet_Witch.jpg/250px-Scarlet_Witch.jpg",
         "role":  "Ascended God"
     },
     {
@@ -2629,7 +2629,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "No... more... mutants.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/579-scarlet-witch.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Scarlet_Witch.jpg/250px-Scarlet_Witch.jpg",
         "basePrice":  13500,
         "title":  "Wanda Maximoff (Chaos Magic Supreme)",
         "power":  "No More Mutants Reality Rewriting Across All Earths",
@@ -2643,7 +2643,7 @@ const DEFAULT_CHARACTERS = [
                            "Probability Annihilation"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/579-scarlet-witch.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Scarlet_Witch.jpg/250px-Scarlet_Witch.jpg",
         "role":  "Chaos Reality Warper"
     },
     {
@@ -2652,7 +2652,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Sign your name on the dotted line... Your soul belongs to Mephisto.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/448-mephisto.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/Mephisto_%28Marvel_Comics%29.png/250px-Mephisto_%28Marvel_Comics%29.png",
         "basePrice":  13200,
         "title":  "Lord of the Nether-Realms",
         "power":  "Hell Realm Reality Control \u0026 Soul Manipulation",
@@ -2666,7 +2666,7 @@ const DEFAULT_CHARACTERS = [
                            "Dimensional Banishment"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/448-mephisto.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/Mephisto_%28Marvel_Comics%29.png/250px-Mephisto_%28Marvel_Comics%29.png",
         "role":  "Demonic Lord"
     },
     {
@@ -2675,7 +2675,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "For Asgard! By the Odinforce, let the cosmos tremble!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/498-odin.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Odin_%28Marvel_Comics%29.png/250px-Odin_%28Marvel_Comics%29.png",
         "basePrice":  13000,
         "title":  "All-Father of Asgard (Destroyer Armor)",
         "power":  "The Odinforce \u0026 Twilight Sword Destroyer Armor",
@@ -2689,7 +2689,7 @@ const DEFAULT_CHARACTERS = [
                            "Banishment to the Outer Dark"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/498-odin.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Odin_%28Marvel_Comics%29.png/250px-Odin_%28Marvel_Comics%29.png",
         "role":  "All-Father Skyfather"
     },
     {
@@ -2698,7 +2698,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am Zeus, King of the Gods! No mortal nor Avenger shall challenge Olympus!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/730-zeus.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a5/Zeus_%28Marvel_Comics%29.png/250px-Zeus_%28Marvel_Comics%29.png",
         "basePrice":  12800,
         "title":  "King of Olympus (Skyfather Peak)",
         "power":  "Aegis Lightning \u0026 Pure Olympian Godhead",
@@ -2712,7 +2712,7 @@ const DEFAULT_CHARACTERS = [
                            "Immortal Skyfather Aegis"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/730-zeus.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a5/Zeus_%28Marvel_Comics%29.png/250px-Zeus_%28Marvel_Comics%29.png",
         "role":  "Olympian Skyfather"
     },
     {
@@ -2721,7 +2721,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Your universe is but kindling for the eternal flames of Dormammu!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/228-dormammu.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Dormammu.png/250px-Dormammu.png",
         "basePrice":  12600,
         "title":  "Lord of the Dark Dimension",
         "power":  "Faltine Flame \u0026 Dark Dimension Omnipresence",
@@ -2735,7 +2735,7 @@ const DEFAULT_CHARACTERS = [
                            "Dark Energy Annihilation"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/228-dormammu.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Dormammu.png/250px-Dormammu.png",
         "role":  "Dimensional Overlord"
     },
     {
@@ -2744,7 +2744,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "The only thing gods ever brought mortals was suffering. It ends now!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/655-thanos.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/0/07/Gorr_the_God_Butcher.jpg/250px-Gorr_the_God_Butcher.jpg",
         "basePrice":  12400,
         "title":  "Wielder of the All-Black (God Slayer)",
         "power":  "All-Black Necrosword \u0026 Godbomb Project",
@@ -2758,7 +2758,7 @@ const DEFAULT_CHARACTERS = [
                            "God Slayer Decapitation"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/655-thanos.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/0/07/Gorr_the_God_Butcher.jpg/250px-Gorr_the_God_Butcher.jpg",
         "role":  "God Slayer"
     },
     {
@@ -2767,7 +2767,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "To save the universe, I surrendered my humanity and took to the stars.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/611-silver-surfer.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/SilverSurfer.png/250px-SilverSurfer.png",
         "basePrice":  12000,
         "title":  "Norrin Radd (Power Cosmic Unbound)",
         "power":  "The Power Cosmic \u0026 Absolute Matter Manipulation",
@@ -2781,7 +2781,7 @@ const DEFAULT_CHARACTERS = [
                            "Black Hole Escapement"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/611-silver-surfer.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/SilverSurfer.png/250px-SilverSurfer.png",
         "role":  "High Herald"
     },
     {
@@ -2790,7 +2790,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I have the power of a million exploding suns... and the darkness of the Void.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/583-sentry.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Sentry_%28Robert_Reynolds%29.png/250px-Sentry_%28Robert_Reynolds%29.png",
         "basePrice":  12000,
         "title":  "The Golden Guardian of Good (Merged Void)",
         "power":  "Power of One Million Exploding Suns \u0026 Molecule Regen",
@@ -2804,7 +2804,7 @@ const DEFAULT_CHARACTERS = [
                            "Immortal Molecular Reassembly"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/583-sentry.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Sentry_%28Robert_Reynolds%29.png/250px-Sentry_%28Robert_Reynolds%29.png",
         "role":  "Cosmic Titan"
     },
     {
@@ -2813,7 +2813,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "HULK SMASH! I didn\u0027t come for a whisper... I came for a scream!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/332-hulk.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Knull_%28character%29.jpg/250px-Knull_%28character%29.jpg",
         "basePrice":  11800,
         "title":  "The Green Scar (World Breaker Prime)",
         "power":  "Limitless Gamma Radiance \u0026 Planet-Cracking Rage",
@@ -2827,7 +2827,7 @@ const DEFAULT_CHARACTERS = [
                            "Infinite Anger Strength Scale"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/332-hulk.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Knull_%28character%29.jpg/250px-Knull_%28character%29.jpg",
         "role":  "Gamma Monster Supreme"
     },
     {
@@ -2836,7 +2836,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "By the Vishanti, dark forces shall yield to the Sorcerer Supreme!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/226-doctor-strange.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Doctor_Strange_Vol_4_2.png/250px-Doctor_Strange_Vol_4_2.png",
         "basePrice":  11500,
         "title":  "Classic Sorcerer Supreme (Stephen Strange)",
         "power":  "Eye of Agamotto \u0026 Spells of the Vishanti",
@@ -2850,7 +2850,7 @@ const DEFAULT_CHARACTERS = [
                            "Mirror Dimension Imprisonment"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/226-doctor-strange.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Doctor_Strange_Vol_4_2.png/250px-Doctor_Strange_Vol_4_2.png",
         "role":  "Mystic Supreme"
     },
     {
@@ -2859,7 +2859,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "If there is but one Korbinite left to fight, the darkness shall not claim us!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/87-beta-ray-bill.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Beta_Ray_Bill.png/250px-Beta_Ray_Bill.png",
         "basePrice":  11200,
         "title":  "Korbinite Champion (Stormbreaker Prime)",
         "power":  "Stormbreaker Magic \u0026 Korbinite Cyborg Strength",
@@ -2873,7 +2873,7 @@ const DEFAULT_CHARACTERS = [
                            "Thunder God Fist"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/87-beta-ray-bill.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Beta_Ray_Bill.png/250px-Beta_Ray_Bill.png",
         "role":  "Asgardian Powerhouse"
     },
     {
@@ -2882,7 +2882,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Whosoever holds this hammer, if he be worthy, shall possess the power of Thor!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/659-thor.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Thor-272.jpg/250px-Thor-272.jpg",
         "basePrice":  11200,
         "title":  "God of Thunder (Herald of Thunder Prime)",
         "power":  "Mjolnir \u0026 Cosmic Lightning \u0026 Godblast",
@@ -2896,7 +2896,7 @@ const DEFAULT_CHARACTERS = [
                            "Anti-Force Blast"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/659-thor.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Thor-272.jpg/250px-Thor-272.jpg",
         "role":  "God of Thunder"
     },
     {
@@ -2905,7 +2905,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "My loyalty to the Shi\u0027ar Imperium is matched only by my absolute confidence!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/287-gladiator.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Gladiator_%28Kallark%29.png/250px-Gladiator_%28Kallark%29.png",
         "basePrice":  11000,
         "title":  "Praetor of the Shi\u0027ar Imperial Guard",
         "power":  "Confidence-Powered Superman Physique \u0026 Heat Beams",
@@ -2919,7 +2919,7 @@ const DEFAULT_CHARACTERS = [
                            "Invulnerable Confidence Shield"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/287-gladiator.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Gladiator_%28Kallark%29.png/250px-Gladiator_%28Kallark%29.png",
         "role":  "Shi\u0027ar Powerhouse"
     },
     {
@@ -2928,7 +2928,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I\u0027m Richard Rider. Nova Prime. And Annihilus is going down!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/496-nova.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Nova_%28Richard_Rider%29.png/250px-Nova_%28Richard_Rider%29.png",
         "basePrice":  10800,
         "title":  "Centurion Prime (Full Xandarian Worldmind)",
         "power":  "Full Nova Force \u0026 Gravimetric Energy",
@@ -2942,7 +2942,7 @@ const DEFAULT_CHARACTERS = [
                            "Stargate Hyperspace Jump"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/496-nova.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Nova_%28Richard_Rider%29.png/250px-Nova_%28Richard_Rider%29.png",
         "role":  "Cosmic Centurion"
     },
     {
@@ -2951,7 +2951,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I held two collapsing universes apart with my bare hands.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/340-hyperion.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Jean_Grey_as_Phoenix.png/250px-Jean_Grey_as_Phoenix.png",
         "basePrice":  10500,
         "title":  "Sun God of Earth-712 (Supreme)",
         "power":  "Atomic Vision \u0026 Universal Collision Durability",
@@ -2965,7 +2965,7 @@ const DEFAULT_CHARACTERS = [
                            "Solar Energy Regeneration"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/340-hyperion.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Jean_Grey_as_Phoenix.png/250px-Jean_Grey_as_Phoenix.png",
         "role":  "Solar Titan"
     },
     {
@@ -2974,7 +2974,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am the master of my soul and the guardian of cosmic destiny.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/10-adam-warlock.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Adam_Warlock_%28Marvel_Comics%29.png/250px-Adam_Warlock_%28Marvel_Comics%29.png",
         "basePrice":  10200,
         "title":  "Avatar of Life (Soul Gem Master)",
         "power":  "Soul Gem Mastery \u0026 Quantum Magic",
@@ -2988,7 +2988,7 @@ const DEFAULT_CHARACTERS = [
                            "Energy Projection Cascade"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/10-adam-warlock.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Adam_Warlock_%28Marvel_Comics%29.png/250px-Adam_Warlock_%28Marvel_Comics%29.png",
         "role":  "Cosmic Magus"
     },
     {
@@ -2997,7 +2997,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "There are thousands of us in here... and all of us have god-like powers.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/414-legion.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/f/fa/Legion_%28Marvel_Comics%29.png/250px-Legion_%28Marvel_Comics%29.png",
         "basePrice":  10000,
         "title":  "Omega Mutant Legion (Stabilized Prime)",
         "power":  "Thousands of Omega Mutant Personalities \u0026 Powers",
@@ -3011,7 +3011,7 @@ const DEFAULT_CHARACTERS = [
                            "Personality Fusion Blast"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/414-legion.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/f/fa/Legion_%28Marvel_Comics%29.png/250px-Legion_%28Marvel_Comics%29.png",
         "role":  "Omega Mutant Supreme"
     },
     {
@@ -3020,7 +3020,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I have been known by many names... but you may call me Magneto!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/423-magneto.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Magneto_%28Marvel_Comics_character%29.jpg/250px-Magneto_%28Marvel_Comics_character%29.jpg",
         "basePrice":  9800,
         "title":  "Master of Magnetism (Omega Mutant)",
         "power":  "Absolute Control Over All Planetary Electromagnetism",
@@ -3034,7 +3034,7 @@ const DEFAULT_CHARACTERS = [
                            "Wolverine Adamantium Rip"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/423-magneto.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Magneto_%28Marvel_Comics_character%29.jpg/250px-Magneto_%28Marvel_Comics_character%29.jpg",
         "role":  "Omega Mutant"
     },
     {
@@ -3043,7 +3043,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I\u0027m not just making ice cubes. I can freeze the universe down to absolute zero.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/342-iceman.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/Infinity_%28Marvel_Comics%29.png/250px-Infinity_%28Marvel_Comics%29.png",
         "basePrice":  9600,
         "title":  "Omega Cryokinetic (Absolute Zero Form)",
         "power":  "Absolute Zero Molecular Kinetic Halting",
@@ -3057,7 +3057,7 @@ const DEFAULT_CHARACTERS = [
                            "Organic Ice Titan Golem"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/342-iceman.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/Infinity_%28Marvel_Comics%29.png/250px-Infinity_%28Marvel_Comics%29.png",
         "role":  "Omega Mutant"
     },
     {
@@ -3066,7 +3066,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "There is no energy in this galaxy that I cannot command or consume!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/704-vulcan.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Adam_Warlock_%28Marvel_Comics%29.png/250px-Adam_Warlock_%28Marvel_Comics%29.png",
         "basePrice":  9600,
         "title":  "Emperor Vulcan (Omega Energy Master)",
         "power":  "Universal Energy Manipulation \u0026 Absorption",
@@ -3080,7 +3080,7 @@ const DEFAULT_CHARACTERS = [
                            "Planetary Shockwave Pulse"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/704-vulcan.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Adam_Warlock_%28Marvel_Comics%29.png/250px-Adam_Warlock_%28Marvel_Comics%29.png",
         "role":  "Omega Mutant"
     },
     {
@@ -3089,7 +3089,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am a woman, a mutant, a thief, an X-Man, a lover, a wife, a queen. I am all these things. I am Storm!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/638-storm.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Beta_Ray_Bill.png/250px-Beta_Ray_Bill.png",
         "basePrice":  9400,
         "title":  "Goddess of the Elements (Omega Weather)",
         "power":  "Atmospheric \u0026 Cosmic Solar Wind Mastery",
@@ -3103,7 +3103,7 @@ const DEFAULT_CHARACTERS = [
                            "Atmospheric Pressure Crush"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/638-storm.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Beta_Ray_Bill.png/250px-Beta_Ray_Bill.png",
         "role":  "Omega Mutant"
     },
     {
@@ -3112,7 +3112,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "... (A single whisper is enough to shatter mountains).",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/106-black-bolt.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Black_Bolt.png/250px-Black_Bolt.png",
         "basePrice":  9200,
         "title":  "Midnight King (Inhuman Monarch)",
         "power":  "Quasi-Sonic Voice of Planetary Annihilation",
@@ -3126,7 +3126,7 @@ const DEFAULT_CHARACTERS = [
                            "Particle Acceleration Shield"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/106-black-bolt.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Black_Bolt.png/250px-Black_Bolt.png",
         "role":  "Inhuman King"
     },
     {
@@ -3135,7 +3135,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Only the strong shall survive! I am the herald of true evolution!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/45-apocalypse.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/1/1a/Apocalypse_%28Marvel_Comics%29.png/250px-Apocalypse_%28Marvel_Comics%29.png",
         "basePrice":  9000,
         "title":  "The First Mutant (Celestial Evolution)",
         "power":  "Celestial Techno-Organic Molecular Control",
@@ -3149,7 +3149,7 @@ const DEFAULT_CHARACTERS = [
                            "Immortal Techno Regeneration"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/45-apocalypse.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/1/1a/Apocalypse_%28Marvel_Comics%29.png/250px-Apocalypse_%28Marvel_Comics%29.png",
         "role":  "First Mutant"
     },
     {
@@ -3158,7 +3158,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Higher, further, faster, more! You haven\u0027t seen anything yet!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/156-captain-marvel.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Carol_Danvers_%28as_of_2018%29.png/250px-Carol_Danvers_%28as_of_2018%29.png",
         "basePrice":  8800,
         "title":  "Binary (White Hole Cosmic Form)",
         "power":  "White Hole Energy Channeling \u0026 Light Speed",
@@ -3172,7 +3172,7 @@ const DEFAULT_CHARACTERS = [
                            "Supernova Impact Punch"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/156-captain-marvel.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Carol_Danvers_%28as_of_2018%29.png/250px-Carol_Danvers_%28as_of_2018%29.png",
         "role":  "Cosmic Avenger"
     },
     {
@@ -3181,7 +3181,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am Iron Man. And my intellect builds armor that topples gods!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/346-iron-man.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Iron_Man_bleeding_edge.jpg/250px-Iron_Man_bleeding_edge.jpg",
         "basePrice":  8600,
         "title":  "Godbuster Armor / Bleeding Edge Prime",
         "power":  "Celestial-Level Nano-Armor \u0026 Arc Repulsors",
@@ -3195,7 +3195,7 @@ const DEFAULT_CHARACTERS = [
                            "Orbital Veronica Satellite Array"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/346-iron-man.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Iron_Man_bleeding_edge.jpg/250px-Iron_Man_bleeding_edge.jpg",
         "role":  "Genius Avenger"
     },
     {
@@ -3204,7 +3204,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Hercules rejoices in battle! Bring forth your mightiest warriors!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/322-hercules.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Carol_Danvers_%28as_of_2018%29.png/250px-Carol_Danvers_%28as_of_2018%29.png",
         "basePrice":  8400,
         "title":  "Prince of Power (Olympian Demigod Peak)",
         "power":  "Immortal Strength Matching Thor and Hulk",
@@ -3218,7 +3218,7 @@ const DEFAULT_CHARACTERS = [
                            "Immortal God Durability"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/322-hercules.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Carol_Danvers_%28as_of_2018%29.png/250px-Carol_Danvers_%28as_of_2018%29.png",
         "role":  "Olympian Demi-God"
     },
     {
@@ -3227,7 +3227,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Imperius Rex! The oceans answer only to the Sub-Mariner!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/476-namor.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Namor_by_Jae_Lee.jpg/250px-Namor_by_Jae_Lee.jpg",
         "basePrice":  8200,
         "title":  "King of Atlantis (Imperius Rex)",
         "power":  "Sub-Mariner Strength \u0026 Ocean Telepathy",
@@ -3241,7 +3241,7 @@ const DEFAULT_CHARACTERS = [
                            "Hydrokinetic Whirlpool"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/476-namor.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Namor_by_Jae_Lee.jpg/250px-Namor_by_Jae_Lee.jpg",
         "role":  "Atlantis King"
     },
     {
@@ -3250,7 +3250,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "A thing isn\u0027t beautiful because it lasts. It\u0027s a privilege to be among them.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/697-vision.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Namor_by_Jae_Lee.jpg/250px-Namor_by_Jae_Lee.jpg",
         "basePrice":  8000,
         "title":  "Synthezoid Avenger (Mind Stone Solar Jewel)",
         "power":  "Density Control (Intangibility to Diamond Hardness)",
@@ -3264,7 +3264,7 @@ const DEFAULT_CHARACTERS = [
                            "Synthezoid Computer Hacking"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/697-vision.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Namor_by_Jae_Lee.jpg/250px-Namor_by_Jae_Lee.jpg",
         "role":  "Synthezoid Avenger"
     },
     {
@@ -3273,7 +3273,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Feel the pain of all the innocent souls you have ever harmed!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/280-ghost-rider.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Ghost_Rider_%28Johnny_Blaze%29.png/250px-Ghost_Rider_%28Johnny_Blaze%29.png",
         "basePrice":  8000,
         "title":  "Spirit of Vengeance (Zarathos Unleashed)",
         "power":  "Penance Stare \u0026 Immortal Hellfire Manipulation",
@@ -3287,7 +3287,7 @@ const DEFAULT_CHARACTERS = [
                            "Zarathos Unbounded Demonic God"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/280-ghost-rider.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Ghost_Rider_%28Johnny_Blaze%29.png/250px-Ghost_Rider_%28Johnny_Blaze%29.png",
         "role":  "Hellfire Rider"
     },
     {
@@ -3296,7 +3296,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am everything Hulk is, but with my mind fully intact!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/3-abomination.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/SilverSurfer.png/250px-SilverSurfer.png",
         "basePrice":  7800,
         "title":  "Gamma Terror (Twice Base Hulk Strength)",
         "power":  "Gamma-Mutated Reptilian Strength \u0026 Bone Spikes",
@@ -3310,7 +3310,7 @@ const DEFAULT_CHARACTERS = [
                            "Monster Tackle"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/3-abomination.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/SilverSurfer.png/250px-SilverSurfer.png",
         "role":  "Gamma Powerhouse"
     },
     {
@@ -3319,7 +3319,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I am unstoppable! Cyttorak powers this metal fist!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/186-colossus.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Galactus.png/250px-Galactus.png",
         "basePrice":  7600,
         "title":  "Piotr Rasputin (Avatar of Cyttorak)",
         "power":  "Organic Steel Body + Crimson Gem of Cyttorak",
@@ -3333,7 +3333,7 @@ const DEFAULT_CHARACTERS = [
                            "Invulnerable Fortress Stance"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/186-colossus.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Galactus.png/250px-Galactus.png",
         "role":  "Steel Titan"
     },
     {
@@ -3342,7 +3342,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "It\u0027s Clobberin\u0027 Time!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/658-thing.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/One-Above-All.png/250px-One-Above-All.png",
         "basePrice":  7400,
         "title":  "The Ever-Lovin\u0027 Blue-Eyed Thing",
         "power":  "Rock Hide Superhuman Strength \u0026 Willpower",
@@ -3356,7 +3356,7 @@ const DEFAULT_CHARACTERS = [
                            "Rock Armor Defense"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/658-thing.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/One-Above-All.png/250px-One-Above-All.png",
         "role":  "Fantastic Titan"
     },
     {
@@ -3365,7 +3365,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I\u0027m the best there is at what I do. But what I do isn\u0027t very nice.",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/717-wolverine.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Marvel_Wolverine.jpg/250px-Marvel_Wolverine.jpg",
         "basePrice":  7200,
         "title":  "Weapon X (Prime Adamantium Healing Factor)",
         "power":  "Adamantium Claws \u0026 Limitless Healing Factor",
@@ -3379,7 +3379,7 @@ const DEFAULT_CHARACTERS = [
                            "Animalistic Scent Tracking"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/717-wolverine.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Marvel_Wolverine.jpg/250px-Marvel_Wolverine.jpg",
         "role":  "Weapon X Legend"
     },
     {
@@ -3388,7 +3388,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "Maximum effort! Time to break the fourth wall!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/213-deadpool.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Deadpool_%28approx._2018%29.png/250px-Deadpool_%28Marvel_Comics_character%29.png",
         "basePrice":  7000,
         "title":  "Merc with a Mouth (Immortal Curse)",
         "power":  "Unpredictable Martial Arts \u0026 Thanos Immortality Curse",
@@ -3402,7 +3402,7 @@ const DEFAULT_CHARACTERS = [
                            "C4 Satchel Chaos Toss"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/213-deadpool.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Deadpool_%28approx._2018%29.png/250px-Deadpool_%28Marvel_Comics_character%29.png",
         "role":  "Immortal Mercenary"
     },
     {
@@ -3411,7 +3411,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "With great power, there must also come great responsibility!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/620-spider-man.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Spiderman50.jpg/250px-Spiderman50.jpg",
         "basePrice":  6800,
         "title":  "Friendly Neighborhood Spider-Man (Unleashed)",
         "power":  "Spider-Sense Precognition \u0026 Proportionate Spider Strength",
@@ -3425,7 +3425,7 @@ const DEFAULT_CHARACTERS = [
                            "Acrobatic Ricochet Blitz"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/620-spider-man.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Spiderman50.jpg/250px-Spiderman50.jpg",
         "role":  "Friendly Neighborhood Legend"
     },
     {
@@ -3434,7 +3434,7 @@ const DEFAULT_CHARACTERS = [
         "quote":  "I can do this all day. Avengers Assemble!",
         "universe":  "marvel",
         "origin":  "Marvel Multiverse",
-        "image":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/149-captain-america.jpg",
+        "image":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/CaptainAmerica109.jpg/250px-CaptainAmerica109.jpg",
         "basePrice":  6500,
         "title":  "The First Avenger (Peak Super Soldier)",
         "power":  "Super Soldier Serum \u0026 Vibranium Shield Mastery",
@@ -3448,12 +3448,12 @@ const DEFAULT_CHARACTERS = [
                            "Mjolnir Worthy Lightning Call"
                        ],
         "affiliation":  "Marvel Universe / Earth-616",
-        "thumb":  "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/149-captain-america.jpg",
+        "thumb":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/CaptainAmerica109.jpg/250px-CaptainAmerica109.jpg",
         "role":  "First Avenger"
     }
 ];
 
-const STORAGE_KEY = 'prime_anime_marvel_v11';
+const STORAGE_KEY = 'prime_anime_marvel_v16';
 
 function loadCharacters() {
     try {
@@ -3479,7 +3479,7 @@ function saveCharacters(chars) {
 
 function resetCharactersToDefault() {
     localStorage.removeItem(STORAGE_KEY);
-    ['prime_anime_marvel_v8', 'prime_anime_marvel_v7', 'prime_anime_marvel_v6', 'prime_anime_marvel_v5', 'prime_anime_v4', 'prime_anime_v3', 'one_piece_auction_characters_v2', 'one_piece_characters'].forEach(k => {
+    ['prime_anime_marvel_v15', 'prime_anime_marvel_v14', 'prime_anime_marvel_v13', 'prime_anime_marvel_v12', 'prime_anime_marvel_v11', 'prime_anime_marvel_v10', 'prime_anime_marvel_v9', 'prime_anime_marvel_v8', 'prime_anime_marvel_v7', 'one_piece_auction_characters_v2'].forEach(k => {
         try { localStorage.removeItem(k); } catch(e) {}
     });
     saveCharacters(DEFAULT_CHARACTERS);

@@ -1293,7 +1293,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (p.characters && p.characters.length > 0) {
         chipsHtml = p.characters.map((c, cIdx) => `
           <button class="squad-chip" data-player="${idx}" data-char-idx="${cIdx}" title="Click to view ${c.name} stats">
-            ${c.universe === 'naruto' ? '🍃' : (c.universe === 'marvel' ? '🦸' : '☠️')} ${c.name}
+            <img src="${c.thumb || c.image || ''}" class="squad-chip-avatar" alt="${c.name}" onerror="this.style.display='none'">
+            <span>${c.name}</span>
           </button>
         `).join('');
       } else {
@@ -2037,6 +2038,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       tr.innerHTML = `
         <td>${idx + 1}</td>
+        <td><img src="${c.thumb || c.image || ''}" class="roster-avatar-img" alt="${c.name}" onerror="this.src=createFallbackAvatar(c)"></td>
         <td><strong>${c.name}</strong><br><small style="color:#94a3b8;">${c.title || c.epithet || ''}</small></td>
         <td><span class="haki-badge" style="background:${badgeBg}">${badgeLabel}</span></td>
         <td><strong style="color:#ffd166; font-size:1.02rem;">⚡ ${pl}</strong><br><small style="color:#38bdf8;">${c.powerTier || 'Fighter'}</small></td>
