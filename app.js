@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (isMultiplayer && currentRoomCode && db) {
         const myIndex = players.findIndex(p => p.id === localPlayerId);
-        if (myIndex === currentPlayerIndex || (myIndex === -1 && isRoomHost)) {
+        if (myIndex === currentPlayerIndex || isRoomHost) {
           db.ref(`rooms/${currentRoomCode}/currentDraft`).set({
             isOpen: true,
             char: selectedChar,
@@ -568,6 +568,11 @@ document.addEventListener('DOMContentLoaded', () => {
       spinBtn.disabled = wheel.isSpinning;
       spinText.textContent = 'YOUR TURN TO SPIN! ⚓';
       spinBtn.style.boxShadow = '0 0 25px rgba(245, 158, 11, 0.9)';
+    } else if (isRoomHost) {
+      spinBtn.disabled = wheel.isSpinning;
+      const turnP = players[currentPlayerIndex];
+      spinText.textContent = `Spin for ${turnP ? turnP.name : 'Player'} (Host) 👑`;
+      spinBtn.style.boxShadow = '0 0 15px rgba(234, 88, 12, 0.6)';
     } else {
       spinBtn.disabled = true;
       const turnP = players[currentPlayerIndex];
@@ -1399,15 +1404,12 @@ document.addEventListener('DOMContentLoaded', () => {
     spinBtn.disabled = false;
 
     if (isMultiplayer && currentRoomCode && db) {
-      const myIndex = players.findIndex(p => p.id === localPlayerId);
-      if (myIndex === currentPlayerIndex || (myIndex === -1 && isRoomHost)) {
-        const nextTurn = (currentPlayerIndex + 1) % players.length;
-        db.ref(`rooms/${currentRoomCode}`).update({
-          currentDraft: null,
-          currentSpin: null,
-          currentPlayerIndex: nextTurn
-        });
-      }
+      const nextTurn = (currentPlayerIndex + 1) % players.length;
+      db.ref(`rooms/${currentRoomCode}`).update({
+        currentDraft: null,
+        currentSpin: null,
+        currentPlayerIndex: nextTurn
+      });
     } else {
       currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
       renderPlayerDock();
@@ -1433,26 +1435,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const pool = activePools[currentUniverse];
     if (pendingSliceIndex >= 0 && pendingSliceIndex < pool.length) {
       pool.splice(pendingSliceIndex, 1);
-    } else {
+    } else if (pool) {
       const idx = pool.findIndex(c => c.id === pendingCharacter.id);
       if (idx !== -1) pool.splice(idx, 1);
     }
 
-    wheel.setItems(pool);
+    if (wheel) wheel.setItems(pool);
     updateCounters();
 
     const nextTurn = (currentPlayerIndex + 1) % players.length;
 
     if (isMultiplayer && currentRoomCode && db) {
-      const myIndex = players.findIndex(p => p.id === localPlayerId);
-      if (myIndex === currentPlayerIndex || (myIndex === -1 && isRoomHost)) {
-        db.ref(`rooms/${currentRoomCode}`).update({
-          players: players,
-          currentPlayerIndex: nextTurn,
-          currentDraft: null,
-          currentSpin: null
-        });
-      }
+      db.ref(`rooms/${currentRoomCode}`).update({
+        players: players,
+        currentPlayerIndex: nextTurn,
+        currentDraft: null,
+        currentSpin: null
+      });
     } else {
       currentPlayerIndex = nextTurn;
       renderPlayerDock();
@@ -1834,7 +1833,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isMultiplayer && currentRoomCode && db) {
       const myIndex = players.findIndex(p => p.id === localPlayerId);
-      if (myIndex !== currentPlayerIndex) {
+      if (myIndex !== currentPlayerIndex && !isRoomHost) {
         alert("⚠️ It is not your turn to spin!");
         return;
       }
