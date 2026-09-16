@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=17">
   <!-- Firebase Realtime Sync SDK -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
@@ -396,18 +396,17 @@
       </div>
 
       <div class="setup-group">
-        <label class="setup-label">Starting Budget per Player:</label>
+        <label class="setup-label">Starting Budget per Player (1 Lakh to 2 Lakhs):</label>
         <div class="budget-slider-wrapper">
-          <input type="range" id="budget-slider" class="budget-slider" min="10000" max="500000" step="5000" value="75000">
-          <span class="budget-val" id="budget-display">75,000 ฿</span>
+          <input type="range" id="budget-slider" class="budget-slider" min="100000" max="200000" step="5000" value="100000">
+          <span class="budget-val" id="budget-display">100,000 ฿ (1 Lakh)</span>
         </div>
         <div class="player-count-btns" style="margin-top: 0.6rem;">
-          <button class="p-count-btn btn-budget-preset" data-budget="25000" type="button">25k</button>
-          <button class="p-count-btn btn-budget-preset" data-budget="50000" type="button">50k</button>
-          <button class="p-count-btn btn-budget-preset active" data-budget="75000" type="button">75k</button>
-          <button class="p-count-btn btn-budget-preset" data-budget="100000" type="button">100k</button>
-          <button class="p-count-btn btn-budget-preset" data-budget="200000" type="button">200k</button>
-          <button class="p-count-btn btn-budget-preset" data-budget="500000" type="button">500k</button>
+          <button class="p-count-btn btn-budget-preset active" data-budget="100000" type="button">100k (1L)</button>
+          <button class="p-count-btn btn-budget-preset" data-budget="125000" type="button">125k</button>
+          <button class="p-count-btn btn-budget-preset" data-budget="150000" type="button">150k (1.5L)</button>
+          <button class="p-count-btn btn-budget-preset" data-budget="175000" type="button">175k</button>
+          <button class="p-count-btn btn-budget-preset" data-budget="200000" type="button">200k (2L)</button>
         </div>
       </div>
 
@@ -455,12 +454,13 @@
         </div>
 
         <div class="setup-row">
-          <label class="setup-label">Starting Purse Budget:</label>
+          <label class="setup-label">Starting Purse Budget (1 Lakh Min to 2 Lakhs Max):</label>
           <select id="mp-budget-select" class="setup-input">
-            <option value="100000000">100,000,000 (100M - Quick)</option>
-            <option value="500000000">500,000,000 (500M - High Stakes)</option>
-            <option value="1000000000" selected>1,000,000,000 (1 Billion - Emperor Tier)</option>
-            <option value="5000000000">5,000,000,000 (5 Billion - God Tier)</option>
+            <option value="100000" selected>1,00,000 (1 Lakh - Standard)</option>
+            <option value="125000">1,25,000 (1.25 Lakhs)</option>
+            <option value="150000">1,50,000 (1.5 Lakhs)</option>
+            <option value="175000">1,75,000 (1.75 Lakhs)</option>
+            <option value="200000">2,00,000 (2 Lakhs - Maximum Limit)</option>
           </select>
         </div>
 
@@ -631,8 +631,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="characters.js?v=16"></script>
-  <script src="wheel.js?v=16"></script>
-  <script src="app.js?v=16"></script>
+  <script src="characters.js?v=17"></script>
+  <script src="wheel.js?v=17"></script>
+  <script src="app.js?v=17"></script>
 </body>
 </html>

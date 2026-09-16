@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   let numPlayers = 2;
-  let startingBudget = 75000;
+  let startingBudget = 100000; // 1 Lakh min (max 2 Lakhs)
   let maxSquadSize = 5; // Default 5 picks per player (0 = unlimited)
   let currentPlayerIndex = 0;
   let players = [];
@@ -378,7 +378,8 @@ document.addEventListener('DOMContentLoaded', () => {
     localPlayerName = hostName;
     sessionStorage.setItem('anime_player_name', hostName);
 
-    const budget = parseInt(mpBudgetSelect.value || '75000');
+    const budget = Math.min(200000, Math.max(100000, parseInt(mpBudgetSelect.value || '100000')));
+    startingBudget = budget;
     const universe = mpUniverseSelect.value || 'onepiece';
     const roomMaxPicks = parseInt(mpPicksSelect ? mpPicksSelect.value : '5') || 0;
     maxSquadSize = roomMaxPicks;
@@ -1048,13 +1049,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Player 2', colorClass: 'p2' }
       ];
     }
-    budgetSlider.value = startingBudget;
+    budgetSlider.min = 100000;
+    budgetSlider.max = 200000;
+    budgetSlider.step = 5000;
+    budgetSlider.value = Math.min(200000, Math.max(100000, startingBudget));
     const currency = currentUniverse === 'naruto' ? 'Ryo' : (currentUniverse === 'marvel' ? '$' : '฿');
-    budgetDisplay.textContent = `${startingBudget.toLocaleString()} ${currency}`;
+    const lakhs = (budgetSlider.value / 100000).toFixed(2).replace(/\.00$/, '');
+    budgetDisplay.textContent = `${parseInt(budgetSlider.value).toLocaleString()} ${currency} (${lakhs} Lakh${lakhs > 1 ? 's' : ''})`;
     
     document.querySelectorAll('.btn-budget-preset').forEach(btn => {
       const b = parseInt(btn.getAttribute('data-budget') || '0');
-      btn.classList.toggle('active', b === startingBudget);
+      btn.classList.toggle('active', b === parseInt(budgetSlider.value));
     });
 
     if (maxPicksSlider && maxPicksDisplay) {
@@ -1139,7 +1144,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function applySetup(isFreshReset = false) {
     const oldBudget = startingBudget;
-    const newBudget = parseInt(budgetSlider.value || '75000');
+    let newBudget = parseInt(budgetSlider.value || '100000');
+    newBudget = Math.min(200000, Math.max(100000, newBudget));
     startingBudget = newBudget;
     const newMaxSquad = parseInt(maxPicksSlider ? maxPicksSlider.value : '5');
     maxSquadSize = isNaN(newMaxSquad) ? 5 : newMaxSquad;
@@ -1317,7 +1323,9 @@ document.addEventListener('DOMContentLoaded', () => {
             ${powerBadge}
             ${!isFull ? '<span class="turn-pill">SPIN TURN</span>' : ''}
           </div>
-          <div class="player-money">${(p.money || 0).toLocaleString()} ${currency}</div>
+          <div class="player-money player-money-editable" data-player="${idx}" title="Click to adjust purse (Max 2,00,000 / 2 Lakhs)">
+            💰 ${(p.money || 0).toLocaleString()} ${currency} ✏️
+          </div>
         </div>
         <div class="squad-tray">
           ${chipsHtml}
@@ -1362,6 +1370,36 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    document.querySelectorAll('.player-money-editable').forEach(el => {
+      el.addEventListener('click', () => {
+        const pIdx = parseInt(el.getAttribute('data-player'));
+        const p = players[pIdx];
+        if (!p) return;
+
+        if (isMultiplayer && !isRoomHost && p.id !== localPlayerId) {
+          alert("⚠️ In online rooms, only the host or the player themselves can adjust their funds.");
+          return;
+        }
+
+        const currency = currentUniverse === 'naruto' ? 'Ryo' : (currentUniverse === 'marvel' ? '$' : '฿');
+        const entered = prompt(`Enter new purse amount for ${p.name} (Max: 2,00,000 / 2 Lakhs ${currency}):`, p.money || 100000);
+        if (entered !== null) {
+          let val = parseInt(entered.toString().replace(/[^0-9]/g, ''));
+          if (isNaN(val)) val = 0;
+          if (val > 200000) {
+            alert("⚠️ Maximum allowed amount is 2,00,000 (2 Lakhs). Capped to 2,00,000.");
+            val = 200000;
+          }
+          p.money = val;
+          renderPlayerDock();
+          saveGameState();
+          if (isMultiplayer && currentRoomCode && db) {
+            db.ref('rooms/' + currentRoomCode).update({ players: players });
+          }
+        }
+      });
+    });
+
     document.querySelectorAll('.squad-chip').forEach(btn => {
       btn.addEventListener('click', () => {
         const pIdx = parseInt(btn.getAttribute('data-player'));
@@ -1388,13 +1426,24 @@ document.addEventListener('DOMContentLoaded', () => {
     confetti.fire(char.universe);
   }
 
+  function getCharacterStartingBid(char) {
+    if (char && char.basePrice && char.basePrice < 12000 && char.basePrice >= 1000) {
+      return char.basePrice;
+    }
+    const pl = parseFloat(char?.powerLevel) || 80;
+    const norm = Math.max(0, Math.min(1, (pl - 60) / 40));
+    const bid = Math.round((2000 + norm * 9500) / 500) * 500;
+    return Math.min(11500, Math.max(1500, bid));
+  }
+
   function initBiddingArena(char) {
     biddingArena.style.display = 'block';
 
     const eligibleBidders = players.map((_, idx) => idx).filter(idx => !isPlayerSquadFull(idx));
+    const startBid = getCharacterStartingBid(char);
 
     liveAuction = {
-      currentBid: 0,
+      currentBid: startBid,
       highestBidderIndex: -1,
       activeBidders: eligibleBidders,
       turnPointer: eligibleBidders.includes(currentPlayerIndex) ? eligibleBidders.indexOf(currentPlayerIndex) : 0,
@@ -1410,10 +1459,11 @@ document.addEventListener('DOMContentLoaded', () => {
       hasConcluded: eligibleBidders.length === 0
     };
 
+    const currency = currentUniverse === 'naruto' ? 'Ryo' : (currentUniverse === 'marvel' ? '$' : '฿');
     if (eligibleBidders.length === 0) {
       liveAuctionLog.innerHTML = `<div class="log-entry">⚠️ All player squads have reached the maximum limit (${maxSquadSize}/${maxSquadSize})!</div>`;
     } else {
-      liveAuctionLog.innerHTML = `<div class="log-entry">Auction started for <strong>${char.name}</strong>! Min raise: 1,000.</div>`;
+      liveAuctionLog.innerHTML = `<div class="log-entry">Auction started for <strong>${char.name}</strong>! Base Starting Bid: <strong>${startBid.toLocaleString()} ${currency}</strong> (⚡PL: ${char.powerLevel || 80}). Min raise: 1,000.</div>`;
     }
     
     switchBiddingTab(activeBiddingTab || 'live');
@@ -1505,6 +1555,12 @@ document.addEventListener('DOMContentLoaded', () => {
     liveCustomBidInput.value = '';
     liveCustomBidInput.min = (liveAuction.currentBid || 0) + 1000;
     liveCustomBidInput.placeholder = isMyBiddingTurn ? `Min: ${((liveAuction.currentBid || 0) + 1000).toLocaleString()} ${currency}` : `Waiting for ${turnPlayer.name}...`;
+
+    // In Online Rooms, only the Room Host has the discard option
+    const canDiscard = (!isMultiplayer) || isRoomHost;
+    if (liveSkipBtn) {
+      liveSkipBtn.style.display = canDiscard ? 'inline-block' : 'none';
+    }
   }
 
   function handleLiveRaise(amountToAdd) {
@@ -1831,11 +1887,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       playerAssignBtns.appendChild(btn);
     });
+
+    const canDiscard = (!isMultiplayer) || isRoomHost;
+    if (directSkipBtn) {
+      directSkipBtn.style.display = canDiscard ? 'block' : 'none';
+    }
   }
 
   // --- AWARD & BUDGET DEDUCTION ---
 
   function cancelAndDiscardCharacter() {
+    if (isMultiplayer && !isRoomHost) {
+      alert("⚠️ In online rooms, only the Room Host has permission to discard characters.");
+      return;
+    }
+
     pendingCharacter = null;
     pendingSliceIndex = -1;
     modal.close();
@@ -2493,9 +2559,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   budgetSlider.addEventListener('input', (e) => {
-    const val = parseInt(e.target.value);
+    let val = parseInt(e.target.value);
+    val = Math.min(200000, Math.max(100000, val));
     const currency = currentUniverse === 'naruto' ? 'Ryo' : (currentUniverse === 'marvel' ? '$' : '฿');
-    budgetDisplay.textContent = `${val.toLocaleString()} ${currency}`;
+    const lakhs = (val / 100000).toFixed(2).replace(/\.00$/, '');
+    budgetDisplay.textContent = `${val.toLocaleString()} ${currency} (${lakhs} Lakh${parseFloat(lakhs) > 1 ? 's' : ''})`;
     document.querySelectorAll('.btn-budget-preset').forEach(btn => {
       const b = parseInt(btn.getAttribute('data-budget') || '0');
       btn.classList.toggle('active', b === val);
@@ -2504,10 +2572,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.btn-budget-preset').forEach(btn => {
     btn.addEventListener('click', () => {
-      const bVal = parseInt(btn.getAttribute('data-budget') || '75000');
+      const bVal = parseInt(btn.getAttribute('data-budget') || '100000');
       budgetSlider.value = bVal;
       const currency = currentUniverse === 'naruto' ? 'Ryo' : (currentUniverse === 'marvel' ? '$' : '฿');
-      budgetDisplay.textContent = `${bVal.toLocaleString()} ${currency}`;
+      const lakhs = (bVal / 100000).toFixed(2).replace(/\.00$/, '');
+      budgetDisplay.textContent = `${bVal.toLocaleString()} ${currency} (${lakhs} Lakh${parseFloat(lakhs) > 1 ? 's' : ''})`;
       document.querySelectorAll('.btn-budget-preset').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     });

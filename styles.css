@@ -337,9 +337,29 @@ body.theme-marvel h1 span.highlight {
 
 .player-money {
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: #ffd166;
+}
+
+.player-money-editable {
+  cursor: pointer;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  background: rgba(255, 209, 102, 0.1);
+  border: 1px dashed rgba(255, 209, 102, 0.4);
+  transition: all 0.2s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.player-money-editable:hover {
+  background: rgba(255, 209, 102, 0.25);
+  border-color: #ffd166;
+  box-shadow: 0 0 10px rgba(255, 209, 102, 0.4);
+  transform: scale(1.04);
 }
 
 .squad-tray {
