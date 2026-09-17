@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Anime Draft Wheel - High-Performance 1,000+ Slice Engine
  * Features Radial Chronometer Precision, Real-time Needle Tracking, Dynamic Sparks, Speed Aura, & SFX
  */
@@ -372,7 +372,7 @@ class AnimeWheel {
         ctx.shadowBlur = 3;
 
         const fontSize = numSlices > 50 ? 10 : (numSlices > 25 ? 12 : 14);
-        ctx.font = 600 px Cinzel, sans-serif;
+        ctx.font = '600 ' + fontSize + 'px "Cinzel", sans-serif';
 
         let displayName = character.name;
         if (displayName.length > 15 && numSlices > 20) {
@@ -607,7 +607,8 @@ class ConfettiCannon {
 
           // Coin Symbol
           ctx.fillStyle = '#78350f';
-          ctx.font = old px sans-serif;
+          const coinFontSize = Math.max(8, Math.round(p.size * 0.58));
+          ctx.font = 'bold ' + coinFontSize + 'px sans-serif';
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
           ctx.fillText('₹', 0, 1);

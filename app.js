@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Anime Draft Wheel - 1,000+ Characters & Roster Editor Game Controller
  */
 
@@ -227,6 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // --- GAME STATE ---
+  const GAME_SESSION_KEY = 'anime_draft_live_session_v18';
   let masterRoster = getSavedRoster(); // 150 top characters loaded
   let currentUniverse = 'onepiece'; // 'onepiece', 'naruto', 'marvel', 'all'
   let activePools = {
@@ -243,10 +244,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let players = [];
   let setupPlayersList = [];
 
-  const CURRENCY_SYMBOL = 'â‚¹';
+  const CURRENCY_SYMBOL = '₹';
   function formatINR(amount) {
     const num = typeof amount === 'number' ? amount : parseInt(String(amount).replace(/[^0-9]/g, '')) || 0;
-    return 'â‚¹ ' + num.toLocaleString('en-IN');
+    return '₹ ' + num.toLocaleString('en-IN');
   }
 
   // Multiplayer State
@@ -335,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize Game (Restore previous session on reload or start fresh)
   if (!restoreGameState()) {
-    initGame(2, 75000);
+    initGame(2, 100000);
   }
 
   // Check URL for Auto Room Invite (?room=CODE)
@@ -657,8 +658,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- SESSION PERSISTENCE & AUTO-RESUME ---
-  const GAME_SESSION_KEY = 'anime_draft_live_session_v11';
-
   function saveGameState() {
     if (isMultiplayer) return; // In multiplayer, Firebase database stores state
     try {
@@ -912,7 +911,17 @@ document.addEventListener('DOMContentLoaded', () => {
       battleCombatFeed.scrollTop = battleCombatFeed.scrollHeight;
     };
 
-    appendLog(`<div class="battle-log-entry" style="text-align:center; color:#ffd166; font-weight:800;">🔔 BATTLE START: ${p1.name} (HP: ${maxHpP1.toLocaleString()}) VS ${p2.name} (HP: ${maxHpP2.toLocaleString()})!</div>`);
+    const spawnFloatingDamage = (targetCard, text, isCrit) => {
+      if (!targetCard) return;
+      const floatEl = document.createElement('div');
+      floatEl.className = `battle-floating-dmg ${isCrit ? 'crit' : ''}`;
+      floatEl.textContent = text;
+      targetCard.parentElement.style.position = 'relative';
+      targetCard.parentElement.appendChild(floatEl);
+      setTimeout(() => floatEl.remove(), 1100);
+    };
+
+    appendLog(`<div class="battle-log-entry" style="text-align:center; color:#ffd166; font-weight:800;">🔔 BATTLE START: ${p1.name} (HP: ${maxHpP1.toLocaleString('en-IN')}) VS ${p2.name} (HP: ${maxHpP2.toLocaleString('en-IN')})!</div>`);
 
     let turn = 0;
     const maxRounds = 12;
@@ -927,6 +936,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const attackerPlayer = isP1Attacking ? p1 : p2;
       const defenderPlayer = isP1Attacking ? p2 : p1;
       const attackerSquad = isP1Attacking ? p1Squad : p2Squad;
+      const attackerCard = isP1Attacking ? battleCardP1 : battleCardP2;
+      const defenderCard = isP1Attacking ? battleCardP2 : battleCardP1;
+
+      // Attacker Card Lunge Attack Animation
+      attackerCard.classList.remove('battle-lunge-p1', 'battle-lunge-p2');
+      void attackerCard.offsetWidth;
+      attackerCard.classList.add(isP1Attacking ? 'battle-lunge-p1' : 'battle-lunge-p2');
+      setTimeout(() => {
+        attackerCard.classList.remove('battle-lunge-p1', 'battle-lunge-p2');
+      }, 450);
 
       // Pick a random fighter from attacker squad
       const fighter = attackerSquad[Math.floor(Math.random() * attackerSquad.length)];
@@ -939,14 +958,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const variance = 0.85 + Math.random() * 0.35;
       const damage = Math.round(fighterPower * 25 * variance * (isCrit ? 1.8 : 1.0));
 
-      // Shake animation
-      const targetCard = isP1Attacking ? battleCardP2 : battleCardP1;
-      targetCard.classList.remove('shake');
-      void targetCard.offsetWidth;
-      targetCard.classList.add('shake');
+      // Shake animation on defender
+      defenderCard.classList.remove('shake');
+      void defenderCard.offsetWidth;
+      defenderCard.classList.add('shake');
+
+      // Floating Combat Damage Numbers
+      spawnFloatingDamage(defenderCard, `${isCrit ? '💥 CRIT! ' : ''}-${damage.toLocaleString('en-IN')}`, isCrit);
 
       battleClashIcon.textContent = isCrit ? '💥' : '⚡';
-      wheel.sound.playTick();
+      if (wheel.sound && wheel.sound.playClash) {
+        wheel.sound.playClash();
+      } else {
+        wheel.sound.playTick();
+      }
 
       if (isP1Attacking) {
         hpP2 = Math.max(0, hpP2 - damage);
@@ -1059,7 +1084,7 @@ document.addEventListener('DOMContentLoaded', () => {
     budgetSlider.max = 200000;
     budgetSlider.step = 5000;
     budgetSlider.value = Math.min(200000, Math.max(100000, startingBudget));
-    const currency = 'â‚¹';
+    const currency = '₹';
     const lakhs = (budgetSlider.value / 100000).toFixed(2).replace(/\.00$/, '');
     budgetDisplay.textContent = `${parseInt(budgetSlider.value).toLocaleString()} ${currency} (${lakhs} Lakh${lakhs > 1 ? 's' : ''})`;
     
@@ -1093,7 +1118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderSetupPlayerInputs() {
     playerNamesInputsContainer.innerHTML = '';
-    const currency = 'â‚¹';
+    const currency = '₹';
 
     setupPlayersList.forEach((p, idx) => {
       const row = document.createElement('div');
@@ -1292,7 +1317,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderPlayerDock() {
     playersDock.innerHTML = '';
-    const currency = 'â‚¹';
+    const currency = '₹';
 
     players.forEach((p, idx) => {
       const isFull = isPlayerSquadFull(idx);
@@ -1387,7 +1412,7 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
-        const currency = 'â‚¹';
+        const currency = '₹';
         const entered = prompt(`Enter new purse amount for ${p.name} (Max: 2,00,000 / 2 Lakhs ${currency}):`, p.money || 100000);
         if (entered !== null) {
           let val = parseInt(entered.toString().replace(/[^0-9]/g, ''));
@@ -1465,7 +1490,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hasConcluded: eligibleBidders.length === 0
     };
 
-    const currency = 'â‚¹';
+    const currency = '₹';
     if (eligibleBidders.length === 0) {
       liveAuctionLog.innerHTML = `<div class="log-entry">⚠️ All player squads have reached the maximum limit (${maxSquadSize}/${maxSquadSize})!</div>`;
     } else {
@@ -1505,7 +1530,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- MODE 1: LIVE 1-BY-1 AUCTION ---
 
   function renderLiveAuctionUI() {
-    const currency = 'â‚¹';
+    const currency = '₹';
     liveHighestBid.textContent = `${(liveAuction.currentBid || 0).toLocaleString()} ${currency}`;
 
     if (liveAuction.highestBidderIndex !== -1 && players[liveAuction.highestBidderIndex]) {
@@ -1580,7 +1605,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const currency = 'â‚¹';
+    const currency = '₹';
     liveAuction.currentBid = newBid;
     liveAuction.highestBidderIndex = currentTurnPlayerIdx;
 
@@ -1606,7 +1631,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const currency = 'â‚¹';
+    const currency = '₹';
     liveAuction.currentBid = entered;
     liveAuction.highestBidderIndex = currentTurnPlayerIdx;
 
@@ -1678,7 +1703,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function concludeLiveAuction(winnerIndex) {
     liveAuction.hasConcluded = true;
     const winner = players[winnerIndex];
-    const currency = 'â‚¹';
+    const currency = '₹';
     addAuctionLog(`🏆 <strong>${winner.name} WINS</strong> at <strong>${(liveAuction.currentBid || 0).toLocaleString()} ${currency}</strong>!`, 'log-win');
     renderLiveAuctionUI();
 
@@ -1709,7 +1734,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- MODE 2: SECRET BLIND BIDDING ---
 
   function renderSecretInputUI() {
-    const currency = 'â‚¹';
+    const currency = '₹';
 
     if (isMultiplayer) {
       const myIndex = players.findIndex(p => p.id === localPlayerId);
@@ -1818,7 +1843,7 @@ document.addEventListener('DOMContentLoaded', () => {
     secretInputStage.style.display = 'none';
     secretRevealStage.style.display = 'block';
 
-    const currency = 'â‚¹';
+    const currency = '₹';
     secretBidsGrid.innerHTML = '';
 
     let highest = secretAuction.winningBid || 0;
@@ -2001,17 +2026,34 @@ document.addEventListener('DOMContentLoaded', () => {
     posterCard.className = `wanted-poster-card ${isMarvel ? 'marvel-card' : (isNaruto ? 'naruto-card' : '')}`;
     cardHeaderTitle.textContent = isMarvel ? 'AVENGERS DOSSIER' : (isNaruto ? 'SHINOBI CLASSIFIED' : 'WANTED');
     cardHeaderSubtext.textContent = isMarvel ? 'S.H.I.E.L.D. EYES ONLY' : (isNaruto ? 'BINGO BOOK S-RANK' : 'DEAD OR ALIVE');
-    currencySymbol.textContent = 'â‚¹';
+    currencySymbol.textContent = '₹';
 
     charEpithet.textContent = char.title || char.epithet || (isMarvel ? 'Super Hero / Cosmic Legend' : (isNaruto ? 'Legendary Shinobi' : 'Grand Line Legend'));
     charName.textContent = char.name;
-    charBounty.textContent = char.bounty > 0 ? (typeof char.bounty === 'number' ? char.bounty.toLocaleString() : char.bounty) : (char.bounty || '100,000');
+    charBounty.textContent = typeof char.bounty === 'number' ? char.bounty.toLocaleString('en-IN') : String(char.bounty || '100,000').replace(/^(₹|฿|Ryo|\$)\s*/i, '');
 
     if (charPowerLevel) {
-      charPowerLevel.textContent = (char.powerLevel ? Number(char.powerLevel).toFixed(1) : '85.0') + ' / 100';
+      const targetPl = char.powerLevel ? parseFloat(char.powerLevel) : 85.0;
+      const animDuration = 600;
+      const animStart = performance.now();
+      const stepPl = (now) => {
+        const elapsed = now - animStart;
+        const p = Math.min(1, elapsed / animDuration);
+        const easeOut = 1 - Math.pow(1 - p, 3);
+        const current = (targetPl * easeOut).toFixed(1);
+        charPowerLevel.textContent = `${current} / 100`;
+        if (p < 1) requestAnimationFrame(stepPl);
+      };
+      requestAnimationFrame(stepPl);
     }
     if (charPowerTier) {
       charPowerTier.textContent = `(${char.powerTier || 'Master Combatant'})`;
+    }
+
+    if (posterCard) {
+      posterCard.classList.remove('poster-slam');
+      void posterCard.offsetWidth;
+      posterCard.classList.add('poster-slam');
     }
 
     labelAffiliation.textContent = isMarvel ? 'Affiliation / Team' : (isNaruto ? 'Hidden Village' : 'Affiliation / Crew');
@@ -2103,7 +2145,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const tr = document.createElement('tr');
       const isNaruto = c.universe === 'naruto';
       const isMarvel = c.universe === 'marvel';
-      const currency = 'â‚¹';
+      const currency = '₹';
       const badgeBg = isMarvel ? '#e23636' : (isNaruto ? '#ea580c' : '#b91c1c');
       const badgeLabel = isMarvel ? '🦸 Marvel' : (isNaruto ? '🍃 Naruto' : '🏴‍☠️ One Piece');
       const pl = c.powerLevel ? Number(c.powerLevel).toFixed(1) : '85.0';
@@ -2567,7 +2609,7 @@ document.addEventListener('DOMContentLoaded', () => {
   budgetSlider.addEventListener('input', (e) => {
     let val = parseInt(e.target.value);
     val = Math.min(200000, Math.max(100000, val));
-    const currency = 'â‚¹';
+    const currency = '₹';
     const lakhs = (val / 100000).toFixed(2).replace(/\.00$/, '');
     budgetDisplay.textContent = `${val.toLocaleString()} ${currency} (${lakhs} Lakh${parseFloat(lakhs) > 1 ? 's' : ''})`;
     document.querySelectorAll('.btn-budget-preset').forEach(btn => {
@@ -2580,7 +2622,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const bVal = parseInt(btn.getAttribute('data-budget') || '100000');
       budgetSlider.value = bVal;
-      const currency = 'â‚¹';
+      const currency = '₹';
       const lakhs = (bVal / 100000).toFixed(2).replace(/\.00$/, '');
       budgetDisplay.textContent = `${bVal.toLocaleString()} ${currency} (${lakhs} Lakh${parseFloat(lakhs) > 1 ? 's' : ''})`;
       document.querySelectorAll('.btn-budget-preset').forEach(b => b.classList.remove('active'));
